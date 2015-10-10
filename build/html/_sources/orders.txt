@@ -1,54 +1,26 @@
 Orders
 ======
 
+Interactive Brokers offers you numerous order types which allow you to minimize your costs, improve your executions, and maximize your profits.  This page lists our common order types, and how to create them via the API.
+
+
+Auction
+-------
+
+An auction order is entered into the electronic trading system during the pre-market opening period for execution at the Calculated Opening Price (COP). If your order is not filled on the open, the order is re-submitted as a limit order with the limit price set to the COP or the best bid/ask after the market opens.
+
+Products: FUT, STK
+Supported Exchanges: https://individuals.interactivebrokers.com/en/?f=%2Fen%2Ftrading%2ForderTypeExchanges.php%3Fot%3Dauc
+Reference: http://individuals.interactivebrokers.com/en/trading/orders/auction.php?ib_entity=llc
+
 .. highlight:: csharp
-
-Always show this text stuffs.
-
-Stuff below here uses jquery:
-
 .. container:: code_example
    :name: csharp
 
-   Show this nice thing if C# is selected.
-
-   This example shows an auction order in C#.
-
    .. include:: atauction.rst
 
+.. highlight:: java
 .. container:: code_example
    :name: java
 
-   Show this other thing if Java is selected.
-
-   This is a test trying to include a market order example
-
-   .. literalinclude:: marketorder2.rst
-
-Stuff below here uses angularjs:
-
-.. raw:: html
-
-	<div ng-model="lang" ng-show="lang=='csharp'">
-
-Show this nice thing if C# is selected.
-
-This example shows an auction order in C#.
-
-.. include:: atauction.rst
-
-.. raw:: html
-
-	</div>
-        <div ng-model="lang" ng-show="lang=='java'">
-
-Show this other thing if Java is selected.
-
-This is a test trying to include a market order example
-
-.. literalinclude:: marketorder2.rst
-
-.. raw:: html
-
-	</div>
-	</div>
+   .. include:: atauction.rst
