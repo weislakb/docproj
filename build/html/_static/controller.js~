@@ -1,0 +1,5 @@
+var twsapidocApp = angular.module('twsapidocApp',[]);
+
+twsapidocApp.controller('langCtrl', function ($scope) {
+	$scope.lang = 'java';
+});

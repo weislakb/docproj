@@ -1,0 +1,250 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>docproj 1 documentation</title>
+  
+
+  
+  
+
+  
+
+  
+  
+    
+
+  
+
+  
+  
+    <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  
+
+  
+
+  
+    <link rel="top" title="None" href="index.html#document-index"/> 
+
+  
+  <script src="_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="index.html#document-index" class="icon icon-home"> docproj
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                1
+              </div>
+            
+          
+
+          
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+                <ul>
+<li class="toctree-l1"><a class="reference internal" href="index.html#document-marketdata">Market Data</a></li>
+<li class="toctree-l1"><a class="reference internal" href="index.html#document-orders">Orders</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="index.html#document-index">docproj</a>
+      </nav>
+
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="index.html#document-index">Docs</a> &raquo;</li>
+      
+    <li>docproj 1 documentation</li>
+      <li class="wy-breadcrumbs-aside">
+        
+          
+        
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="welcome-to-docproj-s-documentation">
+<h1>Welcome to docproj&#8217;s documentation!<a class="headerlink" href="#welcome-to-docproj-s-documentation" title="Permalink to this headline">¶</a></h1>
+<p>Contents:</p>
+<div class="toctree-wrapper compound">
+<span id="document-marketdata"></span><div class="section" id="market-data">
+<h2>Market Data<a class="headerlink" href="#market-data" title="Permalink to this headline">¶</a></h2>
+<p>Some stuff about market data</p>
+<ul class="simple">
+<li>Hey a list<ul>
+<li>I&#8217;m nesting</li>
+</ul>
+</li>
+</ul>
+</div>
+<span id="document-orders"></span><div class="section" id="orders">
+<h2>Orders<a class="headerlink" href="#orders" title="Permalink to this headline">¶</a></h2>
+<p>This example shows an auction order in C#.</p>
+<dl class="group">
+<dt>
+<span class="target" id="project0group__atauction"></span><em>group</em> <code class="descname">atauction</code></dt>
+<dd><p><ul class="simple">
+<li></li>
+<li><pre class="literal-block">
+            Order order = new Order();
+            order.Action = action;
+            order.Tif = &quot;AUC&quot;;
+            order.OrderType = &quot;MTL&quot;;
+            order.TotalQuantity = quantity;
+            order.LmtPrice = price;
+            return order;
+</pre>
+</li>
+<li></li>
+</ul>
+</p>
+</dd></dl>
+
+<p>This example shows a discretionary order in C#.</p>
+<dl class="group">
+<dt>
+<span class="target" id="project0group__discretionary"></span><em>group</em> <code class="descname">discretionary</code></dt>
+<dd><p><ul class="simple">
+<li></li>
+<li></li>
+<li><pre class="literal-block">
+            Order order = new Order();
+            order.Action = action;
+            order.OrderType = &quot;LMT&quot;;
+            order.TotalQuantity = quantity;
+            order.LmtPrice = price;
+            order.DiscretionaryAmt = discretionaryAmount;
+            return order;
+</pre>
+</li>
+<li></li>
+</ul>
+</p>
+</dd></dl>
+
+</div>
+</div>
+</div>
+<div class="section" id="indices-and-tables">
+<h1>Indices and tables<a class="headerlink" href="#indices-and-tables" title="Permalink to this headline">¶</a></h1>
+<ul class="simple">
+<li><a class="reference internal" href="genindex.html"><span>Index</span></a></li>
+<li><a class="reference internal" href="py-modindex.html"><span>Module Index</span></a></li>
+<li><a class="reference internal" href="search.html"><span>Search Page</span></a></li>
+</ul>
+</div>
+
+
+           </div>
+          </div>
+          <footer>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2015, Brandon.
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'./',
+            VERSION:'1',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true
+        };
+    </script>
+      <script type="text/javascript" src="_static/jquery.js"></script>
+      <script type="text/javascript" src="_static/underscore.js"></script>
+      <script type="text/javascript" src="_static/doctools.js"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="_static/js/theme.js"></script>
+  
+
+  
+  
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.StickyNav.enable();
+      });
+  </script>
+   
+
+</body>
+</html>
