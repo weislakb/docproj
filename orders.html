@@ -2,13 +2,13 @@
 
 <!DOCTYPE html>
 <!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
-<!--[if gt IE 8]><!--> <html class="no-js" lang="en" ng-app="apidocApp"> <!--<![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en"> <!--<![endif]-->
 <head>
   <meta charset="utf-8">
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>Orders &mdash; docproj 1 documentation</title>
+  <title>Orders &mdash; TWS API 9.72 documentation</title>
   
 
   
@@ -30,7 +30,7 @@
   
 
   
-    <link rel="top" title="docproj 1 documentation" href="index.html"/>
+    <link rel="top" title="TWS API 9.72 documentation" href="index.html"/>
         <link rel="prev" title="Market Data" href="marketdata.html"/>
 
 
@@ -49,9 +49,12 @@
           
 
           
-            <a href="index.html" class="icon icon-home"> docproj
+            <a href="index.html" class="icon icon-home"> TWS API
           
 
+          
+            
+            <img src="_static/nav_iblogo.png" class="logo" />
           
           </a>
 
@@ -59,7 +62,7 @@
             
             
               <div class="version">
-                1
+                9.72
               </div>
             
           
@@ -99,7 +102,7 @@
       
       <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
         <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
-        <a href="index.html">docproj</a>
+        <a href="index.html">TWS API</a>
       </nav>
 
 
@@ -132,6 +135,9 @@
             Select Language:
             <a id="show-java" class="btn btn-primary btn-lg">Java</a>
             <a id="show-csharp" class="btn btn-primary btn-lg">C#</a>
+            <a id="show-cpp" class="btn btn-primary btn-lg">C++</a>
+            <a id="show-activex" class="btn btn-primary btn-lg">ActiveX</a>
+            <a id="show-dde" class="btn btn-primary btn-lg">DDE for Excel</a>
             <p>
 
 
@@ -144,9 +150,9 @@
 <div class="section" id="auction">
 <h2>Auction<a class="headerlink" href="#auction" title="Permalink to this headline">¶</a></h2>
 <p>An auction order is entered into the electronic trading system during the pre-market opening period for execution at the Calculated Opening Price (COP). If your order is not filled on the open, the order is re-submitted as a limit order with the limit price set to the COP or the best bid/ask after the market opens.</p>
-<p>Products: FUT, STK
-Supported Exchanges: <a class="reference external" href="https://individuals.interactivebrokers.com/en/?f=%2Fen%2Ftrading%2ForderTypeExchanges.php%3Fot%3Dauc">https://individuals.interactivebrokers.com/en/?f=%2Fen%2Ftrading%2ForderTypeExchanges.php%3Fot%3Dauc</a>
-Reference: <a class="reference external" href="http://individuals.interactivebrokers.com/en/trading/orders/auction.php?ib_entity=llc">http://individuals.interactivebrokers.com/en/trading/orders/auction.php?ib_entity=llc</a></p>
+<p>Products: FUT, STK</p>
+<p>Supported Exchanges: <a class="reference external" href="https://individuals.interactivebrokers.com/en/?f=%2Fen%2Ftrading%2ForderTypeExchanges.php%3Fot%3Dauc">https://individuals.interactivebrokers.com/en/?f=%2Fen%2Ftrading%2ForderTypeExchanges.php%3Fot%3Dauc</a></p>
+<p>Reference: <a class="reference external" href="http://individuals.interactivebrokers.com/en/trading/orders/auction.php?ib_entity=llc">http://individuals.interactivebrokers.com/en/trading/orders/auction.php?ib_entity=llc</a></p>
 <div class="code-example container" id="csharp">
 <div class="highlight-csharp"><div class="highlight"><pre><span class="n">Order</span> <span class="n">order</span> <span class="p">=</span> <span class="k">new</span> <span class="n">Order</span><span class="p">();</span>
 <span class="n">order</span><span class="p">.</span><span class="n">Action</span> <span class="p">=</span> <span class="n">action</span><span class="p">;</span>
@@ -211,7 +217,7 @@ Reference: <a class="reference external" href="http://individuals.interactivebro
     <script type="text/javascript">
         var DOCUMENTATION_OPTIONS = {
             URL_ROOT:'./',
-            VERSION:'1',
+            VERSION:'9.72',
             COLLAPSE_INDEX:false,
             FILE_SUFFIX:'.html',
             HAS_SOURCE:  true
@@ -250,16 +256,19 @@ Reference: <a class="reference external" href="http://individuals.interactivebro
    </script>
    <script>
    $(document).ready(function(){
-    $("#csharp").hide();
     $("#java").show();
-    $("#show-csharp").click(function(){
-        $("#csharp").show();
-        $("#java").hide()
-    });
+    $("#csharp").hide();
+
     $("#show-java").click(function(){
       $("#csharp").hide();
-      $("#java").show()
+      $("#java").show();
     });
+
+    $("#show-csharp").click(function(){
+        $("#csharp").show();
+        $("#java").hide();
+    });
+
 });
   </script>
 </body>
