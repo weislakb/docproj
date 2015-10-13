@@ -285,5 +285,5 @@ texinfo_documents = [
 #texinfo_no_detailmenu = False
 
 # -- Breathe Config -------------------------------------------------------
-breathe_projects = { "myproject": "/Users/weislakb/doxygen/xml/" }
-breathe_default_project = "myproject"
+breathe_projects = { "twsapi": "/Users/weislakb/docproj/source/_xml/" }
+breathe_default_project = "twsapi"

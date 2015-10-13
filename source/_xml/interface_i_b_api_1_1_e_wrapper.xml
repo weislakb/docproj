@@ -1,0 +1,2274 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.10">
+  <compounddef id="interface_i_b_api_1_1_e_wrapper" kind="interface" language="C#" prot="public">
+    <compoundname>IBApi::EWrapper</compoundname>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="interface_i_b_api_1_1_e_wrapper_a7dfc221702ca65195609213c984729b8_1a7dfc221702ca65195609213c984729b8" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void error</definition>
+        <argsstring>(Exception e)</argsstring>
+        <name>error</name>
+        <param>
+          <type>Exception</type>
+          <declname>e</declname>
+        </param>
+        <briefdescription>
+<para>Handles errors generated within the API itself. If an exception is thrown within the API code it will be notified here. Posible cases include errors while reading the information from the socket or even misshandlings at <ref refid="interface_i_b_api_1_1_e_wrapper" kindref="compound">EWrapper</ref>&apos;s implementing class. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>e</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the thrown exception. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="source/EWrapper.cs" line="23" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="interface_i_b_api_1_1_e_wrapper_a5d5b40b4377acc0dd2aecb3c88cf0099_1a5d5b40b4377acc0dd2aecb3c88cf0099" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void error</definition>
+        <argsstring>(string str)</argsstring>
+        <name>error</name>
+        <param>
+          <type>string</type>
+          <declname>str</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>str</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The error message received. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="source/EWrapper.cs" line="29" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="interface_i_b_api_1_1_e_wrapper_a0dd0ca408b9ef70181cec1e5ac938039_1a0dd0ca408b9ef70181cec1e5ac938039" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void error</definition>
+        <argsstring>(int id, int errorCode, string errorMsg)</argsstring>
+        <name>error</name>
+        <param>
+          <type>int</type>
+          <declname>id</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>errorCode</declname>
+        </param>
+        <param>
+          <type>string</type>
+          <declname>errorMsg</declname>
+        </param>
+        <briefdescription>
+<para>Errors sent by the TWS are received here. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>id</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the request identifier which generated the error. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>errorCode</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the code identifying the error. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>errorMsg</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>error&apos;s description. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="source/EWrapper.cs" line="38" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="interface_i_b_api_1_1_e_wrapper_a7004c6c027c90ecdc1f5c68759e37fd2_1a7004c6c027c90ecdc1f5c68759e37fd2" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void currentTime</definition>
+        <argsstring>(long time)</argsstring>
+        <name>currentTime</name>
+        <param>
+          <type>long</type>
+          <declname>time</declname>
+        </param>
+        <briefdescription>
+<para>Server&apos;s current time This method will receive IB server&apos;s system time resulting after the invokation of reqCurrentTime. </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="see"><para>reqCurrentTime() </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="source/EWrapper.cs" line="45" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="interface_i_b_api_1_1_e_wrapper_aff4ae3269d7b13dd1ca989a8d5ca1ced_1aff4ae3269d7b13dd1ca989a8d5ca1ced" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void tickPrice</definition>
+        <argsstring>(int tickerId, int field, double price, int canAutoExecute)</argsstring>
+        <name>tickPrice</name>
+        <param>
+          <type>int</type>
+          <declname>tickerId</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>field</declname>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>price</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>canAutoExecute</declname>
+        </param>
+        <briefdescription>
+<para>Market data tick price callback. Handles all price related ticks. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>tickerId</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the request&apos;s unique identifier. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>field</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the type of the price being received (i.e. ask price). </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>price</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the actual price. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>canAutoExecute</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Specifies whether the price tick is available for automatic execution (1) or not (0). </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="see"><para>TickType, <ref refid="interface_i_b_api_1_1_e_wrapper_a1844eb442fb657c0f2cc0a63e4e74eba_1a1844eb442fb657c0f2cc0a63e4e74eba" kindref="member">tickSize</ref>, <ref refid="interface_i_b_api_1_1_e_wrapper_a19cb7c5bbd4ab05ccc5f9e686ed07a9e_1a19cb7c5bbd4ab05ccc5f9e686ed07a9e" kindref="member">tickString</ref>, <ref refid="interface_i_b_api_1_1_e_wrapper_af8afed0428f2f848f15ac137d81283fc_1af8afed0428f2f848f15ac137d81283fc" kindref="member">tickEFP</ref>, <ref refid="interface_i_b_api_1_1_e_wrapper_a9901f14408b7a6f75b1d06e3e6196a26_1a9901f14408b7a6f75b1d06e3e6196a26" kindref="member">tickGeneric</ref>, <ref refid="interface_i_b_api_1_1_e_wrapper_acacbf738e95ff9ffcc19b130f39938b3_1acacbf738e95ff9ffcc19b130f39938b3" kindref="member">tickOptionComputation</ref>, <ref refid="interface_i_b_api_1_1_e_wrapper_1a2d1c80705657202c82a0b8708ad0e169" kindref="member">tickSnapshotEnd</ref>, <ref refid="interface_i_b_api_1_1_e_wrapper_a79918660257f0e7ce77309bf3bccf13c_1a79918660257f0e7ce77309bf3bccf13c" kindref="member">marketDataType</ref>, EClientSocket::reqMktData </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="source/EWrapper.cs" line="56" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="interface_i_b_api_1_1_e_wrapper_a1844eb442fb657c0f2cc0a63e4e74eba_1a1844eb442fb657c0f2cc0a63e4e74eba" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void tickSize</definition>
+        <argsstring>(int tickerId, int field, int size)</argsstring>
+        <name>tickSize</name>
+        <param>
+          <type>int</type>
+          <declname>tickerId</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>field</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>size</declname>
+        </param>
+        <briefdescription>
+<para>Market data tick size callback. Handles all size-related ticks. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>tickerId</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the request&apos;s unique identifier. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>field</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the type of size being received (i.e. bid size) </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>size</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the actual size. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="see"><para>reqMarketData() </para></simplesect>
+<simplesect kind="see"><para>TickType, <ref refid="interface_i_b_api_1_1_e_wrapper_aff4ae3269d7b13dd1ca989a8d5ca1ced_1aff4ae3269d7b13dd1ca989a8d5ca1ced" kindref="member">tickPrice</ref>, <ref refid="interface_i_b_api_1_1_e_wrapper_a19cb7c5bbd4ab05ccc5f9e686ed07a9e_1a19cb7c5bbd4ab05ccc5f9e686ed07a9e" kindref="member">tickString</ref>, <ref refid="interface_i_b_api_1_1_e_wrapper_af8afed0428f2f848f15ac137d81283fc_1af8afed0428f2f848f15ac137d81283fc" kindref="member">tickEFP</ref>, <ref refid="interface_i_b_api_1_1_e_wrapper_a9901f14408b7a6f75b1d06e3e6196a26_1a9901f14408b7a6f75b1d06e3e6196a26" kindref="member">tickGeneric</ref>, <ref refid="interface_i_b_api_1_1_e_wrapper_acacbf738e95ff9ffcc19b130f39938b3_1acacbf738e95ff9ffcc19b130f39938b3" kindref="member">tickOptionComputation</ref>, <ref refid="interface_i_b_api_1_1_e_wrapper_1a2d1c80705657202c82a0b8708ad0e169" kindref="member">tickSnapshotEnd</ref>, <ref refid="interface_i_b_api_1_1_e_wrapper_a79918660257f0e7ce77309bf3bccf13c_1a79918660257f0e7ce77309bf3bccf13c" kindref="member">marketDataType</ref>, EClientSocket::reqMktData </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="source/EWrapper.cs" line="67" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="interface_i_b_api_1_1_e_wrapper_a19cb7c5bbd4ab05ccc5f9e686ed07a9e_1a19cb7c5bbd4ab05ccc5f9e686ed07a9e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void tickString</definition>
+        <argsstring>(int tickerId, int field, string value)</argsstring>
+        <name>tickString</name>
+        <param>
+          <type>int</type>
+          <declname>tickerId</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>field</declname>
+        </param>
+        <param>
+          <type>string</type>
+          <declname>value</declname>
+        </param>
+        <briefdescription>
+<para>Market data callback. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>tickerId</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the request&apos;s unique identifier. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>field</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the type of the tick being received </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>value</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="see"><para>TickType, <ref refid="interface_i_b_api_1_1_e_wrapper_a1844eb442fb657c0f2cc0a63e4e74eba_1a1844eb442fb657c0f2cc0a63e4e74eba" kindref="member">tickSize</ref>, <ref refid="interface_i_b_api_1_1_e_wrapper_aff4ae3269d7b13dd1ca989a8d5ca1ced_1aff4ae3269d7b13dd1ca989a8d5ca1ced" kindref="member">tickPrice</ref>, <ref refid="interface_i_b_api_1_1_e_wrapper_af8afed0428f2f848f15ac137d81283fc_1af8afed0428f2f848f15ac137d81283fc" kindref="member">tickEFP</ref>, <ref refid="interface_i_b_api_1_1_e_wrapper_a9901f14408b7a6f75b1d06e3e6196a26_1a9901f14408b7a6f75b1d06e3e6196a26" kindref="member">tickGeneric</ref>, <ref refid="interface_i_b_api_1_1_e_wrapper_acacbf738e95ff9ffcc19b130f39938b3_1acacbf738e95ff9ffcc19b130f39938b3" kindref="member">tickOptionComputation</ref>, <ref refid="interface_i_b_api_1_1_e_wrapper_1a2d1c80705657202c82a0b8708ad0e169" kindref="member">tickSnapshotEnd</ref>, <ref refid="interface_i_b_api_1_1_e_wrapper_a79918660257f0e7ce77309bf3bccf13c_1a79918660257f0e7ce77309bf3bccf13c" kindref="member">marketDataType</ref>, EClientSocket::reqMktData </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="source/EWrapper.cs" line="76" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="interface_i_b_api_1_1_e_wrapper_a9901f14408b7a6f75b1d06e3e6196a26_1a9901f14408b7a6f75b1d06e3e6196a26" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void tickGeneric</definition>
+        <argsstring>(int tickerId, int field, double value)</argsstring>
+        <name>tickGeneric</name>
+        <param>
+          <type>int</type>
+          <declname>tickerId</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>field</declname>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>value</declname>
+        </param>
+        <briefdescription>
+<para>Market data callback. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>tickerId</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the request&apos;s unique identifier. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>field</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the type of tick being received. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>value</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="source/EWrapper.cs" line="84" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="interface_i_b_api_1_1_e_wrapper_af8afed0428f2f848f15ac137d81283fc_1af8afed0428f2f848f15ac137d81283fc" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void tickEFP</definition>
+        <argsstring>(int tickerId, int tickType, double basisPoints, string formattedBasisPoints, double impliedFuture, int holdDays, string futureLastTradeDate, double dividendImpact, double dividendsToLastTradeDate)</argsstring>
+        <name>tickEFP</name>
+        <param>
+          <type>int</type>
+          <declname>tickerId</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>tickType</declname>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>basisPoints</declname>
+        </param>
+        <param>
+          <type>string</type>
+          <declname>formattedBasisPoints</declname>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>impliedFuture</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>holdDays</declname>
+        </param>
+        <param>
+          <type>string</type>
+          <declname>futureLastTradeDate</declname>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>dividendImpact</declname>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>dividendsToLastTradeDate</declname>
+        </param>
+        <briefdescription>
+<para>Exchange for Physicals. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>tickerId</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The request&apos;s identifier. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>tickType</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The type of tick being received. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>basisPoints</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Annualized basis points, which is representative of the financing rate that can be directly compared to broker rates. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>formattedBasisPoints</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Annualized basis points as a formatted string that depicts them in percentage form. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>impliedFuture</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The implied Futures price. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>holdDays</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The number of hold days until the lastTradeDate of the EFP. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>futureLastTradeDate</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The expiration date of the single stock future. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>dividendImpact</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The dividend impact upon the annualized basis points interest rate. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>dividendsToLastTradeDate</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The dividends expected until the expiration of the single stock future. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="source/EWrapper.cs" line="98" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="interface_i_b_api_1_1_e_wrapper_abf465aff35de5e6c8ea15cecc953de3a_1abf465aff35de5e6c8ea15cecc953de3a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void deltaNeutralValidation</definition>
+        <argsstring>(int reqId, UnderComp underComp)</argsstring>
+        <name>deltaNeutralValidation</name>
+        <param>
+          <type>int</type>
+          <declname>reqId</declname>
+        </param>
+        <param>
+          <type>UnderComp</type>
+          <declname>underComp</declname>
+        </param>
+        <briefdescription>
+<para><itemizedlist>
+<listitem><para>Upon accepting a Delta-Neutral DN RFQ(request for quote), the server sends a <ref refid="interface_i_b_api_1_1_e_wrapper_abf465aff35de5e6c8ea15cecc953de3a_1abf465aff35de5e6c8ea15cecc953de3a" kindref="member">deltaNeutralValidation()</ref> message with the UnderComp structure. If the delta and price fields are empty in the original request, the confirmation will contain the current values from the server. These values are locked when RFQ is processed and remain locked unitl the RFQ is cancelled. </para></listitem></itemizedlist>
+</para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>reqId</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the request&apos;s identifier. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>underComp</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Underlying Component </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="source/EWrapper.cs" line="108" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="interface_i_b_api_1_1_e_wrapper_acacbf738e95ff9ffcc19b130f39938b3_1acacbf738e95ff9ffcc19b130f39938b3" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void tickOptionComputation</definition>
+        <argsstring>(int tickerId, int field, double impliedVolatility, double delta, double optPrice, double pvDividend, double gamma, double vega, double theta, double undPrice)</argsstring>
+        <name>tickOptionComputation</name>
+        <param>
+          <type>int</type>
+          <declname>tickerId</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>field</declname>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>impliedVolatility</declname>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>delta</declname>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>optPrice</declname>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>pvDividend</declname>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>gamma</declname>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>vega</declname>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>theta</declname>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>undPrice</declname>
+        </param>
+        <briefdescription>
+<para>Receive&apos;s option specific market data. This method is called when the market in an option or its underlier moves. TWS’s option model volatilities, prices, and deltas, along with the present value of dividends expected on that options underlier are received. </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="see"><para>TickType, <ref refid="interface_i_b_api_1_1_e_wrapper_a1844eb442fb657c0f2cc0a63e4e74eba_1a1844eb442fb657c0f2cc0a63e4e74eba" kindref="member">tickSize</ref>, <ref refid="interface_i_b_api_1_1_e_wrapper_aff4ae3269d7b13dd1ca989a8d5ca1ced_1aff4ae3269d7b13dd1ca989a8d5ca1ced" kindref="member">tickPrice</ref>, <ref refid="interface_i_b_api_1_1_e_wrapper_af8afed0428f2f848f15ac137d81283fc_1af8afed0428f2f848f15ac137d81283fc" kindref="member">tickEFP</ref>, <ref refid="interface_i_b_api_1_1_e_wrapper_a9901f14408b7a6f75b1d06e3e6196a26_1a9901f14408b7a6f75b1d06e3e6196a26" kindref="member">tickGeneric</ref>, <ref refid="interface_i_b_api_1_1_e_wrapper_a19cb7c5bbd4ab05ccc5f9e686ed07a9e_1a19cb7c5bbd4ab05ccc5f9e686ed07a9e" kindref="member">tickString</ref>, <ref refid="interface_i_b_api_1_1_e_wrapper_1a2d1c80705657202c82a0b8708ad0e169" kindref="member">tickSnapshotEnd</ref>, <ref refid="interface_i_b_api_1_1_e_wrapper_a79918660257f0e7ce77309bf3bccf13c_1a79918660257f0e7ce77309bf3bccf13c" kindref="member">marketDataType</ref>, EClientSocket::reqMktData </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="source/EWrapper.cs" line="115" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="interface_i_b_api_1_1_e_wrapper_1a2d1c80705657202c82a0b8708ad0e169" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void tickSnapshotEnd</definition>
+        <argsstring>(int tickerId)</argsstring>
+        <name>tickSnapshotEnd</name>
+        <param>
+          <type>int</type>
+          <declname>tickerId</declname>
+        </param>
+        <briefdescription>
+<para>When requesting market data snapshots, this market will indicate the snapshot reception is finished. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="source/EWrapper.cs" line="121" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="interface_i_b_api_1_1_e_wrapper_a09c07727efd297e438690ab42838d332_1a09c07727efd297e438690ab42838d332" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void nextValidId</definition>
+        <argsstring>(int orderId)</argsstring>
+        <name>nextValidId</name>
+        <param>
+          <type>int</type>
+          <declname>orderId</declname>
+        </param>
+        <briefdescription>
+<para>Receives next valid order id. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>orderId</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the next order id </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="see"><para>EClientSocket::reqIds </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="source/EWrapper.cs" line="128" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="interface_i_b_api_1_1_e_wrapper_abd7e561f313bcc4c860074906199a46c_1abd7e561f313bcc4c860074906199a46c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void managedAccounts</definition>
+        <argsstring>(string accountsList)</argsstring>
+        <name>managedAccounts</name>
+        <param>
+          <type>string</type>
+          <declname>accountsList</declname>
+        </param>
+        <briefdescription>
+<para>Receives a comma-separated string with the managed account ids. </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="see"><para>EClientSocket::reqManagedAccts </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="source/EWrapper.cs" line="134" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="interface_i_b_api_1_1_e_wrapper_a9b0f099dc421e5a48ec290cab67a8ad1_1a9b0f099dc421e5a48ec290cab67a8ad1" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void connectionClosed</definition>
+        <argsstring>()</argsstring>
+        <name>connectionClosed</name>
+        <briefdescription>
+<para>Notifes when the API-TWS connectivity has been closed. </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="see"><para>EClientSocket::eDisconnect </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="source/EWrapper.cs" line="140" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="interface_i_b_api_1_1_e_wrapper_acd761f48771f61dd0fb9e9a7d88d4f04_1acd761f48771f61dd0fb9e9a7d88d4f04" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void accountSummary</definition>
+        <argsstring>(int reqId, string account, string tag, string value, string currency)</argsstring>
+        <name>accountSummary</name>
+        <param>
+          <type>int</type>
+          <declname>reqId</declname>
+        </param>
+        <param>
+          <type>string</type>
+          <declname>account</declname>
+        </param>
+        <param>
+          <type>string</type>
+          <declname>tag</declname>
+        </param>
+        <param>
+          <type>string</type>
+          <declname>value</declname>
+        </param>
+        <param>
+          <type>string</type>
+          <declname>currency</declname>
+        </param>
+        <briefdescription>
+<para>Receives the account information. This method will receive the account information just as it appears in the TWS&apos; Account Summary Window. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>reqId</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the request&apos;s unique identifier. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>account</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the account id </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>tag</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the account&apos;s attribute being received. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>value</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the account&apos;s attribute&apos;s value. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>currency</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the currency on which the value is expressed. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="see"><para><ref refid="interface_i_b_api_1_1_e_wrapper_a12bf8483858526077140c950e80f2995_1a12bf8483858526077140c950e80f2995" kindref="member">accountSummaryEnd</ref>, EClientSocket::reqAccountSummary </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="source/EWrapper.cs" line="152" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="interface_i_b_api_1_1_e_wrapper_a12bf8483858526077140c950e80f2995_1a12bf8483858526077140c950e80f2995" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void accountSummaryEnd</definition>
+        <argsstring>(int reqId)</argsstring>
+        <name>accountSummaryEnd</name>
+        <param>
+          <type>int</type>
+          <declname>reqId</declname>
+        </param>
+        <briefdescription>
+<para>notifies when all the accounts&apos; information has ben received. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>reqId</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the request&apos;s identifier. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="see"><para><ref refid="interface_i_b_api_1_1_e_wrapper_acd761f48771f61dd0fb9e9a7d88d4f04_1acd761f48771f61dd0fb9e9a7d88d4f04" kindref="member">accountSummary</ref>, EClientSocket::reqAccountSummary </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="source/EWrapper.cs" line="159" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="interface_i_b_api_1_1_e_wrapper_1a40b122cde44711d81929df50f3a3f342" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void bondContractDetails</definition>
+        <argsstring>(int reqId, ContractDetails contract)</argsstring>
+        <name>bondContractDetails</name>
+        <param>
+          <type>int</type>
+          <declname>reqId</declname>
+        </param>
+        <param>
+          <type>ContractDetails</type>
+          <declname>contract</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="source/EWrapper.cs" line="167" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="interface_i_b_api_1_1_e_wrapper_ae15a34084d9f26f279abd0bdeab1b9b5_1ae15a34084d9f26f279abd0bdeab1b9b5" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void updateAccountValue</definition>
+        <argsstring>(string key, string value, string currency, string accountName)</argsstring>
+        <name>updateAccountValue</name>
+        <param>
+          <type>string</type>
+          <declname>key</declname>
+        </param>
+        <param>
+          <type>string</type>
+          <declname>value</declname>
+        </param>
+        <param>
+          <type>string</type>
+          <declname>currency</declname>
+        </param>
+        <param>
+          <type>string</type>
+          <declname>accountName</declname>
+        </param>
+        <briefdescription>
+<para>Receives the subscribed account&apos;s information. Only one account can be subscribed at a time. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>key</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the value being updated. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>value</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>up-to-date value </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>currency</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the currency on which the value is expressed. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>accountName</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the account </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="see"><para><ref refid="interface_i_b_api_1_1_e_wrapper_a4351084fa82b4bb13baf4e70107e22e9_1a4351084fa82b4bb13baf4e70107e22e9" kindref="member">updatePortfolio</ref>, <ref refid="interface_i_b_api_1_1_e_wrapper_a0f2fa798304a0cf101d57453f48c55f0_1a0f2fa798304a0cf101d57453f48c55f0" kindref="member">updateAccountTime</ref>, <ref refid="interface_i_b_api_1_1_e_wrapper_a05f35c1d896eeee696487d483110354f_1a05f35c1d896eeee696487d483110354f" kindref="member">accountDownloadEnd</ref>, EClientSocket::reqAccountUpdates </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="source/EWrapper.cs" line="178" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="interface_i_b_api_1_1_e_wrapper_a4351084fa82b4bb13baf4e70107e22e9_1a4351084fa82b4bb13baf4e70107e22e9" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void updatePortfolio</definition>
+        <argsstring>(Contract contract, double position, double marketPrice, double marketValue, double averageCost, double unrealisedPNL, double realisedPNL, string accountName)</argsstring>
+        <name>updatePortfolio</name>
+        <param>
+          <type>Contract</type>
+          <declname>contract</declname>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>position</declname>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>marketPrice</declname>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>marketValue</declname>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>averageCost</declname>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>unrealisedPNL</declname>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>realisedPNL</declname>
+        </param>
+        <param>
+          <type>string</type>
+          <declname>accountName</declname>
+        </param>
+        <briefdescription>
+<para>Receives the subscribed account&apos;s portfolio. This function will receive only the portfolio of the subscribed account. If the portfolios of all managed accounts are needed, refer to EClientSocket::reqPosition. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>contract</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the Contract for which a position is held. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>position</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the number of positions held. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>marketPrice</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>instrument&apos;s unitary price </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>marketValue</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>total market value of the instrument. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="see"><para><ref refid="interface_i_b_api_1_1_e_wrapper_a0f2fa798304a0cf101d57453f48c55f0_1a0f2fa798304a0cf101d57453f48c55f0" kindref="member">updateAccountTime</ref>, <ref refid="interface_i_b_api_1_1_e_wrapper_a05f35c1d896eeee696487d483110354f_1a05f35c1d896eeee696487d483110354f" kindref="member">accountDownloadEnd</ref>, <ref refid="interface_i_b_api_1_1_e_wrapper_ae15a34084d9f26f279abd0bdeab1b9b5_1ae15a34084d9f26f279abd0bdeab1b9b5" kindref="member">updateAccountValue</ref>, EClientSocket::reqAccountUpdates </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="source/EWrapper.cs" line="189" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="interface_i_b_api_1_1_e_wrapper_a0f2fa798304a0cf101d57453f48c55f0_1a0f2fa798304a0cf101d57453f48c55f0" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void updateAccountTime</definition>
+        <argsstring>(string timestamp)</argsstring>
+        <name>updateAccountTime</name>
+        <param>
+          <type>string</type>
+          <declname>timestamp</declname>
+        </param>
+        <briefdescription>
+<para>Receives the last time on which the account was updated. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>timestamp</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the last update system time. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="see"><para><ref refid="interface_i_b_api_1_1_e_wrapper_a4351084fa82b4bb13baf4e70107e22e9_1a4351084fa82b4bb13baf4e70107e22e9" kindref="member">updatePortfolio</ref>, <ref refid="interface_i_b_api_1_1_e_wrapper_a05f35c1d896eeee696487d483110354f_1a05f35c1d896eeee696487d483110354f" kindref="member">accountDownloadEnd</ref>, <ref refid="interface_i_b_api_1_1_e_wrapper_ae15a34084d9f26f279abd0bdeab1b9b5_1ae15a34084d9f26f279abd0bdeab1b9b5" kindref="member">updateAccountValue</ref>, EClientSocket::reqAccountUpdates </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="source/EWrapper.cs" line="197" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="interface_i_b_api_1_1_e_wrapper_a05f35c1d896eeee696487d483110354f_1a05f35c1d896eeee696487d483110354f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void accountDownloadEnd</definition>
+        <argsstring>(string account)</argsstring>
+        <name>accountDownloadEnd</name>
+        <param>
+          <type>string</type>
+          <declname>account</declname>
+        </param>
+        <briefdescription>
+<para>Notifies when all the account&apos;s information has finished. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>account</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the account&apos;s id </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="see"><para><ref refid="interface_i_b_api_1_1_e_wrapper_a0f2fa798304a0cf101d57453f48c55f0_1a0f2fa798304a0cf101d57453f48c55f0" kindref="member">updateAccountTime</ref>, <ref refid="interface_i_b_api_1_1_e_wrapper_a4351084fa82b4bb13baf4e70107e22e9_1a4351084fa82b4bb13baf4e70107e22e9" kindref="member">updatePortfolio</ref>, <ref refid="interface_i_b_api_1_1_e_wrapper_ae15a34084d9f26f279abd0bdeab1b9b5_1ae15a34084d9f26f279abd0bdeab1b9b5" kindref="member">updateAccountValue</ref>, EClientSocket::reqAccountUpdates </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="source/EWrapper.cs" line="204" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="interface_i_b_api_1_1_e_wrapper_a225c060ff9653cfaeff7304033eb76b3_1a225c060ff9653cfaeff7304033eb76b3" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void orderStatus</definition>
+        <argsstring>(int orderId, string status, double filled, double remaining, double avgFillPrice, int permId, int parentId, double lastFillPrice, int clientId, string whyHeld)</argsstring>
+        <name>orderStatus</name>
+        <param>
+          <type>int</type>
+          <declname>orderId</declname>
+        </param>
+        <param>
+          <type>string</type>
+          <declname>status</declname>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>filled</declname>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>remaining</declname>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>avgFillPrice</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>permId</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>parentId</declname>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>lastFillPrice</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>clientId</declname>
+        </param>
+        <param>
+          <type>string</type>
+          <declname>whyHeld</declname>
+        </param>
+        <briefdescription>
+<para>Gives the up-to-date information of an order every time it changes. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>orderId</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the order&apos;s client id. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>status</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the current status of the order: PendingSubmit - indicates that you have transmitted the order, but have not yet received confirmation that it has been accepted by the order destination. NOTE: This order status is not sent by TWS and should be explicitly set by the API developer when an order is submitted. PendingCancel - indicates that you have sent a request to cancel the order but have not yet received cancel confirmation from the order destination. At this point, your order is not confirmed canceled. You may still receive an execution while your cancellation request is pending. NOTE: This order status is not sent by TWS and should be explicitly set by the API developer when an order is canceled. PreSubmitted - indicates that a simulated order type has been accepted by the IB system and that this order has yet to be elected. The order is held in the IB system until the election criteria are met. At that time the order is transmitted to the order destination as specified . Submitted - indicates that your order has been accepted at the order destination and is working. ApiCanceled - after an order has been submitted and before it has been acknowledged, an API client client can request its cancelation, producing this state. Cancelled - indicates that the balance of your order has been confirmed canceled by the IB system. This could occur unexpectedly when IB or the destination has rejected your order. Filled - indicates that the order has been completely filled. Inactive - indicates that the order has been accepted by the system (simulated orders) or an exchange (native orders) but that currently the order is inactive due to system, exchange or other issues. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>filled</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>number of filled positions. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>remaining</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the remnant positions. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>avgFillPrice</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>average filling price. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>permId</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the order&apos;s permId used by the TWs to identify orders. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>parentId</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>parent&apos;s id. Used for bracker and auto trailing stop orders. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>lastFillPrice</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>price at which the last positions were filled. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>clientId</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>API client which submitted the order. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>whyHeld</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>this field is used to identify an order held when TWS is trying to locate shares for a short sell. The value used to indicate this is &apos;locate&apos;. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="see"><para><ref refid="interface_i_b_api_1_1_e_wrapper_aa05258f1d005accd3efc0d60bc151407_1aa05258f1d005accd3efc0d60bc151407" kindref="member">openOrder</ref>, <ref refid="interface_i_b_api_1_1_e_wrapper_ab86caf7ed61e14d9b5609e8dd60b93e1_1ab86caf7ed61e14d9b5609e8dd60b93e1" kindref="member">openOrderEnd</ref>, EClientSocket::placeOrder, EClientSocket::reqAllOpenOrders, EClientSocket::reqAutoOpenOrders </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="source/EWrapper.cs" line="228" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="interface_i_b_api_1_1_e_wrapper_aa05258f1d005accd3efc0d60bc151407_1aa05258f1d005accd3efc0d60bc151407" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void openOrder</definition>
+        <argsstring>(int orderId, Contract contract, Order order, OrderState orderState)</argsstring>
+        <name>openOrder</name>
+        <param>
+          <type>int</type>
+          <declname>orderId</declname>
+        </param>
+        <param>
+          <type>Contract</type>
+          <declname>contract</declname>
+        </param>
+        <param>
+          <type>Order</type>
+          <declname>order</declname>
+        </param>
+        <param>
+          <type>OrderState</type>
+          <declname>orderState</declname>
+        </param>
+        <briefdescription>
+<para>Feeds in currently open orders. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>orderId</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the order&apos;s unique id </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>contract</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the order&apos;s Contract. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>order</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the currently active Order. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>orderState</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the order&apos;s OrderState </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="see"><para><ref refid="interface_i_b_api_1_1_e_wrapper_a225c060ff9653cfaeff7304033eb76b3_1a225c060ff9653cfaeff7304033eb76b3" kindref="member">orderStatus</ref>, <ref refid="interface_i_b_api_1_1_e_wrapper_ab86caf7ed61e14d9b5609e8dd60b93e1_1ab86caf7ed61e14d9b5609e8dd60b93e1" kindref="member">openOrderEnd</ref>, EClientSocket::placeOrder, EClientSocket::reqAllOpenOrders, EClientSocket::reqAutoOpenOrders </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="source/EWrapper.cs" line="239" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="interface_i_b_api_1_1_e_wrapper_ab86caf7ed61e14d9b5609e8dd60b93e1_1ab86caf7ed61e14d9b5609e8dd60b93e1" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void openOrderEnd</definition>
+        <argsstring>()</argsstring>
+        <name>openOrderEnd</name>
+        <briefdescription>
+<para>Notifies the end of the open orders&apos; reception. </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="see"><para><ref refid="interface_i_b_api_1_1_e_wrapper_a225c060ff9653cfaeff7304033eb76b3_1a225c060ff9653cfaeff7304033eb76b3" kindref="member">orderStatus</ref>, <ref refid="interface_i_b_api_1_1_e_wrapper_aa05258f1d005accd3efc0d60bc151407_1aa05258f1d005accd3efc0d60bc151407" kindref="member">openOrder</ref>, EClientSocket::placeOrder, EClientSocket::reqAllOpenOrders, EClientSocket::reqAutoOpenOrders </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="source/EWrapper.cs" line="245" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="interface_i_b_api_1_1_e_wrapper_a1b767810613c700b5bb1056a836da0bc_1a1b767810613c700b5bb1056a836da0bc" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void contractDetails</definition>
+        <argsstring>(int reqId, ContractDetails contractDetails)</argsstring>
+        <name>contractDetails</name>
+        <param>
+          <type>int</type>
+          <declname>reqId</declname>
+        </param>
+        <param>
+          <type>ContractDetails</type>
+          <declname>contractDetails</declname>
+        </param>
+        <briefdescription>
+<para>receives the full contract&apos;s definitons This method will return all contracts matching the requested via EClientSocket::reqContractDetails. For example, one can obtain the whole option chain with it. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>reqId</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the unique request identifier </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>contractDetails</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the instrument&apos;s complete definition. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="see"><para><ref refid="interface_i_b_api_1_1_e_wrapper_a4e9466339bac7149c2fdb48cda0dd088_1a4e9466339bac7149c2fdb48cda0dd088" kindref="member">contractDetailsEnd</ref>, EClientSocket::reqContractDetails </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="source/EWrapper.cs" line="254" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="interface_i_b_api_1_1_e_wrapper_a4e9466339bac7149c2fdb48cda0dd088_1a4e9466339bac7149c2fdb48cda0dd088" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void contractDetailsEnd</definition>
+        <argsstring>(int reqId)</argsstring>
+        <name>contractDetailsEnd</name>
+        <param>
+          <type>int</type>
+          <declname>reqId</declname>
+        </param>
+        <briefdescription>
+<para>After all contracts matching the request were returned, this method will mark the end of their reception. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>reqId</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the request&apos;s identifier </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="see"><para><ref refid="interface_i_b_api_1_1_e_wrapper_a1b767810613c700b5bb1056a836da0bc_1a1b767810613c700b5bb1056a836da0bc" kindref="member">contractDetails</ref>, EClientSocket::reqContractDetails </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="source/EWrapper.cs" line="261" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="interface_i_b_api_1_1_e_wrapper_a09f82de3d0666d13b00b5168e8b9313d_1a09f82de3d0666d13b00b5168e8b9313d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void execDetails</definition>
+        <argsstring>(int reqId, Contract contract, Execution execution)</argsstring>
+        <name>execDetails</name>
+        <param>
+          <type>int</type>
+          <declname>reqId</declname>
+        </param>
+        <param>
+          <type>Contract</type>
+          <declname>contract</declname>
+        </param>
+        <param>
+          <type>Execution</type>
+          <declname>execution</declname>
+        </param>
+        <briefdescription>
+<para>Provides the executions which happened in the last 24 hours. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>reqId</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the request&apos;s identifier </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>contract</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the Contract of the Order </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>execution</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the Execution details. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="see"><para><ref refid="interface_i_b_api_1_1_e_wrapper_ac9b605c48d60da99ef595d2bc7ca39e2_1ac9b605c48d60da99ef595d2bc7ca39e2" kindref="member">execDetailsEnd</ref>, <ref refid="interface_i_b_api_1_1_e_wrapper_a7ebfc18d5d03189ab5bf895db4a1a204_1a7ebfc18d5d03189ab5bf895db4a1a204" kindref="member">commissionReport</ref>, EClientSocket::reqExecutions, Execution </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="source/EWrapper.cs" line="270" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="interface_i_b_api_1_1_e_wrapper_ac9b605c48d60da99ef595d2bc7ca39e2_1ac9b605c48d60da99ef595d2bc7ca39e2" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void execDetailsEnd</definition>
+        <argsstring>(int reqId)</argsstring>
+        <name>execDetailsEnd</name>
+        <param>
+          <type>int</type>
+          <declname>reqId</declname>
+        </param>
+        <briefdescription>
+<para>indicates the end of the Execution reception. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>reqId</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the request&apos;s identifier </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="see"><para><ref refid="interface_i_b_api_1_1_e_wrapper_a09f82de3d0666d13b00b5168e8b9313d_1a09f82de3d0666d13b00b5168e8b9313d" kindref="member">execDetails</ref>, <ref refid="interface_i_b_api_1_1_e_wrapper_a7ebfc18d5d03189ab5bf895db4a1a204_1a7ebfc18d5d03189ab5bf895db4a1a204" kindref="member">commissionReport</ref>, EClientSocket::reqExecutions </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="source/EWrapper.cs" line="277" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="interface_i_b_api_1_1_e_wrapper_a7ebfc18d5d03189ab5bf895db4a1a204_1a7ebfc18d5d03189ab5bf895db4a1a204" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void commissionReport</definition>
+        <argsstring>(CommissionReport commissionReport)</argsstring>
+        <name>commissionReport</name>
+        <param>
+          <type>CommissionReport</type>
+          <declname>commissionReport</declname>
+        </param>
+        <briefdescription>
+<para>provides the CommissionReport of an Execution </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="see"><para><ref refid="interface_i_b_api_1_1_e_wrapper_a09f82de3d0666d13b00b5168e8b9313d_1a09f82de3d0666d13b00b5168e8b9313d" kindref="member">execDetails</ref>, <ref refid="interface_i_b_api_1_1_e_wrapper_ac9b605c48d60da99ef595d2bc7ca39e2_1ac9b605c48d60da99ef595d2bc7ca39e2" kindref="member">execDetailsEnd</ref>, EClientSocket::reqExecutions, CommissionReport </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="source/EWrapper.cs" line="283" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="interface_i_b_api_1_1_e_wrapper_af209070fa9583fb4780be0f3ff1e61e4_1af209070fa9583fb4780be0f3ff1e61e4" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void fundamentalData</definition>
+        <argsstring>(int reqId, string data)</argsstring>
+        <name>fundamentalData</name>
+        <param>
+          <type>int</type>
+          <declname>reqId</declname>
+        </param>
+        <param>
+          <type>string</type>
+          <declname>data</declname>
+        </param>
+        <briefdescription>
+<para>returns Reuters&apos; Fundamental data </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>reqId</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the request&apos;s identifier </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>data</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Reuthers xml-formatted fundamental data </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="see"><para>EClientSocket::reqFundamentalData </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="source/EWrapper.cs" line="291" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="interface_i_b_api_1_1_e_wrapper_a5cfc0dff9d3e3470f4c9209163279cda_1a5cfc0dff9d3e3470f4c9209163279cda" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void historicalData</definition>
+        <argsstring>(int reqId, string date, double open, double high, double low, double close, int volume, int count, double WAP, bool hasGaps)</argsstring>
+        <name>historicalData</name>
+        <param>
+          <type>int</type>
+          <declname>reqId</declname>
+        </param>
+        <param>
+          <type>string</type>
+          <declname>date</declname>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>open</declname>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>high</declname>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>low</declname>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>close</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>volume</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>count</declname>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>WAP</declname>
+        </param>
+        <param>
+          <type>bool</type>
+          <declname>hasGaps</declname>
+        </param>
+        <briefdescription>
+<para>returns the requested historical data bars </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>reqId</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the request&apos;s identifier </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>date</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the bar&apos;s date and time (either as a yyyymmss hh:mm:ss formatted string or as system time according to the request) </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>open</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the bar&apos;s open point </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>high</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the bar&apos;s high point </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>low</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the bar&apos;s low point </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>close</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the bar&apos;s closing point </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>volume</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the bar&apos;s traded volume if available </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>count</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the number of trades during the bar&apos;s timespan (only available for TRADES). </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>WAP</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the bar&apos;s Weighted Average Price </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>hasGaps</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>indicates if the data has gaps or not. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="see"><para>EClientSocket::reqHistoricalData </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="source/EWrapper.cs" line="307" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="interface_i_b_api_1_1_e_wrapper_1a715bb6750de66a0e072a910e697e20cf" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void historicalDataEnd</definition>
+        <argsstring>(int reqId, string start, string end)</argsstring>
+        <name>historicalDataEnd</name>
+        <param>
+          <type>int</type>
+          <declname>reqId</declname>
+        </param>
+        <param>
+          <type>string</type>
+          <declname>start</declname>
+        </param>
+        <param>
+          <type>string</type>
+          <declname>end</declname>
+        </param>
+        <briefdescription>
+<para>Marks the ending of the historical bars reception. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="source/EWrapper.cs" line="313" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="interface_i_b_api_1_1_e_wrapper_a79918660257f0e7ce77309bf3bccf13c_1a79918660257f0e7ce77309bf3bccf13c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void marketDataType</definition>
+        <argsstring>(int reqId, int marketDataType)</argsstring>
+        <name>marketDataType</name>
+        <param>
+          <type>int</type>
+          <declname>reqId</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>marketDataType</declname>
+        </param>
+        <briefdescription>
+<para>Returns the current market data type (frozen or real time streamed) </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>reqId</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the request&apos;s identifier </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>marketDataType</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>1 for real time, 2 for frozen </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="see"><para>EClientSocket::reqMarketDataType </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="source/EWrapper.cs" line="321" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="interface_i_b_api_1_1_e_wrapper_ab0d68c4cf7093f105095d72dd7e7a912_1ab0d68c4cf7093f105095d72dd7e7a912" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void updateMktDepth</definition>
+        <argsstring>(int tickerId, int position, int operation, int side, double price, int size)</argsstring>
+        <name>updateMktDepth</name>
+        <param>
+          <type>int</type>
+          <declname>tickerId</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>position</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>operation</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>side</declname>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>price</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>size</declname>
+        </param>
+        <briefdescription>
+<para>Returns the order book. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>tickerId</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the request&apos;s identifier </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>position</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the order book&apos;s row being updated </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>operation</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>how to refresh the row: 0 = insert (insert this new order into the row identified by &apos;position&apos;)· 1 = update (update the existing order in the row identified by &apos;position&apos;)· 2 = delete (delete the existing order at the row identified by &apos;position&apos;). </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>side</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>0 for ask, 1 for bid </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>price</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the order&apos;s price </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>size</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the order&apos;s size </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="see"><para><ref refid="interface_i_b_api_1_1_e_wrapper_ad8afb71cd866b423a84555f500992968_1ad8afb71cd866b423a84555f500992968" kindref="member">updateMktDepthL2</ref>, EClientSocket::reqMarketDepth </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="source/EWrapper.cs" line="336" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="interface_i_b_api_1_1_e_wrapper_ad8afb71cd866b423a84555f500992968_1ad8afb71cd866b423a84555f500992968" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void updateMktDepthL2</definition>
+        <argsstring>(int tickerId, int position, string marketMaker, int operation, int side, double price, int size)</argsstring>
+        <name>updateMktDepthL2</name>
+        <param>
+          <type>int</type>
+          <declname>tickerId</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>position</declname>
+        </param>
+        <param>
+          <type>string</type>
+          <declname>marketMaker</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>operation</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>side</declname>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>price</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>size</declname>
+        </param>
+        <briefdescription>
+<para>Returns the order book. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>tickerId</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the request&apos;s identifier </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>position</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the order book&apos;s row being updated </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>marketMaker</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the exchange holding the order </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>operation</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>how to refresh the row: 0 - insert (insert this new order into the row identified by &apos;position&apos;)· 1 - update (update the existing order in the row identified by &apos;position&apos;)· 2 - delete (delete the existing order at the row identified by &apos;position&apos;). </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>side</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>0 for ask, 1 for bid </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>price</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the order&apos;s price </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>size</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the order&apos;s size </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="see"><para><ref refid="interface_i_b_api_1_1_e_wrapper_ab0d68c4cf7093f105095d72dd7e7a912_1ab0d68c4cf7093f105095d72dd7e7a912" kindref="member">updateMktDepth</ref>, EClientSocket::reqMarketDepth </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="source/EWrapper.cs" line="352" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="interface_i_b_api_1_1_e_wrapper_a3286ab81957d224345888153bce59082_1a3286ab81957d224345888153bce59082" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void updateNewsBulletin</definition>
+        <argsstring>(int msgId, int msgType, String message, String origExchange)</argsstring>
+        <name>updateNewsBulletin</name>
+        <param>
+          <type>int</type>
+          <declname>msgId</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>msgType</declname>
+        </param>
+        <param>
+          <type>String</type>
+          <declname>message</declname>
+        </param>
+        <param>
+          <type>String</type>
+          <declname>origExchange</declname>
+        </param>
+        <briefdescription>
+<para>provides IB&apos;s bulletins </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>msgId</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the bulletin&apos;s identifier </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>msgType</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>one of: 1 - Regular news bulletin 2 - Exchange no longer available for trading 3 - Exchange is available for trading </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>message</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the message </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>origExchange</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the exchange where the message comes from. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="source/EWrapper.cs" line="364" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="interface_i_b_api_1_1_e_wrapper_af4105e2dae9efd6f6bb56f706374c9d6_1af4105e2dae9efd6f6bb56f706374c9d6" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void position</definition>
+        <argsstring>(string account, Contract contract, double pos, double avgCost)</argsstring>
+        <name>position</name>
+        <param>
+          <type>string</type>
+          <declname>account</declname>
+        </param>
+        <param>
+          <type>Contract</type>
+          <declname>contract</declname>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>pos</declname>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>avgCost</declname>
+        </param>
+        <briefdescription>
+<para>provides the portfolio&apos;s open positions. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>account</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the account holding the position. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>contract</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the position&apos;s Contract </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>pos</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the number of positions held.  avgCost the average cost of the position. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="see"><para><ref refid="interface_i_b_api_1_1_e_wrapper_acf1bebfc1b29cbeff32da7d53aec0971_1acf1bebfc1b29cbeff32da7d53aec0971" kindref="member">positionEnd</ref>, EClientSocket::reqPositions </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="source/EWrapper.cs" line="374" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="interface_i_b_api_1_1_e_wrapper_acf1bebfc1b29cbeff32da7d53aec0971_1acf1bebfc1b29cbeff32da7d53aec0971" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void positionEnd</definition>
+        <argsstring>()</argsstring>
+        <name>positionEnd</name>
+        <briefdescription>
+<para>Indicates all the positions have been transmitted. </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="see"><para><ref refid="interface_i_b_api_1_1_e_wrapper_af4105e2dae9efd6f6bb56f706374c9d6_1af4105e2dae9efd6f6bb56f706374c9d6" kindref="member">position</ref>, reqPositions </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="source/EWrapper.cs" line="380" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="interface_i_b_api_1_1_e_wrapper_ac23fa61ac0221a489ecd4566d1b320fe_1ac23fa61ac0221a489ecd4566d1b320fe" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void realtimeBar</definition>
+        <argsstring>(int reqId, long time, double open, double high, double low, double close, long volume, double WAP, int count)</argsstring>
+        <name>realtimeBar</name>
+        <param>
+          <type>int</type>
+          <declname>reqId</declname>
+        </param>
+        <param>
+          <type>long</type>
+          <declname>time</declname>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>open</declname>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>high</declname>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>low</declname>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>close</declname>
+        </param>
+        <param>
+          <type>long</type>
+          <declname>volume</declname>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>WAP</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>count</declname>
+        </param>
+        <briefdescription>
+<para>updates the real time 5 seconds bars </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>reqId</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the request&apos;s identifier </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>date</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the bar&apos;s date and time (either as a yyyymmss hh:mm:ss formatted string or as system time according to the request) </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>open</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the bar&apos;s open point </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>high</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the bar&apos;s high point </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>low</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the bar&apos;s low point </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>close</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the bar&apos;s closing point </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>volume</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the bar&apos;s traded volume if available </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>WAP</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the bar&apos;s Weighted Average Price </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>count</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the number of trades during the bar&apos;s timespan (only available for TRADES). </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="see"><para>EClientSocket::reqRealTimeBars </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="source/EWrapper.cs" line="395" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="interface_i_b_api_1_1_e_wrapper_a24890ab0ae2ed757f93b505e5b05dacc_1a24890ab0ae2ed757f93b505e5b05dacc" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void scannerParameters</definition>
+        <argsstring>(string xml)</argsstring>
+        <name>scannerParameters</name>
+        <param>
+          <type>string</type>
+          <declname>xml</declname>
+        </param>
+        <briefdescription>
+<para>provides the xml-formatted parameters available to create a market scanner. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>xml</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the xml-formatted string with the available parameters. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="see"><para><ref refid="interface_i_b_api_1_1_e_wrapper_a973d71a29aa397fc21f51113b1a12461_1a973d71a29aa397fc21f51113b1a12461" kindref="member">scannerData</ref>, EClientSocket::reqScannerParameters </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="source/EWrapper.cs" line="402" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="interface_i_b_api_1_1_e_wrapper_a973d71a29aa397fc21f51113b1a12461_1a973d71a29aa397fc21f51113b1a12461" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void scannerData</definition>
+        <argsstring>(int reqId, int rank, ContractDetails contractDetails, string distance, string benchmark, string projection, string legsStr)</argsstring>
+        <name>scannerData</name>
+        <param>
+          <type>int</type>
+          <declname>reqId</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>rank</declname>
+        </param>
+        <param>
+          <type>ContractDetails</type>
+          <declname>contractDetails</declname>
+        </param>
+        <param>
+          <type>string</type>
+          <declname>distance</declname>
+        </param>
+        <param>
+          <type>string</type>
+          <declname>benchmark</declname>
+        </param>
+        <param>
+          <type>string</type>
+          <declname>projection</declname>
+        </param>
+        <param>
+          <type>string</type>
+          <declname>legsStr</declname>
+        </param>
+        <briefdescription>
+<para>provides the data resulting from the market scanner request. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>reqid</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the request&apos;s identifier. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>rank</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the ranking within the response of this bar. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>contractDetails</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the data&apos;s ContractDetails </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>distance</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>according to query. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>benchmark</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>according to query. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>projection</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>according to query. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>legStr</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>describes the combo legs when the scanner is returning EFP </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="see"><para><ref refid="interface_i_b_api_1_1_e_wrapper_a24890ab0ae2ed757f93b505e5b05dacc_1a24890ab0ae2ed757f93b505e5b05dacc" kindref="member">scannerParameters</ref>, <ref refid="interface_i_b_api_1_1_e_wrapper_a54d829186800287ac87c77a6a38a1917_1a54d829186800287ac87c77a6a38a1917" kindref="member">scannerDataEnd</ref>, EClientSocket::reqScannerSubscription </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="source/EWrapper.cs" line="415" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="interface_i_b_api_1_1_e_wrapper_a54d829186800287ac87c77a6a38a1917_1a54d829186800287ac87c77a6a38a1917" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void scannerDataEnd</definition>
+        <argsstring>(int reqId)</argsstring>
+        <name>scannerDataEnd</name>
+        <param>
+          <type>int</type>
+          <declname>reqId</declname>
+        </param>
+        <briefdescription>
+<para>Indicates the scanner data reception has terminated. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>reqId</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the request&apos;s identifier </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="see"><para><ref refid="interface_i_b_api_1_1_e_wrapper_a24890ab0ae2ed757f93b505e5b05dacc_1a24890ab0ae2ed757f93b505e5b05dacc" kindref="member">scannerParameters</ref>, <ref refid="interface_i_b_api_1_1_e_wrapper_a973d71a29aa397fc21f51113b1a12461_1a973d71a29aa397fc21f51113b1a12461" kindref="member">scannerData</ref>, <ref refid="class_e_client_socket" kindref="compound">EClientSocket</ref>&gt;&gt;reqScannerSubscription </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="source/EWrapper.cs" line="422" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="interface_i_b_api_1_1_e_wrapper_ac79344d06112e6145bccb3794270ee3c_1ac79344d06112e6145bccb3794270ee3c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void receiveFA</definition>
+        <argsstring>(int faDataType, string faXmlData)</argsstring>
+        <name>receiveFA</name>
+        <param>
+          <type>int</type>
+          <declname>faDataType</declname>
+        </param>
+        <param>
+          <type>string</type>
+          <declname>faXmlData</declname>
+        </param>
+        <briefdescription>
+<para>receives the Financial Advisor&apos;s configuration available in the TWS </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>faDataType</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>one of:<orderedlist>
+<listitem><para>Groups: offer traders a way to create a group of accounts and apply a single allocation method to all accounts in the group.</para></listitem><listitem><para>Profiles: let you allocate shares on an account-by-account basis using a predefined calculation value.</para></listitem><listitem><para>Account Aliases: let you easily identify the accounts by meaningful names rather than account numbers. </para></listitem></orderedlist>
+</para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>faXmlData</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the xml-formatted configuration </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="see"><para>EClientSocket::requestFA, EClientSocket::replaceFA </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="source/EWrapper.cs" line="433" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="interface_i_b_api_1_1_e_wrapper_1a2bc45bf2d7710fb5590171763eb76b94" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void verifyMessageAPI</definition>
+        <argsstring>(string apiData)</argsstring>
+        <name>verifyMessageAPI</name>
+        <param>
+          <type>string</type>
+          <declname>apiData</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="source/EWrapper.cs" line="436" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="interface_i_b_api_1_1_e_wrapper_1a26641bd5bd24991d629574a5b551ff39" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void verifyCompleted</definition>
+        <argsstring>(bool isSuccessful, string errorText)</argsstring>
+        <name>verifyCompleted</name>
+        <param>
+          <type>bool</type>
+          <declname>isSuccessful</declname>
+        </param>
+        <param>
+          <type>string</type>
+          <declname>errorText</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="source/EWrapper.cs" line="437" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="interface_i_b_api_1_1_e_wrapper_1a037e65efa0f4f4d2f6a643ac75f064bc" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void verifyAndAuthMessageAPI</definition>
+        <argsstring>(string apiData, string xyzChallenge)</argsstring>
+        <name>verifyAndAuthMessageAPI</name>
+        <param>
+          <type>string</type>
+          <declname>apiData</declname>
+        </param>
+        <param>
+          <type>string</type>
+          <declname>xyzChallenge</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="source/EWrapper.cs" line="438" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="interface_i_b_api_1_1_e_wrapper_1afe1e68d1f6bad2a634928e662342c388" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void verifyAndAuthCompleted</definition>
+        <argsstring>(bool isSuccessful, string errorText)</argsstring>
+        <name>verifyAndAuthCompleted</name>
+        <param>
+          <type>bool</type>
+          <declname>isSuccessful</declname>
+        </param>
+        <param>
+          <type>string</type>
+          <declname>errorText</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="source/EWrapper.cs" line="439" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="interface_i_b_api_1_1_e_wrapper_1ac36bbb024e3aa3873b8fd08f8848943f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void displayGroupList</definition>
+        <argsstring>(int reqId, string groups)</argsstring>
+        <name>displayGroupList</name>
+        <param>
+          <type>int</type>
+          <declname>reqId</declname>
+        </param>
+        <param>
+          <type>string</type>
+          <declname>groups</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="source/EWrapper.cs" line="440" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="interface_i_b_api_1_1_e_wrapper_1a9d7f55fc848c0329c3482d198b188f70" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void displayGroupUpdated</definition>
+        <argsstring>(int reqId, string contractInfo)</argsstring>
+        <name>displayGroupUpdated</name>
+        <param>
+          <type>int</type>
+          <declname>reqId</declname>
+        </param>
+        <param>
+          <type>string</type>
+          <declname>contractInfo</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="source/EWrapper.cs" line="441" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="interface_i_b_api_1_1_e_wrapper_1af9a662ffc740646d319356f65725f15f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void connectAck</definition>
+        <argsstring>()</argsstring>
+        <name>connectAck</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="source/EWrapper.cs" line="442" column="1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>This interface&apos;s methods are used by the TWS/Gateway to communicate with the API client. Every API client application needs to implement this interface in order to handle all the events generated by the TWS/Gateway. Almost every <ref refid="class_e_client_socket" kindref="compound">EClientSocket</ref> method call will result in at least one event delivered here. </para>    </briefdescription>
+    <detaileddescription>
+<para><simplesect kind="see"><para><ref refid="class_e_client_socket" kindref="compound">EClientSocket</ref> class </para></simplesect>
+</para>    </detaileddescription>
+    <location file="source/EWrapper.cs" line="18" column="1" bodyfile="source/EWrapper.cs" bodystart="17" bodyend="443"/>
+    <listofallmembers>
+      <member refid="interface_i_b_api_1_1_e_wrapper_a05f35c1d896eeee696487d483110354f_1a05f35c1d896eeee696487d483110354f" prot="public" virt="non-virtual"><scope>IBApi::EWrapper</scope><name>accountDownloadEnd</name></member>
+      <member refid="interface_i_b_api_1_1_e_wrapper_acd761f48771f61dd0fb9e9a7d88d4f04_1acd761f48771f61dd0fb9e9a7d88d4f04" prot="public" virt="non-virtual"><scope>IBApi::EWrapper</scope><name>accountSummary</name></member>
+      <member refid="interface_i_b_api_1_1_e_wrapper_a12bf8483858526077140c950e80f2995_1a12bf8483858526077140c950e80f2995" prot="public" virt="non-virtual"><scope>IBApi::EWrapper</scope><name>accountSummaryEnd</name></member>
+      <member refid="interface_i_b_api_1_1_e_wrapper_1a40b122cde44711d81929df50f3a3f342" prot="public" virt="non-virtual"><scope>IBApi::EWrapper</scope><name>bondContractDetails</name></member>
+      <member refid="interface_i_b_api_1_1_e_wrapper_a7ebfc18d5d03189ab5bf895db4a1a204_1a7ebfc18d5d03189ab5bf895db4a1a204" prot="public" virt="non-virtual"><scope>IBApi::EWrapper</scope><name>commissionReport</name></member>
+      <member refid="interface_i_b_api_1_1_e_wrapper_1af9a662ffc740646d319356f65725f15f" prot="public" virt="non-virtual"><scope>IBApi::EWrapper</scope><name>connectAck</name></member>
+      <member refid="interface_i_b_api_1_1_e_wrapper_a9b0f099dc421e5a48ec290cab67a8ad1_1a9b0f099dc421e5a48ec290cab67a8ad1" prot="public" virt="non-virtual"><scope>IBApi::EWrapper</scope><name>connectionClosed</name></member>
+      <member refid="interface_i_b_api_1_1_e_wrapper_a1b767810613c700b5bb1056a836da0bc_1a1b767810613c700b5bb1056a836da0bc" prot="public" virt="non-virtual"><scope>IBApi::EWrapper</scope><name>contractDetails</name></member>
+      <member refid="interface_i_b_api_1_1_e_wrapper_a4e9466339bac7149c2fdb48cda0dd088_1a4e9466339bac7149c2fdb48cda0dd088" prot="public" virt="non-virtual"><scope>IBApi::EWrapper</scope><name>contractDetailsEnd</name></member>
+      <member refid="interface_i_b_api_1_1_e_wrapper_a7004c6c027c90ecdc1f5c68759e37fd2_1a7004c6c027c90ecdc1f5c68759e37fd2" prot="public" virt="non-virtual"><scope>IBApi::EWrapper</scope><name>currentTime</name></member>
+      <member refid="interface_i_b_api_1_1_e_wrapper_abf465aff35de5e6c8ea15cecc953de3a_1abf465aff35de5e6c8ea15cecc953de3a" prot="public" virt="non-virtual"><scope>IBApi::EWrapper</scope><name>deltaNeutralValidation</name></member>
+      <member refid="interface_i_b_api_1_1_e_wrapper_1ac36bbb024e3aa3873b8fd08f8848943f" prot="public" virt="non-virtual"><scope>IBApi::EWrapper</scope><name>displayGroupList</name></member>
+      <member refid="interface_i_b_api_1_1_e_wrapper_1a9d7f55fc848c0329c3482d198b188f70" prot="public" virt="non-virtual"><scope>IBApi::EWrapper</scope><name>displayGroupUpdated</name></member>
+      <member refid="interface_i_b_api_1_1_e_wrapper_a7dfc221702ca65195609213c984729b8_1a7dfc221702ca65195609213c984729b8" prot="public" virt="non-virtual"><scope>IBApi::EWrapper</scope><name>error</name></member>
+      <member refid="interface_i_b_api_1_1_e_wrapper_a5d5b40b4377acc0dd2aecb3c88cf0099_1a5d5b40b4377acc0dd2aecb3c88cf0099" prot="public" virt="non-virtual"><scope>IBApi::EWrapper</scope><name>error</name></member>
+      <member refid="interface_i_b_api_1_1_e_wrapper_a0dd0ca408b9ef70181cec1e5ac938039_1a0dd0ca408b9ef70181cec1e5ac938039" prot="public" virt="non-virtual"><scope>IBApi::EWrapper</scope><name>error</name></member>
+      <member refid="interface_i_b_api_1_1_e_wrapper_a09f82de3d0666d13b00b5168e8b9313d_1a09f82de3d0666d13b00b5168e8b9313d" prot="public" virt="non-virtual"><scope>IBApi::EWrapper</scope><name>execDetails</name></member>
+      <member refid="interface_i_b_api_1_1_e_wrapper_ac9b605c48d60da99ef595d2bc7ca39e2_1ac9b605c48d60da99ef595d2bc7ca39e2" prot="public" virt="non-virtual"><scope>IBApi::EWrapper</scope><name>execDetailsEnd</name></member>
+      <member refid="interface_i_b_api_1_1_e_wrapper_af209070fa9583fb4780be0f3ff1e61e4_1af209070fa9583fb4780be0f3ff1e61e4" prot="public" virt="non-virtual"><scope>IBApi::EWrapper</scope><name>fundamentalData</name></member>
+      <member refid="interface_i_b_api_1_1_e_wrapper_a5cfc0dff9d3e3470f4c9209163279cda_1a5cfc0dff9d3e3470f4c9209163279cda" prot="public" virt="non-virtual"><scope>IBApi::EWrapper</scope><name>historicalData</name></member>
+      <member refid="interface_i_b_api_1_1_e_wrapper_1a715bb6750de66a0e072a910e697e20cf" prot="public" virt="non-virtual"><scope>IBApi::EWrapper</scope><name>historicalDataEnd</name></member>
+      <member refid="interface_i_b_api_1_1_e_wrapper_abd7e561f313bcc4c860074906199a46c_1abd7e561f313bcc4c860074906199a46c" prot="public" virt="non-virtual"><scope>IBApi::EWrapper</scope><name>managedAccounts</name></member>
+      <member refid="interface_i_b_api_1_1_e_wrapper_a79918660257f0e7ce77309bf3bccf13c_1a79918660257f0e7ce77309bf3bccf13c" prot="public" virt="non-virtual"><scope>IBApi::EWrapper</scope><name>marketDataType</name></member>
+      <member refid="interface_i_b_api_1_1_e_wrapper_a09c07727efd297e438690ab42838d332_1a09c07727efd297e438690ab42838d332" prot="public" virt="non-virtual"><scope>IBApi::EWrapper</scope><name>nextValidId</name></member>
+      <member refid="interface_i_b_api_1_1_e_wrapper_aa05258f1d005accd3efc0d60bc151407_1aa05258f1d005accd3efc0d60bc151407" prot="public" virt="non-virtual"><scope>IBApi::EWrapper</scope><name>openOrder</name></member>
+      <member refid="interface_i_b_api_1_1_e_wrapper_ab86caf7ed61e14d9b5609e8dd60b93e1_1ab86caf7ed61e14d9b5609e8dd60b93e1" prot="public" virt="non-virtual"><scope>IBApi::EWrapper</scope><name>openOrderEnd</name></member>
+      <member refid="interface_i_b_api_1_1_e_wrapper_a225c060ff9653cfaeff7304033eb76b3_1a225c060ff9653cfaeff7304033eb76b3" prot="public" virt="non-virtual"><scope>IBApi::EWrapper</scope><name>orderStatus</name></member>
+      <member refid="interface_i_b_api_1_1_e_wrapper_af4105e2dae9efd6f6bb56f706374c9d6_1af4105e2dae9efd6f6bb56f706374c9d6" prot="public" virt="non-virtual"><scope>IBApi::EWrapper</scope><name>position</name></member>
+      <member refid="interface_i_b_api_1_1_e_wrapper_acf1bebfc1b29cbeff32da7d53aec0971_1acf1bebfc1b29cbeff32da7d53aec0971" prot="public" virt="non-virtual"><scope>IBApi::EWrapper</scope><name>positionEnd</name></member>
+      <member refid="interface_i_b_api_1_1_e_wrapper_ac23fa61ac0221a489ecd4566d1b320fe_1ac23fa61ac0221a489ecd4566d1b320fe" prot="public" virt="non-virtual"><scope>IBApi::EWrapper</scope><name>realtimeBar</name></member>
+      <member refid="interface_i_b_api_1_1_e_wrapper_ac79344d06112e6145bccb3794270ee3c_1ac79344d06112e6145bccb3794270ee3c" prot="public" virt="non-virtual"><scope>IBApi::EWrapper</scope><name>receiveFA</name></member>
+      <member refid="interface_i_b_api_1_1_e_wrapper_a973d71a29aa397fc21f51113b1a12461_1a973d71a29aa397fc21f51113b1a12461" prot="public" virt="non-virtual"><scope>IBApi::EWrapper</scope><name>scannerData</name></member>
+      <member refid="interface_i_b_api_1_1_e_wrapper_a54d829186800287ac87c77a6a38a1917_1a54d829186800287ac87c77a6a38a1917" prot="public" virt="non-virtual"><scope>IBApi::EWrapper</scope><name>scannerDataEnd</name></member>
+      <member refid="interface_i_b_api_1_1_e_wrapper_a24890ab0ae2ed757f93b505e5b05dacc_1a24890ab0ae2ed757f93b505e5b05dacc" prot="public" virt="non-virtual"><scope>IBApi::EWrapper</scope><name>scannerParameters</name></member>
+      <member refid="interface_i_b_api_1_1_e_wrapper_af8afed0428f2f848f15ac137d81283fc_1af8afed0428f2f848f15ac137d81283fc" prot="public" virt="non-virtual"><scope>IBApi::EWrapper</scope><name>tickEFP</name></member>
+      <member refid="interface_i_b_api_1_1_e_wrapper_a9901f14408b7a6f75b1d06e3e6196a26_1a9901f14408b7a6f75b1d06e3e6196a26" prot="public" virt="non-virtual"><scope>IBApi::EWrapper</scope><name>tickGeneric</name></member>
+      <member refid="interface_i_b_api_1_1_e_wrapper_acacbf738e95ff9ffcc19b130f39938b3_1acacbf738e95ff9ffcc19b130f39938b3" prot="public" virt="non-virtual"><scope>IBApi::EWrapper</scope><name>tickOptionComputation</name></member>
+      <member refid="interface_i_b_api_1_1_e_wrapper_aff4ae3269d7b13dd1ca989a8d5ca1ced_1aff4ae3269d7b13dd1ca989a8d5ca1ced" prot="public" virt="non-virtual"><scope>IBApi::EWrapper</scope><name>tickPrice</name></member>
+      <member refid="interface_i_b_api_1_1_e_wrapper_a1844eb442fb657c0f2cc0a63e4e74eba_1a1844eb442fb657c0f2cc0a63e4e74eba" prot="public" virt="non-virtual"><scope>IBApi::EWrapper</scope><name>tickSize</name></member>
+      <member refid="interface_i_b_api_1_1_e_wrapper_1a2d1c80705657202c82a0b8708ad0e169" prot="public" virt="non-virtual"><scope>IBApi::EWrapper</scope><name>tickSnapshotEnd</name></member>
+      <member refid="interface_i_b_api_1_1_e_wrapper_a19cb7c5bbd4ab05ccc5f9e686ed07a9e_1a19cb7c5bbd4ab05ccc5f9e686ed07a9e" prot="public" virt="non-virtual"><scope>IBApi::EWrapper</scope><name>tickString</name></member>
+      <member refid="interface_i_b_api_1_1_e_wrapper_a0f2fa798304a0cf101d57453f48c55f0_1a0f2fa798304a0cf101d57453f48c55f0" prot="public" virt="non-virtual"><scope>IBApi::EWrapper</scope><name>updateAccountTime</name></member>
+      <member refid="interface_i_b_api_1_1_e_wrapper_ae15a34084d9f26f279abd0bdeab1b9b5_1ae15a34084d9f26f279abd0bdeab1b9b5" prot="public" virt="non-virtual"><scope>IBApi::EWrapper</scope><name>updateAccountValue</name></member>
+      <member refid="interface_i_b_api_1_1_e_wrapper_ab0d68c4cf7093f105095d72dd7e7a912_1ab0d68c4cf7093f105095d72dd7e7a912" prot="public" virt="non-virtual"><scope>IBApi::EWrapper</scope><name>updateMktDepth</name></member>
+      <member refid="interface_i_b_api_1_1_e_wrapper_ad8afb71cd866b423a84555f500992968_1ad8afb71cd866b423a84555f500992968" prot="public" virt="non-virtual"><scope>IBApi::EWrapper</scope><name>updateMktDepthL2</name></member>
+      <member refid="interface_i_b_api_1_1_e_wrapper_a3286ab81957d224345888153bce59082_1a3286ab81957d224345888153bce59082" prot="public" virt="non-virtual"><scope>IBApi::EWrapper</scope><name>updateNewsBulletin</name></member>
+      <member refid="interface_i_b_api_1_1_e_wrapper_a4351084fa82b4bb13baf4e70107e22e9_1a4351084fa82b4bb13baf4e70107e22e9" prot="public" virt="non-virtual"><scope>IBApi::EWrapper</scope><name>updatePortfolio</name></member>
+      <member refid="interface_i_b_api_1_1_e_wrapper_1afe1e68d1f6bad2a634928e662342c388" prot="public" virt="non-virtual"><scope>IBApi::EWrapper</scope><name>verifyAndAuthCompleted</name></member>
+      <member refid="interface_i_b_api_1_1_e_wrapper_1a037e65efa0f4f4d2f6a643ac75f064bc" prot="public" virt="non-virtual"><scope>IBApi::EWrapper</scope><name>verifyAndAuthMessageAPI</name></member>
+      <member refid="interface_i_b_api_1_1_e_wrapper_1a26641bd5bd24991d629574a5b551ff39" prot="public" virt="non-virtual"><scope>IBApi::EWrapper</scope><name>verifyCompleted</name></member>
+      <member refid="interface_i_b_api_1_1_e_wrapper_1a2bc45bf2d7710fb5590171763eb76b94" prot="public" virt="non-virtual"><scope>IBApi::EWrapper</scope><name>verifyMessageAPI</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

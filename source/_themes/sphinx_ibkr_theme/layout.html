@@ -201,31 +201,19 @@
   {% endif %}
 
   {%- block footer %} {% endblock %}
-  <script type="text/javascript">
-  function showonlyone(selected) {
-     $('.code_example container').each(function(index) {
-          if ($(this).attr("id") == selected) {
-               $(this).show(100);
-          }
-          else {
-               $(this).hide(100);
-          }
-     });
-   }
-   </script>
    <script>
    $(document).ready(function(){
-    $("#java").show();
-    $("#csharp").hide();
+    $(".java-code-example").show();
+    $(".csharp-code-example").hide();
 
     $("#show-java").click(function(){
-      $("#csharp").hide();
-      $("#java").show();
+      $(".csharp-code-example").hide();
+      $(".java-code-example").show();
     });
 
     $("#show-csharp").click(function(){
-        $("#csharp").show();
-        $("#java").hide();
+        $(".csharp-code-example").show();
+        $(".java-code-example").hide();
     });
 
 });

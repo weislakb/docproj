@@ -1,0 +1,562 @@
+        <table style="margin-left: auto;margin-right: auto;width: 600px;" cellspacing="0" class="ib" xmlns="http://www.w3.org/1999/xhtml">
+            <col style="width: 236px;" />
+            <col />
+            <thead xmlns="">
+                <tr>
+                    <th>
+                        <p class="CellHeading" xmlns="http://www.w3.org/1999/xhtml">Attribute</p>
+                    </th>
+                    <th>
+                        <p class="CellHeading" xmlns="http://www.w3.org/1999/xhtml">Description</p>
+                    </th>
+                </tr>
+            </thead>
+            <tbody xmlns="">
+                <tr style="height: 17.00pt;" xmlns="http://www.w3.org/1999/xhtml">
+                    <td colspan="2"><b>Order Identifiers</b>
+                    </td>
+                </tr>
+                <tr style="height: 17.00pt;" xmlns="http://www.w3.org/1999/xhtml">
+                    <td>int m_clientId</td>
+                    <td>The id of the client that placed this order.</td>
+                </tr>
+                <tr style="height: 17.00pt;" xmlns="http://www.w3.org/1999/xhtml">
+                    <td>int m_orderId</td>
+                    <td>The id for this order.</td>
+                </tr>
+                <tr style="height: 29.00pt;" xmlns="http://www.w3.org/1999/xhtml">
+                    <td>int m_permid</td>
+                    <td>The TWS id used to identify orders, remains the same over TWS sessions.</td>
+                </tr>
+                <tr style="height: 17.00pt;" xmlns="http://www.w3.org/1999/xhtml">
+                    <td colspan="2"><b>Main Order Fields</b>
+                    </td>
+                </tr>
+                <tr style="height: 17.00pt;" xmlns="http://www.w3.org/1999/xhtml">
+                    <td>String m_action</td>
+                    <td>Identifies the side. Valid values are: BUY, SELL, SSHORT</td>
+                </tr>
+                <tr style="height: 29.00pt;" xmlns="http://www.w3.org/1999/xhtml">
+                    <td>double m_auxPrice</td>
+                    <td>This is the STOP price for stop-limit orders, and the offset amount for relative orders. In all other cases, specify zero.</td>
+                </tr>
+                <tr style="height: 41.00pt;" xmlns="http://www.w3.org/1999/xhtml">
+                    <td>double m_lmtPrice</td>
+                    <td>This is the LIMIT price, used for limit, stop-limit and relative orders. In all other cases specify zero. For relative orders with no limit price, also specify zero.</td>
+                </tr>
+                <tr style="height: 58pt;" xmlns="http://www.w3.org/1999/xhtml">
+                    <td>String m_orderType</td>
+                    <td>
+                        <p>Identifies the order type. </p>
+                        <p xmlns="http://www.w3.org/1999/xhtml">For more information about supported order types, see <a href="https://www.interactivebrokers.com/en/software/api/apiguide/tables/supported_order_types.htm" xmlns="http://www.w3.org/1999/xhtml">Supported Order Types</a>.</p>
+                    </td>
+                </tr>
+                <tr style="height: 17.00pt;" xmlns="http://www.w3.org/1999/xhtml">
+                    <td>long m_totalQuantity</td>
+                    <td>The order quantity.</td>
+                </tr>
+                <tr style="height: 17.00pt;" xmlns="http://www.w3.org/1999/xhtml">
+                    <td colspan="2"><b>Extended Order Fields</b>
+                    </td>
+                </tr>
+                <tr style="height: 17.00pt;" xmlns="http://www.w3.org/1999/xhtml">
+                    <td>boolean m_allOrNone</td>
+                    <td>0 = no, 1 = yes</td>
+                </tr>
+                <tr style="height: 17.00pt;" xmlns="http://www.w3.org/1999/xhtml">
+                    <td>boolean m_blockOrder</td>
+                    <td>If set to true, specifies that the order is an ISE Block order.</td>
+                </tr>
+                <tr style="height: 29.00pt;" xmlns="http://www.w3.org/1999/xhtml">
+                    <td>int m_displaySize</td>
+                    <td>The publicly disclosed order size, used when placing Iceberg orders.</td>
+                </tr>
+                <tr style="height: 44.00pt;" xmlns="http://www.w3.org/1999/xhtml">
+                    <td>String m_goodAfterTime</td>
+                    <td>
+                        <p class="CellBody">The trade's "Good After Time," format <br />"YYYYMMDD hh:mm:ss (optional time zone)" </p>
+                        <p class="CellBody">Use an empty String if not applicable.</p>
+                    </td>
+                </tr>
+                <tr style="height: 56.00pt;" xmlns="http://www.w3.org/1999/xhtml">
+                    <td>String m_goodTillDate</td>
+                    <td>
+                        <p class="CellBody">You must enter GTD as the time in force to use this string. The trade's "Good Till Date," format "YYYYMMDD hh:mm:ss (optional time zone)" </p>
+                        <p class="CellBody">Use an empty String if not applicable.</p>
+                    </td>
+                </tr>
+                <tr style="height: 41.00pt;" xmlns="http://www.w3.org/1999/xhtml">
+                    <td>boolean hidden</td>
+                    <td>If set to true, the order will not be visible when viewing the market depth. This option only applies to orders routed to the ISLAND exchange.</td>
+                </tr>
+                <tr style="height: 17.00pt;" xmlns="http://www.w3.org/1999/xhtml">
+                    <td>int m_minQty</td>
+                    <td>Identifies a minimum quantity order type.</td>
+                </tr>
+                <tr style="height: 17.00pt;" xmlns="http://www.w3.org/1999/xhtml">
+                    <td>String m_ocaGroup</td>
+                    <td>Identifies an OCA (one cancels all) group.</td>
+                </tr>
+                <tr style="height: 146.00pt;" xmlns="http://www.w3.org/1999/xhtml">
+                    <td>int m_ocaType</td>
+                    <td>
+                        <p>Tells how to handle remaining orders in an OCA group when one order or part of an order executes. Valid values include:</p>
+                        <ul>
+                            <li value="1">1 = Cancel all remaining orders with block</li>
+                            <li value="2">         2 = Remaining orders are proportionately reduced in size with block</li>
+                            <li value="3">         3 = Remaining orders are proportionately reduced in size with no block</li>
+                        </ul>
+                        <p class="CellBody">If you use a value "with block" gives your order has overfill protection. This means that only one order in the group will be routed at a time to remove the possibility of an overfill. </p>
+                    </td>
+                </tr>
+                <tr style="height: 17.00pt;" xmlns="http://www.w3.org/1999/xhtml">
+                    <td>String m_orderRef</td>
+                    <td>The order reference. Intended for institutional customers only, although all customers may use it to identify the API client that sent the order when multiple API clients are running.</td>
+                </tr>
+                <tr style="height: 29.00pt;" xmlns="http://www.w3.org/1999/xhtml">
+                    <td>boolean m_outsideRth</td>
+                    <td>If set to true, allows orders to also trigger or fill outside of regular trading hours.</td>
+                </tr>
+                <tr style="height: 29.00pt;" xmlns="http://www.w3.org/1999/xhtml">
+                    <td>int m_parentId</td>
+                    <td>The order ID of the parent order, used for bracket and auto trailing stop orders.</td>
+                </tr>
+                <tr style="height: 17.00pt;" xmlns="http://www.w3.org/1999/xhtml">
+                    <td>double m_percentOffset</td>
+                    <td>The percent offset amount for relative orders.</td>
+                </tr>
+                <tr style="height: 128.00pt;" xmlns="http://www.w3.org/1999/xhtml">
+                    <td>boolean overridePercentageConstraints</td>
+                    <td>
+                        <p class="CellBody">Precautionary constraints are defined on the TWS Presets page, and help ensure tha tyour price and size order values are reasonable. Orders sent from the API are also validated against these safety constraints, and may be rejected if any constraint is violated. To override validation, set this parameter’s value to True.</p>
+                        <p>Valid values include:</p>
+                        <ul>
+                            <li value="1">0 = False</li>
+                            <li value="2">         1 = True</li>
+                        </ul>
+                    </td>
+                </tr>
+                <tr style="height: 179.00pt;" xmlns="http://www.w3.org/1999/xhtml">
+                    <td>string m_rule80A</td>
+                    <td>
+                        <p>Values include:</p>
+                        <ul>
+                            <li value="1">Individual = 'I'</li>
+                            <li value="2">         Agency = 'A',</li>
+                            <li value="3">         AgentOtherMember = 'W'</li>
+                            <li value="4">         IndividualPTIA = 'J'</li>
+                            <li value="5">         AgencyPTIA = 'U'</li>
+                            <li value="6">         AgentOtherMemberPTIA = 'M'</li>
+                            <li value="7">         IndividualPT = 'K'</li>
+                            <li value="8">         AgencyPT = 'Y'</li>
+                            <li value="9">         AgentOtherMemberPT = 'N'</li>
+                        </ul>
+                    </td>
+                </tr>
+                <tr style="height: 17.00pt;" xmlns="http://www.w3.org/1999/xhtml">
+                    <td>boolean m_sweepToFill</td>
+                    <td>If set to true, specifies that the order is a Sweep-to-Fill order.</td>
+                </tr>
+                <tr style="height: 17.00pt;" xmlns="http://www.w3.org/1999/xhtml">
+                    <td>String m_tif</td>
+                    <td>The time in force. Valid values are: DAY, GTC, IOC, GTD.</td>
+                </tr>
+                <tr style="height: 29.00pt;" xmlns="http://www.w3.org/1999/xhtml">
+                    <td>bool m_transmit</td>
+                    <td>Specifies whether the order will be transmitted by TWS. If set to false, the order will be created at TWS but will not be sent.</td>
+                </tr>
+                <tr style="height: 227.00pt;" xmlns="http://www.w3.org/1999/xhtml">
+                    <td>int m_triggerMethod</td>
+                    <td>
+                        <p>Specifies how Simulated Stop, Stop-Limit and Trailing Stop orders are triggered. Valid values are:</p>
+                        <ul>
+                            <li value="1">0 - The default value. The "double bid/ask" function will be used for orders for OTC stocks and US options. All other orders will used the "last" function.</li>
+                            <li value="2">         1 - use "double bid/ask" function, where stop orders are triggered based on two consecutive bid or ask prices.</li>
+                            <li value="3">         2 - "last" function, where stop orders are triggered based on the last price.</li>
+                            <li value="4">         3 double last function.</li>
+                            <li value="5">         4 bid/ask function.</li>
+                            <li value="6">         7 last or bid/ask function.</li>
+                            <li value="7">         8 mid-point function.</li>
+                        </ul>
+                    </td>
+                </tr>
+                <tr style="height: 17.00pt;" xmlns="http://www.w3.org/1999/xhtml">
+                    <td>double m_trailStopPrice</td>
+                    <td>For TRAILLIMIT orders only</td>
+                </tr>
+                <tr style="height: 17.00pt;" xmlns="http://www.w3.org/1999/xhtml">
+                    <td>double m_trailingPercent</td>
+                    <td>
+                        <p xmlns="http://www.w3.org/1999/xhtml">Specify the trailing amount of a trailing stop order as a percentage. Observe the following guidelines when using the trailingPercent field:
+
+    </p>
+                        <ul>
+                            <li xmlns="http://www.w3.org/1999/xhtml" value="1">This field is mutually exclusive with the existing trailing amount. That is, the API client can send one or the other but not both.
+    </li>
+                            <li xmlns="http://www.w3.org/1999/xhtml" value="2">This field is read AFTER the stop price (barrier price) as follows:
+        deltaNeutralAuxPrice
+  <br xmlns="http://www.w3.org/1999/xhtml" />   stopPrice
+<br xmlns="http://www.w3.org/1999/xhtml" />      trailingPercent<br xmlns="http://www.w3.org/1999/xhtml" />scale order attributes</li>
+                            <li xmlns="http://www.w3.org/1999/xhtml" value="3">    The field will also be sent to the API in the openOrder message if the API client version is &gt;= 56. It is sent after the stopPrice field as follows:<br xmlns="http://www.w3.org/1999/xhtml" />     stopPrice
+<br xmlns="http://www.w3.org/1999/xhtml" />      trailingPct<br xmlns="http://www.w3.org/1999/xhtml" />       basisPoint
+</li>
+                        </ul>
+                    </td>
+                </tr>
+                <tr style="height: 17.00pt;" xmlns="http://www.w3.org/1999/xhtml">
+                    <td>String m_activeStartTime</td>
+                    <td>For GTC&#160;orders.</td>
+                </tr>
+                <tr style="height: 17.00pt;" xmlns="http://www.w3.org/1999/xhtml">
+                    <td>String m_activeStopTime</td>
+                    <td>For GTC&#160;orders.</td>
+                </tr>
+                <tr style="height: 22pt;" xmlns="http://www.w3.org/1999/xhtml">
+                    <td colspan="2"><b xmlns="http://www.w3.org/1999/xhtml">Financial Advisor Fields</b>
+                    </td>
+                </tr>
+                <tr style="height: 29.00pt;" xmlns="http://www.w3.org/1999/xhtml">
+                    <td>String m_faGroup</td>
+                    <td>The Financial Advisor group the trade will be allocated to -- use an empty String if not applicable.</td>
+                </tr>
+                <tr style="height: 29.00pt;" xmlns="http://www.w3.org/1999/xhtml">
+                    <td>String m_faMethod</td>
+                    <td>The Financial Advisor allocation function the trade will be allocated with -- use an empty String if not applicable.</td>
+                </tr>
+                <tr style="height: 29.00pt;" xmlns="http://www.w3.org/1999/xhtml">
+                    <td>String m_faPercentage</td>
+                    <td>The Financial Advisor percentage concerning the trade's allocation&#160;-- use an empty String if not applicable.</td>
+                </tr>
+                <tr style="height: 29.00pt;" xmlns="http://www.w3.org/1999/xhtml">
+                    <td>String m_faProfile</td>
+                    <td>The Financial Advisor allocation profile the trade will be allocated to -- use an empty String if not applicable.</td>
+                </tr>
+                <tr style="height: 19pt;" xmlns="http://www.w3.org/1999/xhtml">
+                    <td colspan="2"><b xmlns="http://www.w3.org/1999/xhtml">Institutional (non-cleared) Only</b>
+                    </td>
+                </tr>
+                <tr style="height: 29.00pt;" xmlns="http://www.w3.org/1999/xhtml">
+                    <td>String m_designatedLocation</td>
+                    <td>Used only when shortSaleSlot = 2.</td>
+                </tr>
+                <tr style="height: 17.00pt;" xmlns="http://www.w3.org/1999/xhtml">
+                    <td>String m_openClose</td>
+                    <td>For institutional customers only. Valid values are O, C.</td>
+                </tr>
+                <tr style="height: 29.00pt;" xmlns="http://www.w3.org/1999/xhtml">
+                    <td>int m_origin</td>
+                    <td>The order origin. For institutional customers only. Valid values are 0 = customer, 1 = firm</td>
+                </tr>
+                <tr style="height: 17.00pt;" xmlns="http://www.w3.org/1999/xhtml">
+                    <td>int m_shortSaleSlot</td>
+                    <td>Valid values are 1 or 2.</td>
+                </tr>
+                <tr style="height: 20pt;" xmlns="http://www.w3.org/1999/xhtml">
+                    <td colspan="2" style="font-weight: bold;">SMART&#160;Routing Only</td>
+                </tr>
+                <tr style="height: 29.00pt;" xmlns="http://www.w3.org/1999/xhtml">
+                    <td>double m_discretionaryAmt</td>
+                    <td>The amount off the limit price allowed for discretionary orders.</td>
+                </tr>
+                <tr style="height: 29.00pt;" xmlns="http://www.w3.org/1999/xhtml">
+                    <td>boolean m_eTradeOnly</td>
+                    <td>Trade with electronic quotes.<br />0 = no, 1 = yes</td>
+                </tr>
+                <tr style="height: 29.00pt;" xmlns="http://www.w3.org/1999/xhtml">
+                    <td>boolean m_firmQuoteOnly</td>
+                    <td>Trade with firm quotes.<br />0 = no, 1 = yes</td>
+                </tr>
+                <tr style="height: 17.00pt;" xmlns="http://www.w3.org/1999/xhtml">
+                    <td>double m_nbboPriceCap</td>
+                    <td>Maximum smart order distance from the NBBO.</td>
+                </tr>
+                <tr style="height: 65.00pt;" xmlns="http://www.w3.org/1999/xhtml">
+                    <td>boolean m_optOutSmartRouting</td>
+                    <td>Use to opt out of default SmartRouting for orders routed directly to ASX. This attribute defaults to false unless explicitly set to true. When set to false, orders routed directly to ASX will NOT use SmartRouting. When set to true, orders routed directly to ASX orders WILL use SmartRouting.</td>
+                </tr>
+                <tr style="height: 20pt;" xmlns="http://www.w3.org/1999/xhtml">
+                    <td colspan="2">
+                        <p colspan="2" xmlns="http://www.w3.org/1999/xhtml" style="font-weight: bold;">BOX&#160;or VOL Orders Only</p>
+                    </td>
+                </tr>
+                <tr style="height: 86.00pt;" xmlns="http://www.w3.org/1999/xhtml">
+                    <td>int m_auctionStrategy</td>
+                    <td>
+                        <p>Values include:</p>
+                        <ul>
+                            <li value="1">match = 1</li>
+                            <li value="2">         improvement = 2</li>
+                            <li value="3">        transparent = 3</li>
+                        </ul>
+                        <p class="CellBody">For orders on BOX only.</p>
+                    </td>
+                </tr>
+                <tr style="height: 20pt;" xmlns="http://www.w3.org/1999/xhtml">
+                    <td colspan="2">
+                        <p colspan="2" xmlns="http://www.w3.org/1999/xhtml" style="font-weight: bold;">BOX&#160;Exchange Orders Only</p>
+                    </td>
+                </tr>
+                <tr style="height: 17.00pt;" xmlns="http://www.w3.org/1999/xhtml">
+                    <td>double m_delta</td>
+                    <td>The stock delta. For orders on BOX only.</td>
+                </tr>
+                <tr style="height: 17.00pt;" xmlns="http://www.w3.org/1999/xhtml">
+                    <td>double m_startingPrice</td>
+                    <td>The auction starting price. For orders on BOX only.</td>
+                </tr>
+                <tr style="height: 53.00pt;" xmlns="http://www.w3.org/1999/xhtml">
+                    <td>double m_stockRefPrice</td>
+                    <td>The stock reference price. The reference price is used for VOL orders to compute the limit price sent to an exchange (whether or not Continuous Update is selected), and for price range monitoring.</td>
+                </tr>
+                <tr style="height: 20pt;" xmlns="http://www.w3.org/1999/xhtml">
+                    <td colspan="2">
+                        <p colspan="2" xmlns="http://www.w3.org/1999/xhtml" style="font-weight: bold;">Pegged-to-Stock and VOL Orders Only</p>
+                    </td>
+                </tr>
+                <tr style="height: 41.00pt;" xmlns="http://www.w3.org/1999/xhtml">
+                    <td>double m_stockRangeLower</td>
+                    <td>The lower value for the acceptable underlying stock price range. For price improvement option orders on BOX and VOL orders with dynamic management.</td>
+                </tr>
+                <tr style="height: 41.00pt;" xmlns="http://www.w3.org/1999/xhtml">
+                    <td>double m_stockRangeUpper</td>
+                    <td>The upper value for the acceptable underlying stock price range. For price improvement option orders on BOX and VOL orders with dynamic management.</td>
+                </tr>
+                <tr style="height: 20pt;" xmlns="http://www.w3.org/1999/xhtml">
+                    <td colspan="2">
+                        <p colspan="2" xmlns="http://www.w3.org/1999/xhtml" style="font-weight: bold;">Volatility Orders Only</p>
+                    </td>
+                </tr>
+                <tr style="height: 41.00pt;" xmlns="http://www.w3.org/1999/xhtml">
+                    <td>boolean m_continuousUpdate</td>
+                    <td>VOL orders only. Specifies whether TWS will automatically update the limit price of the order as the underlying price moves. </td>
+                </tr>
+                <tr style="height: 41.00pt;" xmlns="http://www.w3.org/1999/xhtml">
+                    <td>String m_deltaNeutralOrderType</td>
+                    <td>VOL orders only. Enter an order type to instruct TWS to submit a delta neutral trade on full or partial execution of the VOL order. For no hedge delta order to be sent, specify NONE.</td>
+                </tr>
+                <tr style="height: 41.00pt;" xmlns="http://www.w3.org/1999/xhtml">
+                    <td>int m_deltaNeutralAuxPrice</td>
+                    <td>VOL orders only. Use this field to enter a value if the value in the <span style="font-style: italic;">deltaNeutralOrderType</span>&#160;field is an order type that requires an Aux price, such as a REL order. </td>
+                </tr>
+                <tr style="height: 92.00pt;" xmlns="http://www.w3.org/1999/xhtml">
+                    <td>int m_referencePriceType</td>
+                    <td>
+                        <p class="CellBody">VOL orders only. Specifies how you want TWS to calculate the limit price for options, and for stock range price monitoring.</p>
+                        <p>Valid values include:</p>
+                        <ul>
+                            <li value="1">1 = Average of NBBO</li>
+                            <li value="2">         2 = NBB or the NBO depending on the action and right.</li>
+                        </ul>
+                    </td>
+                </tr>
+                <tr style="height: 41.00pt;" xmlns="http://www.w3.org/1999/xhtml">
+                    <td>double m_volatility</td>
+                    <td>The option price in volatility, as calculated by TWS' Option Analytics. This value is expressed as a percent and is used to calculate the limit price sent to the exchange.</td>
+                </tr>
+                <tr style="height: 53.00pt;" xmlns="http://www.w3.org/1999/xhtml">
+                    <td>int m_volatilityType</td>
+                    <td>
+                        <p>Values include:</p>
+                        <ul>
+                            <li value="1">1 = Daily volatility</li>
+                            <li value="2">         2 = Annual volatility</li>
+                        </ul>
+                    </td>
+                </tr>
+                <tr style="height: 53.00pt;" xmlns="http://www.w3.org/1999/xhtml">
+                    <td>String m_deltaNeutralOpenClose</td>
+                    <td>Specifies whether the order is an Open or a Close order and is used when the hedge involves a CFD and the order is clearing away.</td>
+                </tr>
+                <tr style="height: 53.00pt;" xmlns="http://www.w3.org/1999/xhtml">
+                    <td>boolean m_deltaNeutralShortSale</td>
+                    <td>Used when the hedge involves a stock and indicates whether or not it is sold short.</td>
+                </tr>
+                <tr style="height: 53.00pt;" xmlns="http://www.w3.org/1999/xhtml">
+                    <td>int m_deltaNeutralShortSaleSlot</td>
+                    <td>Has a value of 1 (the clearing broker holds shares) or 2 (delivered from a third party). If you use 2, then you must specify a deltaNeutralDesignatedLocation.</td>
+                </tr>
+                <tr style="height: 53.00pt;" xmlns="http://www.w3.org/1999/xhtml">
+                    <td>String m_deltaNeutralDesignatedLocation</td>
+                    <td>Used only when deltaNeutralShortSaleSlot = 2.</td>
+                </tr>
+                <tr style="height: 20pt;" xmlns="http://www.w3.org/1999/xhtml">
+                    <td colspan="2">
+                        <p colspan="2" xmlns="http://www.w3.org/1999/xhtml" style="font-weight: bold;">Combo Orders Only</p>
+                    </td>
+                </tr>
+                <tr style="height: 17.00pt;" xmlns="http://www.w3.org/1999/xhtml">
+                    <td>double m_basisPoints</td>
+                    <td>For EFP orders only</td>
+                </tr>
+                <tr style="height: 17.00pt;" xmlns="http://www.w3.org/1999/xhtml">
+                    <td>int m_basisPointsType</td>
+                    <td>For EFP orders only</td>
+                </tr>
+                <tr style="height: 20pt;" xmlns="http://www.w3.org/1999/xhtml">
+                    <td colspan="2">
+                        <p colspan="2" xmlns="http://www.w3.org/1999/xhtml" style="font-weight: bold;">Scale Orders Only</p>
+                    </td>
+                </tr>
+                <tr style="height: 29.00pt;" xmlns="http://www.w3.org/1999/xhtml">
+                    <td>boolean m_scaleAutoReset()</td>
+                    <td>For extended Scale orders.</td>
+                </tr>
+                <tr style="height: 29.00pt;" xmlns="http://www.w3.org/1999/xhtml">
+                    <td>int m_scaleInitFillQty()</td>
+                    <td>For extended Scale orders.</td>
+                </tr>
+                <tr style="height: 29.00pt;" xmlns="http://www.w3.org/1999/xhtml">
+                    <td>int m_scaleInitLevelSize</td>
+                    <td>For Scale orders: Defines the size of the first, or initial, order component.</td>
+                </tr>
+                <tr style="height: 29.00pt;" xmlns="http://www.w3.org/1999/xhtml">
+                    <td>int m_scaleInitPosition()</td>
+                    <td>For extended Scale orders.</td>
+                </tr>
+                <tr style="height: 29.00pt;" xmlns="http://www.w3.org/1999/xhtml">
+                    <td>int m_scalePriceAdjustInterval()</td>
+                    <td>For extended Scale orders.</td>
+                </tr>
+                <tr style="height: 29.00pt;" xmlns="http://www.w3.org/1999/xhtml">
+                    <td>double m_scalePriceAdjustValue()</td>
+                    <td>For extended Scale orders.</td>
+                </tr>
+                <tr style="height: 29.00pt;" xmlns="http://www.w3.org/1999/xhtml">
+                    <td>double m_scalePriceIncrement</td>
+                    <td>For Scale orders: Defines the price increment between scale components. This field is required.</td>
+                </tr>
+                <tr style="height: 29.00pt;" xmlns="http://www.w3.org/1999/xhtml">
+                    <td>double m_scaleProfitOffset()</td>
+                    <td>For extended Scale orders.</td>
+                </tr>
+                <tr style="height: 29.00pt;" xmlns="http://www.w3.org/1999/xhtml">
+                    <td>boolean m_scaleRandomPercent()</td>
+                    <td>For extended Scale orders.</td>
+                </tr>
+                <tr style="height: 41.00pt;" xmlns="http://www.w3.org/1999/xhtml">
+                    <td>int m_scaleSubsLevelSize</td>
+                    <td>For Scale orders: Defines the order size of the subsequent scale order components. Used in conjunction with scaleInitLevelSize().</td>
+                </tr>
+                <tr style="height: 41.00pt;" xmlns="http://www.w3.org/1999/xhtml">
+                    <td>String m_scaleTable</td>
+                    <td>Manual table for Scale orders.</td>
+                </tr>
+                <tr style="height: 20pt;" xmlns="http://www.w3.org/1999/xhtml">
+                    <td colspan="2">
+                        <p colspan="2" xmlns="http://www.w3.org/1999/xhtml" style="font-weight: bold;">Hedge Orders Only</p>
+                    </td>
+                </tr>
+                <tr style="height: 17.00pt;" xmlns="http://www.w3.org/1999/xhtml">
+                    <td>String m_hedgeParam</td>
+                    <td>Beta = x for Beta hedge orders, ratio = y for Pair hedge order</td>
+                </tr>
+                <tr style="height: 89.00pt;" xmlns="http://www.w3.org/1999/xhtml">
+                    <td>String m_hedgeType</td>
+                    <td>
+                        <p>For hedge orders. Possible values are:</p>
+                        <ul>
+                            <li value="1">D = Delta</li>
+                            <li value="2">         B = Beta</li>
+                            <li value="3">         F = FX</li>
+                            <li value="4">         P = Pair</li>
+                        </ul>
+                    </td>
+                </tr>
+                <tr style="height: 20pt;" xmlns="http://www.w3.org/1999/xhtml">
+                    <td colspan="2">
+                        <p xmlns="" style="font-weight: bold;">Clearing Information</p>
+                    </td>
+                </tr>
+                <tr style="height: 17.00pt;" xmlns="http://www.w3.org/1999/xhtml">
+                    <td>String m_account</td>
+                    <td>The account. For institutional customers only.</td>
+                </tr>
+                <tr style="height: 41.00pt;" xmlns="http://www.w3.org/1999/xhtml">
+                    <td>String m_clearingAccount</td>
+                    <td>For IBExecution customers: Specifies the true beneficiary of the order. This value is required for FUT/FOP orders for reporting to the exchange.</td>
+                </tr>
+                <tr style="height: 29.00pt;" xmlns="http://www.w3.org/1999/xhtml">
+                    <td>String m_clearingIntent</td>
+                    <td>For IBExecution customers: Valid values are: IB, Away, and PTA (post trade allocation).</td>
+                </tr>
+                <tr style="height: 17.00pt;" xmlns="http://www.w3.org/1999/xhtml">
+                    <td>String m_settlingFirm</td>
+                    <td>Institutional only.</td>
+                </tr>
+                <tr style="height: 20pt;" xmlns="http://www.w3.org/1999/xhtml">
+                    <td colspan="2" style="font-weight: bold;">
+                        <p colspan="2" xmlns="http://www.w3.org/1999/xhtml">Algo Orders Only</p>
+                    </td>
+                </tr>
+                <tr style="height: 44.00pt;" xmlns="http://www.w3.org/1999/xhtml">
+                    <td>String m_algoStrategy</td>
+                    <td>
+                        <p class="CellBody">For information about API Algo orders, see <a href="https://www.interactivebrokers.com/en/software/api/apiguide/tables/ibalgo_parameters.htm" xmlns="http://www.w3.org/1999/xhtml">IBAlgo Parameters</a>.</p>
+                    </td>
+                </tr>
+                <tr style="height: 44.00pt;" xmlns="http://www.w3.org/1999/xhtml">
+                    <td>Vector&lt;TagValue&gt; <br xmlns="http://www.w3.org/1999/xhtml" />m_algoParams</td>
+                    <td>Support for IBAlgo parameters.</td>
+                </tr>
+                <tr style="height: 44.00pt;" xmlns="http://www.w3.org/1999/xhtml">
+                    <td>String m_algoId</td>
+                    <td>Identifies an order generated by algorithmic trading.</td>
+                </tr>
+                <tr style="height: 20pt;" xmlns="http://www.w3.org/1999/xhtml">
+                    <td colspan="2" style="font-weight: bold;">
+                        <p colspan="2" xmlns="http://www.w3.org/1999/xhtml">Solicited Orders</p>
+                    </td>
+                </tr>
+                <tr style="height: 44.00pt;" xmlns="http://www.w3.org/1999/xhtml">
+                    <td>boolean m_solicited</td>
+                    <td>
+                        <p xmlns="http://www.w3.org/1999/xhtml">True = solicited (orders initiated by a broker through the brokers research and design)</p>
+                        <p xmlns="http://www.w3.org/1999/xhtml">False = unsolicited (those instigated by a broker's customer either through their actions or by the broker at their direction)</p>
+                    </td>
+                </tr>
+                <tr style="height: 20pt;" xmlns="http://www.w3.org/1999/xhtml">
+                    <td colspan="2">
+                        <p colspan="2" xmlns="http://www.w3.org/1999/xhtml" style="font-weight: bold;">What If</p>
+                    </td>
+                </tr>
+                <tr style="height: 44.00pt;" xmlns="http://www.w3.org/1999/xhtml">
+                    <td>boolean m_whatIf</td>
+                    <td>
+                        <p class="CellBody">Use to request pre-trade commissions and margin information. </p>
+                        <p class="CellBody">If set to true, margin and commissions data is received back via the OrderState() object for the openOrder() callback.</p>
+                    </td>
+                </tr>
+                <tr style="height: 20pt;" xmlns="http://www.w3.org/1999/xhtml">
+                    <td colspan="2">
+                        <p colspan="2" xmlns="http://www.w3.org/1999/xhtml" style="font-weight: bold;">Smart Combo Routing</p>
+                    </td>
+                </tr>
+                <tr style="height: 44.00pt;" xmlns="http://www.w3.org/1999/xhtml">
+                    <td>Vector&lt;TagValue&gt; <br xmlns="http://www.w3.org/1999/xhtml" />m_smartComboRoutingParams</td>
+                    <td>Support for <a href="https://www.interactivebrokers.com/en/software/api/apiguide/tables/smart_combo_routing.htm" xmlns="http://www.w3.org/1999/xhtml">Smart Combo Routing</a>.</td>
+                </tr>
+                <tr style="height: 20pt;" xmlns="http://www.w3.org/1999/xhtml">
+                    <td colspan="2">
+                        <p colspan="2" xmlns="http://www.w3.org/1999/xhtml">Order Combo Legs</p>
+                    </td>
+                </tr>
+                <tr style="height: 44.00pt;" xmlns="http://www.w3.org/1999/xhtml">
+                    <td>OrderComboLegs() As Object</td>
+                    <td>Holds attributes for all legs in a combo order.</td>
+                </tr>
+                <tr style="height: 20pt;" xmlns="http://www.w3.org/1999/xhtml">
+                    <td colspan="2" style="font-weight: bold;">Not Held</td>
+                </tr>
+                <tr style="height: 65.00pt;" xmlns="http://www.w3.org/1999/xhtml">
+                    <td>boolean m_notHeld</td>
+                    <td>For IBDARK&#160;orders only. Orders routed to IBDARK are tagged as “post only” and are held in IB's order book, where incoming SmartRouted orders from other IB customers are eligible to trade against them. </td>
+                </tr>
+                <tr style="height: 20pt;" xmlns="http://www.w3.org/1999/xhtml">
+                    <td colspan="2" style="font-weight: bold;">Internal use only</td>
+                </tr>
+                <tr style="height: 65.00pt;" xmlns="http://www.w3.org/1999/xhtml">
+                    <td>Vector&lt;TagValue&gt; <br xmlns="http://www.w3.org/1999/xhtml" />m_orderMiscOptions</td>
+                    <td>For internal use only. Use the default value XYZ.</td>
+                </tr>
+            </tbody>
+        </table>

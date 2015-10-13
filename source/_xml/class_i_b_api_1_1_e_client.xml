@@ -1,0 +1,2531 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.10">
+  <compounddef id="class_i_b_api_1_1_e_client" kind="class" language="C#" prot="public" abstract="yes">
+    <compoundname>IBApi::EClient</compoundname>
+      <sectiondef kind="protected-attrib">
+      <memberdef kind="variable" id="class_i_b_api_1_1_e_client_1a89af9728586e10491e22cdfd2654e314" prot="protected" static="no" mutable="no">
+        <type>int</type>
+        <definition>int serverVersion</definition>
+        <argsstring></argsstring>
+        <name>serverVersion</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="source/EClient.cs" line="20" column="1" bodyfile="source/EClient.cs" bodystart="20" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_i_b_api_1_1_e_client_1ae4acf7f265ee81aa80dec12722cce970" prot="protected" static="no" mutable="no">
+        <type>ETransport</type>
+        <definition>ETransport socketTransport</definition>
+        <argsstring></argsstring>
+        <name>socketTransport</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="source/EClient.cs" line="22" column="1" bodyfile="source/EClient.cs" bodystart="22" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_i_b_api_1_1_e_client_1a0c72ef91f991621e214b4975d6b961d5" prot="protected" static="no" mutable="no">
+        <type><ref refid="interface_i_b_api_1_1_e_wrapper" kindref="compound">EWrapper</ref></type>
+        <definition>EWrapper wrapper</definition>
+        <argsstring></argsstring>
+        <name>wrapper</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="source/EClient.cs" line="24" column="1" bodyfile="source/EClient.cs" bodystart="24" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_i_b_api_1_1_e_client_1ada1a895a5ff67fb36ed9a4765f2274d2" prot="protected" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool isConnected</definition>
+        <argsstring></argsstring>
+        <name>isConnected</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="source/EClient.cs" line="26" column="1" bodyfile="source/EClient.cs" bodystart="26" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_i_b_api_1_1_e_client_1a835ae48cfee11c9ce3a4bc4727993119" prot="protected" static="no" mutable="no">
+        <type>int</type>
+        <definition>int clientId</definition>
+        <argsstring></argsstring>
+        <name>clientId</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="source/EClient.cs" line="27" column="1" bodyfile="source/EClient.cs" bodystart="27" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_i_b_api_1_1_e_client_1a8324856cfd55c38c8d5f9f886839dca4" prot="protected" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool extraAuth</definition>
+        <argsstring></argsstring>
+        <name>extraAuth</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="source/EClient.cs" line="28" column="1" bodyfile="source/EClient.cs" bodystart="28" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_i_b_api_1_1_e_client_1aa1d42f0a07a098b3955a3a0df3ad7f79" prot="protected" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool useV100Plus</definition>
+        <argsstring></argsstring>
+        <name>useV100Plus</name>
+        <initializer>= true</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="source/EClient.cs" line="29" column="1" bodyfile="source/EClient.cs" bodystart="29" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_i_b_api_1_1_e_client_1a5243596fcb804198d6d892058295403b" prot="protected" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool allowRedirect</definition>
+        <argsstring></argsstring>
+        <name>allowRedirect</name>
+        <initializer>= false</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="source/EClient.cs" line="34" column="1" bodyfile="source/EClient.cs" bodystart="34" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_i_b_api_1_1_e_client_1a4d226af85a476de05dfcdb5234ddbe74" prot="protected" static="no" mutable="no">
+        <type>Stream</type>
+        <definition>Stream tcpStream</definition>
+        <argsstring></argsstring>
+        <name>tcpStream</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="source/EClient.cs" line="105" column="1" bodyfile="source/EClient.cs" bodystart="105" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="property">
+      <memberdef kind="property" id="class_i_b_api_1_1_e_client_1a66984a66019ddb1fefdb5a048eb686b2" prot="package" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="no" privatesettable="no" protectedsettable="no">
+        <type>bool</type>
+        <definition>bool UseV100Plus</definition>
+        <argsstring></argsstring>
+        <name>UseV100Plus</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="source/EClient.cs" line="31" column="1" bodyfile="source/EClient.cs" bodystart="31" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="property" id="class_i_b_api_1_1_e_client_1acf8abd56a4309686e2fe8c839672a460" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="no" privatesettable="no" protectedsettable="no">
+        <type><ref refid="interface_i_b_api_1_1_e_wrapper" kindref="compound">EWrapper</ref></type>
+        <definition>EWrapper Wrapper</definition>
+        <argsstring></argsstring>
+        <name>Wrapper</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="source/EClient.cs" line="69" column="1" bodyfile="source/EClient.cs" bodystart="70" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="property" id="class_i_b_api_1_1_e_client_1aefb4f201071c475e143c8946067d684b" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="yes" privatesettable="no" protectedsettable="no">
+        <type>bool</type>
+        <definition>bool AllowRedirect</definition>
+        <argsstring></argsstring>
+        <name>AllowRedirect</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="source/EClient.cs" line="74" column="1" bodyfile="source/EClient.cs" bodystart="74" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="property" id="class_i_b_api_1_1_e_client_1a368ae79fe337fb5f9b1c2c389020e9c5" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="no" privatesettable="no" protectedsettable="no">
+        <type>int</type>
+        <definition>int ServerVersion</definition>
+        <argsstring></argsstring>
+        <name>ServerVersion</name>
+        <briefdescription>
+<para>returns the Host&apos;s version. Some of the API functionality might not be available in older Hosts and therefore it is essential to keep the TWS/Gateway as up to date as possible. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="source/EClient.cs" line="79" column="1" bodyfile="source/EClient.cs" bodystart="80" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="property" id="class_i_b_api_1_1_e_client_1a8b5a91b71a45856e86b5075aecde0942" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="no" privatesettable="no" protectedsettable="yes">
+        <type>string</type>
+        <definition>string ServerTime</definition>
+        <argsstring></argsstring>
+        <name>ServerTime</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="source/EClient.cs" line="93" column="1" bodyfile="source/EClient.cs" bodystart="93" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="property" id="class_i_b_api_1_1_e_client_1a92c6f01beeba35cdc2e6a94f5c566ab7" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="yes" privatesettable="no" protectedsettable="no">
+        <type>string</type>
+        <definition>string optionalCapabilities</definition>
+        <argsstring></argsstring>
+        <name>optionalCapabilities</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="source/EClient.cs" line="160" column="1" bodyfile="source/EClient.cs" bodystart="160" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="property" id="class_i_b_api_1_1_e_client_1aacf95fe1db1afe29b687a4fa78ef4609" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="yes" privatesettable="no" protectedsettable="no">
+        <type>bool</type>
+        <definition>bool AsyncEConnect</definition>
+        <argsstring></argsstring>
+        <name>AsyncEConnect</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="source/EClient.cs" line="2502" column="1" bodyfile="source/EClient.cs" bodystart="2502" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="class_i_b_api_1_1_e_client_1a076dd5fccdd2496ec18d1add279edad8" prot="private" static="no" mutable="no">
+        <type>string</type>
+        <definition>string connectOptions</definition>
+        <argsstring></argsstring>
+        <name>connectOptions</name>
+        <initializer>= &quot;&quot;</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="source/EClient.cs" line="33" column="1" bodyfile="source/EClient.cs" bodystart="33" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-static-attrib">
+      <memberdef kind="variable" id="class_i_b_api_1_1_e_client_1afcf6b472311ae96d184a3228b09182e6" prot="private" static="yes" mutable="no">
+        <type>readonly string</type>
+        <definition>readonly string encodedVersion</definition>
+        <argsstring></argsstring>
+        <name>encodedVersion</name>
+        <initializer>= Constants.MinVersion.ToString() + (Constants.MaxVersion != Constants.MinVersion ? &quot;..&quot; + Constants.MaxVersion : string.Empty)</initializer>
+        <briefdescription>
+<para>Establishes a connection to the designated Host. After establishing a connection succesfully, the Host will provide the next valid order id, server&apos;s current time, managed accounts and open orders among others depending on the Host version. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>host</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the Host&apos;s IP address. Leave blank for localhost. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>port</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the Host&apos;s port. 7496 by default for the TWS, 4001 by default on the Gateway. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>clientId</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Every API client program requires a unique id which can be any integer. Note that up to eight clients can be connected simultaneously to a single Host. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="see"><para><ref refid="interface_i_b_api_1_1_e_wrapper" kindref="compound">EWrapper</ref>, <ref refid="interface_i_b_api_1_1_e_wrapper_a09c07727efd297e438690ab42838d332_1a09c07727efd297e438690ab42838d332" kindref="member">EWrapper::nextValidId</ref>, <ref refid="interface_i_b_api_1_1_e_wrapper_a7004c6c027c90ecdc1f5c68759e37fd2_1a7004c6c027c90ecdc1f5c68759e37fd2" kindref="member">EWrapper::currentTime</ref> </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="source/EClient.cs" line="104" column="1" bodyfile="source/EClient.cs" bodystart="104" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_i_b_api_1_1_e_client_a6019980df10f825dcba782d8992da1c1_1a6019980df10f825dcba782d8992da1c1" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>EClient</definition>
+        <argsstring>(EWrapper wrapper)</argsstring>
+        <name>EClient</name>
+        <param>
+          <type><ref refid="interface_i_b_api_1_1_e_wrapper" kindref="compound">EWrapper</ref></type>
+          <declname>wrapper</declname>
+        </param>
+        <briefdescription>
+<para>Constructor. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>wrapper</parametername>
+</parameternamelist>
+<parameterdescription>
+<para><ref refid="interface_i_b_api_1_1_e_wrapper" kindref="compound">EWrapper</ref>&apos;s implementating class instance. Every message being delivered by IB to the API client will be forwarded to the <ref refid="interface_i_b_api_1_1_e_wrapper" kindref="compound">EWrapper</ref>&apos;s implementating class. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="see"><para><ref refid="interface_i_b_api_1_1_e_wrapper" kindref="compound">EWrapper</ref> </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="source/EClient.cs" line="41" column="1" bodyfile="source/EClient.cs" bodystart="41" bodyend="49"/>
+      </memberdef>
+      <memberdef kind="function" id="class_i_b_api_1_1_e_client_1a3297a7c5fd7c83930e02af34411a4c22" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void SetConnectOptions</definition>
+        <argsstring>(string connectOptions)</argsstring>
+        <name>SetConnectOptions</name>
+        <param>
+          <type>string</type>
+          <declname>connectOptions</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="source/EClient.cs" line="51" column="1" bodyfile="source/EClient.cs" bodystart="51" bodyend="61"/>
+      </memberdef>
+      <memberdef kind="function" id="class_i_b_api_1_1_e_client_1a02b6e0c36bd0cc914f4dfacd600d9051" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void DisableUseV100Plus</definition>
+        <argsstring>()</argsstring>
+        <name>DisableUseV100Plus</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="source/EClient.cs" line="63" column="1" bodyfile="source/EClient.cs" bodystart="63" bodyend="67"/>
+      </memberdef>
+      <memberdef kind="function" id="class_i_b_api_1_1_e_client_ab8e2702adca8f47228f9754f4963455d_1ab8e2702adca8f47228f9754f4963455d" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool IsConnected</definition>
+        <argsstring>()</argsstring>
+        <name>IsConnected</name>
+        <briefdescription>
+<para>Notifies whether or not the API client is connected to the Host. </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>true if connection has been established, false if it has not. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="source/EClient.cs" line="88" column="1" bodyfile="source/EClient.cs" bodystart="88" bodyend="91"/>
+      </memberdef>
+      <memberdef kind="function" id="class_i_b_api_1_1_e_client_1acf1370a40894c7a3d44053142077397b" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void startApi</definition>
+        <argsstring>()</argsstring>
+        <name>startApi</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="source/EClient.cs" line="141" column="1" bodyfile="source/EClient.cs" bodystart="141" bodyend="158"/>
+      </memberdef>
+      <memberdef kind="function" id="class_i_b_api_1_1_e_client_a7f7a3199c392465d0767c6506c1af5b4_1a7f7a3199c392465d0767c6506c1af5b4" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void Close</definition>
+        <argsstring>()</argsstring>
+        <name>Close</name>
+        <briefdescription>
+<para>Terminates the connection and notifies the <ref refid="interface_i_b_api_1_1_e_wrapper" kindref="compound">EWrapper</ref> implementing class. </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="see"><para><ref refid="interface_i_b_api_1_1_e_wrapper_a9b0f099dc421e5a48ec290cab67a8ad1_1a9b0f099dc421e5a48ec290cab67a8ad1" kindref="member">EWrapper::connectionClosed</ref>, <ref refid="class_i_b_api_1_1_e_client_1aeb253ccdaf724eac22e8f75a0f19f421" kindref="member">eDisconnect</ref> </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="source/EClient.cs" line="166" column="1" bodyfile="source/EClient.cs" bodystart="166" bodyend="170"/>
+      </memberdef>
+      <memberdef kind="function" id="class_i_b_api_1_1_e_client_1aeb253ccdaf724eac22e8f75a0f19f421" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void eDisconnect</definition>
+        <argsstring>()</argsstring>
+        <name>eDisconnect</name>
+        <briefdescription>
+<para>Closes the socket connection and terminates its thread. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="source/EClient.cs" line="175" column="1" bodyfile="source/EClient.cs" bodystart="175" bodyend="192"/>
+      </memberdef>
+      <memberdef kind="function" id="class_i_b_api_1_1_e_client_ab27324bd18e7022e26ac4520808b919f_1ab27324bd18e7022e26ac4520808b919f" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void cancelHistoricalData</definition>
+        <argsstring>(int reqId)</argsstring>
+        <name>cancelHistoricalData</name>
+        <param>
+          <type>int</type>
+          <declname>reqId</declname>
+        </param>
+        <briefdescription>
+<para>Cancels a historical data request. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>reqId</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the request&apos;s identifier. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="see"><para><ref refid="class_i_b_api_1_1_e_client_a72fc193c4d50f738b6092a174988f093_1a72fc193c4d50f738b6092a174988f093" kindref="member">reqHistoricalData</ref> </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="source/EClient.cs" line="200" column="1" bodyfile="source/EClient.cs" bodystart="200" bodyend="209"/>
+      </memberdef>
+      <memberdef kind="function" id="class_i_b_api_1_1_e_client_a04c5d248c1036dd72435cc1edc7c58e2_1a04c5d248c1036dd72435cc1edc7c58e2" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void calculateImpliedVolatility</definition>
+        <argsstring>(int reqId, Contract contract, double optionPrice, double underPrice, List&lt; TagValue &gt; impliedVolatilityOptions)</argsstring>
+        <name>calculateImpliedVolatility</name>
+        <param>
+          <type>int</type>
+          <declname>reqId</declname>
+        </param>
+        <param>
+          <type>Contract</type>
+          <declname>contract</declname>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>optionPrice</declname>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>underPrice</declname>
+        </param>
+        <param>
+          <type>List&lt; TagValue &gt;</type>
+          <declname>impliedVolatilityOptions</declname>
+        </param>
+        <briefdescription>
+<para>Calculate the volatility for an option. Request the calculation of the implied volatility based on hypothetical option and its underlying prices. The calculation will be return in <ref refid="interface_i_b_api_1_1_e_wrapper" kindref="compound">EWrapper</ref>&apos;s tickOptionComputation callback. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>reqId</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>unique identifier of the request. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>contract</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the option&apos;s contract for which the volatility wants to be calculated. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>optionPrice</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>hypothetical option price. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>underPrice</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>hypothetical option&apos;s underlying price. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="see"><para><ref refid="interface_i_b_api_1_1_e_wrapper_acacbf738e95ff9ffcc19b130f39938b3_1acacbf738e95ff9ffcc19b130f39938b3" kindref="member">EWrapper::tickOptionComputation</ref>, <ref refid="class_i_b_api_1_1_e_client_ae9bedabe0d86919489c87093c0a20d98_1ae9bedabe0d86919489c87093c0a20d98" kindref="member">cancelCalculateImpliedVolatility</ref>, Contract </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="source/EClient.cs" line="220" column="1" bodyfile="source/EClient.cs" bodystart="220" bodyend="259"/>
+      </memberdef>
+      <memberdef kind="function" id="class_i_b_api_1_1_e_client_a7afa53b655542e74ede683e1de2b2fc4_1a7afa53b655542e74ede683e1de2b2fc4" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void calculateOptionPrice</definition>
+        <argsstring>(int reqId, Contract contract, double volatility, double underPrice, List&lt; TagValue &gt; optionPriceOptions)</argsstring>
+        <name>calculateOptionPrice</name>
+        <param>
+          <type>int</type>
+          <declname>reqId</declname>
+        </param>
+        <param>
+          <type>Contract</type>
+          <declname>contract</declname>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>volatility</declname>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>underPrice</declname>
+        </param>
+        <param>
+          <type>List&lt; TagValue &gt;</type>
+          <declname>optionPriceOptions</declname>
+        </param>
+        <briefdescription>
+<para>Calculates an option&apos;s price. Calculates an option&apos;s price based on the provided volatility and its underlying&apos;s price. The calculation will be return in <ref refid="interface_i_b_api_1_1_e_wrapper" kindref="compound">EWrapper</ref>&apos;s tickOptionComputation callback. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>reqId</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>request&apos;s unique identifier. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>contract</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the option&apos;s contract for which the price wants to be calculated. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>volatility</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>hypothetical volatility. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>underPrice</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>hypothetical underlying&apos;s price. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="see"><para><ref refid="interface_i_b_api_1_1_e_wrapper_acacbf738e95ff9ffcc19b130f39938b3_1acacbf738e95ff9ffcc19b130f39938b3" kindref="member">EWrapper::tickOptionComputation</ref>, <ref refid="class_i_b_api_1_1_e_client_aaf743e93e4dc4045f97c40e476fb0fd6_1aaf743e93e4dc4045f97c40e476fb0fd6" kindref="member">cancelCalculateOptionPrice</ref>, Contract </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="source/EClient.cs" line="270" column="1" bodyfile="source/EClient.cs" bodystart="270" bodyend="312"/>
+      </memberdef>
+      <memberdef kind="function" id="class_i_b_api_1_1_e_client_af5ec205466b47cdab2cd17931b529e82_1af5ec205466b47cdab2cd17931b529e82" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void cancelAccountSummary</definition>
+        <argsstring>(int reqId)</argsstring>
+        <name>cancelAccountSummary</name>
+        <param>
+          <type>int</type>
+          <declname>reqId</declname>
+        </param>
+        <briefdescription>
+<para>Cancels the account&apos;s summary request. After requesting an account&apos;s summary, invoke this function to cancel it. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>reqId</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the identifier of the previously performed account request </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="see"><para><ref refid="class_i_b_api_1_1_e_client_a3e0d55d36cd416639b97ee6e47a86fe9_1a3e0d55d36cd416639b97ee6e47a86fe9" kindref="member">reqAccountSummary</ref> </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="source/EClient.cs" line="320" column="1" bodyfile="source/EClient.cs" bodystart="320" bodyend="328"/>
+      </memberdef>
+      <memberdef kind="function" id="class_i_b_api_1_1_e_client_ae9bedabe0d86919489c87093c0a20d98_1ae9bedabe0d86919489c87093c0a20d98" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void cancelCalculateImpliedVolatility</definition>
+        <argsstring>(int reqId)</argsstring>
+        <name>cancelCalculateImpliedVolatility</name>
+        <param>
+          <type>int</type>
+          <declname>reqId</declname>
+        </param>
+        <briefdescription>
+<para>Cancels an option&apos;s implied volatility calculation request. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>reqId</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the identifier of the implied volatility&apos;s calculation request. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="see"><para><ref refid="class_i_b_api_1_1_e_client_a04c5d248c1036dd72435cc1edc7c58e2_1a04c5d248c1036dd72435cc1edc7c58e2" kindref="member">calculateImpliedVolatility</ref> </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="source/EClient.cs" line="335" column="1" bodyfile="source/EClient.cs" bodystart="335" bodyend="343"/>
+      </memberdef>
+      <memberdef kind="function" id="class_i_b_api_1_1_e_client_aaf743e93e4dc4045f97c40e476fb0fd6_1aaf743e93e4dc4045f97c40e476fb0fd6" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void cancelCalculateOptionPrice</definition>
+        <argsstring>(int reqId)</argsstring>
+        <name>cancelCalculateOptionPrice</name>
+        <param>
+          <type>int</type>
+          <declname>reqId</declname>
+        </param>
+        <briefdescription>
+<para>Cancels an option&apos;s price calculation request. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>reqId</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the identifier of the option&apos;s price&apos;s calculation request. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="see"><para><ref refid="class_i_b_api_1_1_e_client_a7afa53b655542e74ede683e1de2b2fc4_1a7afa53b655542e74ede683e1de2b2fc4" kindref="member">calculateOptionPrice</ref> </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="source/EClient.cs" line="350" column="1" bodyfile="source/EClient.cs" bodystart="350" bodyend="358"/>
+      </memberdef>
+      <memberdef kind="function" id="class_i_b_api_1_1_e_client_acd1ccc4382e3e51fa07091426422d61b_1acd1ccc4382e3e51fa07091426422d61b" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void cancelFundamentalData</definition>
+        <argsstring>(int reqId)</argsstring>
+        <name>cancelFundamentalData</name>
+        <param>
+          <type>int</type>
+          <declname>reqId</declname>
+        </param>
+        <briefdescription>
+<para>Cancels Fundamental data request. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>reqId</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the request&apos;s idenfier. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="see"><para><ref refid="class_i_b_api_1_1_e_client_abba7df6f72f5516cae4c05c9144a89ee_1abba7df6f72f5516cae4c05c9144a89ee" kindref="member">reqFundamentalData</ref> </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="source/EClient.cs" line="365" column="1" bodyfile="source/EClient.cs" bodystart="365" bodyend="373"/>
+      </memberdef>
+      <memberdef kind="function" id="class_i_b_api_1_1_e_client_af443a1cd993aee33ce67deb7bc39e484_1af443a1cd993aee33ce67deb7bc39e484" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void cancelMktData</definition>
+        <argsstring>(int tickerId)</argsstring>
+        <name>cancelMktData</name>
+        <param>
+          <type>int</type>
+          <declname>tickerId</declname>
+        </param>
+        <briefdescription>
+<para>Cancels a RT Market Data request. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>tickerId</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>request&apos;s identifier </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="see"><para><ref refid="class_i_b_api_1_1_e_client_a5b7d2f3048b2be5c9c3a87c18fb01dd3_1a5b7d2f3048b2be5c9c3a87c18fb01dd3" kindref="member">reqMktData</ref> </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="source/EClient.cs" line="382" column="1" bodyfile="source/EClient.cs" bodystart="382" bodyend="388"/>
+      </memberdef>
+      <memberdef kind="function" id="class_i_b_api_1_1_e_client_a7aeb4af9a757c70cb74579308ab1fb7b_1a7aeb4af9a757c70cb74579308ab1fb7b" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void cancelMktDepth</definition>
+        <argsstring>(int tickerId)</argsstring>
+        <name>cancelMktDepth</name>
+        <param>
+          <type>int</type>
+          <declname>tickerId</declname>
+        </param>
+        <briefdescription>
+<para>Cancel&apos;s market depth&apos;s request. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>tickerId</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>request&apos;s identifier. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="see"><para><ref refid="class_i_b_api_1_1_e_client_a7f2915171d0c150723e297be291beabb_1a7f2915171d0c150723e297be291beabb" kindref="member">reqMarketDepth</ref> </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="source/EClient.cs" line="395" column="1" bodyfile="source/EClient.cs" bodystart="395" bodyend="402"/>
+      </memberdef>
+      <memberdef kind="function" id="class_i_b_api_1_1_e_client_ae734ca3d50bb6ce3ddb666d9babc0d6e_1ae734ca3d50bb6ce3ddb666d9babc0d6e" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void cancelNewsBulletin</definition>
+        <argsstring>()</argsstring>
+        <name>cancelNewsBulletin</name>
+        <briefdescription>
+<para>Cancels IB&apos;s news bulletin subscription. </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="see"><para><ref refid="class_i_b_api_1_1_e_client_a286458a8be7d3b37f0d94fe61bf717fa_1a286458a8be7d3b37f0d94fe61bf717fa" kindref="member">reqNewsBulletins</ref> </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="source/EClient.cs" line="408" column="1" bodyfile="source/EClient.cs" bodystart="408" bodyend="414"/>
+      </memberdef>
+      <memberdef kind="function" id="class_i_b_api_1_1_e_client_adb0a6963779be4904439fb1f24a8cce8_1adb0a6963779be4904439fb1f24a8cce8" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void cancelOrder</definition>
+        <argsstring>(int orderId)</argsstring>
+        <name>cancelOrder</name>
+        <param>
+          <type>int</type>
+          <declname>orderId</declname>
+        </param>
+        <briefdescription>
+<para>Cancels an active order. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>orderId</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the order&apos;s client id </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="see"><para><ref refid="class_i_b_api_1_1_e_client_aa6ff6f6455c551bef9d66c34d1c8586c_1aa6ff6f6455c551bef9d66c34d1c8586c" kindref="member">placeOrder</ref>, <ref refid="class_i_b_api_1_1_e_client_a66ad7a4820c5be21ebde521d59a50053_1a66ad7a4820c5be21ebde521d59a50053" kindref="member">reqGlobalCancel</ref> </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="source/EClient.cs" line="421" column="1" bodyfile="source/EClient.cs" bodystart="421" bodyend="427"/>
+      </memberdef>
+      <memberdef kind="function" id="class_i_b_api_1_1_e_client_ab2159a39733d8967928317524875aa62_1ab2159a39733d8967928317524875aa62" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void cancelPositions</definition>
+        <argsstring>()</argsstring>
+        <name>cancelPositions</name>
+        <briefdescription>
+<para>Cancels all account&apos;s positions request. </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="see"><para><ref refid="class_i_b_api_1_1_e_client_ab262cf5601e57d6612d3df5e821fca9e_1ab262cf5601e57d6612d3df5e821fca9e" kindref="member">reqPositions</ref> </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="source/EClient.cs" line="433" column="1" bodyfile="source/EClient.cs" bodystart="433" bodyend="443"/>
+      </memberdef>
+      <memberdef kind="function" id="class_i_b_api_1_1_e_client_a472bdf9a30d1079e03400d8d38cfb634_1a472bdf9a30d1079e03400d8d38cfb634" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void cancelRealTimeBars</definition>
+        <argsstring>(int tickerId)</argsstring>
+        <name>cancelRealTimeBars</name>
+        <param>
+          <type>int</type>
+          <declname>tickerId</declname>
+        </param>
+        <briefdescription>
+<para>Cancels Real Time Bars&apos; subscription. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>tickerId</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the request&apos;s identifier. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="see"><para><ref refid="class_i_b_api_1_1_e_client_a644a8d918f3108a3817e8672b9782e67_1a644a8d918f3108a3817e8672b9782e67" kindref="member">reqRealTimeBars</ref> </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="source/EClient.cs" line="450" column="1" bodyfile="source/EClient.cs" bodystart="450" bodyend="456"/>
+      </memberdef>
+      <memberdef kind="function" id="class_i_b_api_1_1_e_client_abf7a8fc280a422a0695962ba50b2d574_1abf7a8fc280a422a0695962ba50b2d574" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void cancelScannerSubscription</definition>
+        <argsstring>(int tickerId)</argsstring>
+        <name>cancelScannerSubscription</name>
+        <param>
+          <type>int</type>
+          <declname>tickerId</declname>
+        </param>
+        <briefdescription>
+<para>Cancels Scanner Subscription. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>tickerId</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the subscription&apos;s unique identifier. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="see"><para><ref refid="class_i_b_api_1_1_e_client_a13dd1287f67c6873b3e8b85d6c19f885_1a13dd1287f67c6873b3e8b85d6c19f885" kindref="member">reqScannerSubscription</ref>, ScannerSubscription, <ref refid="class_i_b_api_1_1_e_client_a5839736a34d827f8db87f536a73ae970_1a5839736a34d827f8db87f536a73ae970" kindref="member">reqScannerParameters</ref> </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="source/EClient.cs" line="463" column="1" bodyfile="source/EClient.cs" bodystart="463" bodyend="469"/>
+      </memberdef>
+      <memberdef kind="function" id="class_i_b_api_1_1_e_client_aad70a7b82ad3b5e7ae3e9f0b98dc2a5b_1aad70a7b82ad3b5e7ae3e9f0b98dc2a5b" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void exerciseOptions</definition>
+        <argsstring>(int tickerId, Contract contract, int exerciseAction, int exerciseQuantity, string account, int ovrd)</argsstring>
+        <name>exerciseOptions</name>
+        <param>
+          <type>int</type>
+          <declname>tickerId</declname>
+        </param>
+        <param>
+          <type>Contract</type>
+          <declname>contract</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>exerciseAction</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>exerciseQuantity</declname>
+        </param>
+        <param>
+          <type>string</type>
+          <declname>account</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>ovrd</declname>
+        </param>
+        <briefdescription>
+<para>Exercises your options. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>tickerId</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>exercise request&apos;s identifier </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>contract</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the option Contract to be exercised. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>exerciseAction</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>set to 1 to exercise the option, set to 2 to let the option lapse. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>exerciseQuantity</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>number of contracts to be exercised </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>account</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>destination account </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>ovrd</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Specifies whether your setting will override the system&apos;s natural action. For example, if your action is &quot;exercise&quot; and the option is not in-the-money, by natural action the option would not exercise. If you have override set to &quot;yes&quot; the natural action would be overridden and the out-of-the money option would be exercised. Set to 1 to override, set to 0 not to. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="source/EClient.cs" line="480" column="1" bodyfile="source/EClient.cs" bodystart="480" bodyend="523"/>
+      </memberdef>
+      <memberdef kind="function" id="class_i_b_api_1_1_e_client_aa6ff6f6455c551bef9d66c34d1c8586c_1aa6ff6f6455c551bef9d66c34d1c8586c" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void placeOrder</definition>
+        <argsstring>(int id, Contract contract, Order order)</argsstring>
+        <name>placeOrder</name>
+        <param>
+          <type>int</type>
+          <declname>id</declname>
+        </param>
+        <param>
+          <type>Contract</type>
+          <declname>contract</declname>
+        </param>
+        <param>
+          <type>Order</type>
+          <declname>order</declname>
+        </param>
+        <briefdescription>
+<para>Places an order. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>id</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the order&apos;s unique identifier. Use a sequential id starting with the id received at the nextValidId method. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>contract</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the order&apos;s contract </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>order</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the order </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="see"><para>nextValidId, <ref refid="class_i_b_api_1_1_e_client_aa2c9a012884dd53311a7a7c6a326306c_1aa2c9a012884dd53311a7a7c6a326306c" kindref="member">reqAllOpenOrders</ref>, <ref refid="class_i_b_api_1_1_e_client_abe8e30367fff33b9a1171a4580029016_1abe8e30367fff33b9a1171a4580029016" kindref="member">reqAutoOpenOrders</ref>, <ref refid="class_i_b_api_1_1_e_client_a11e9c0dce640a3b8ed7a221792412c05_1a11e9c0dce640a3b8ed7a221792412c05" kindref="member">reqOpenOrders</ref>, <ref refid="class_i_b_api_1_1_e_client_adb0a6963779be4904439fb1f24a8cce8_1adb0a6963779be4904439fb1f24a8cce8" kindref="member">cancelOrder</ref>, <ref refid="class_i_b_api_1_1_e_client_a66ad7a4820c5be21ebde521d59a50053_1a66ad7a4820c5be21ebde521d59a50053" kindref="member">reqGlobalCancel</ref>, <ref refid="interface_i_b_api_1_1_e_wrapper_aa05258f1d005accd3efc0d60bc151407_1aa05258f1d005accd3efc0d60bc151407" kindref="member">EWrapper::openOrder</ref>, <ref refid="interface_i_b_api_1_1_e_wrapper_a225c060ff9653cfaeff7304033eb76b3_1a225c060ff9653cfaeff7304033eb76b3" kindref="member">EWrapper::orderStatus</ref>, Order, Contract </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="source/EClient.cs" line="532" column="1" bodyfile="source/EClient.cs" bodystart="532" bodyend="964"/>
+      </memberdef>
+      <memberdef kind="function" id="class_i_b_api_1_1_e_client_a7ff2dbde6ec82a3d6dc5036168ddd38a_1a7ff2dbde6ec82a3d6dc5036168ddd38a" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void replaceFA</definition>
+        <argsstring>(int faDataType, string xml)</argsstring>
+        <name>replaceFA</name>
+        <param>
+          <type>int</type>
+          <declname>faDataType</declname>
+        </param>
+        <param>
+          <type>string</type>
+          <declname>xml</declname>
+        </param>
+        <briefdescription>
+<para>Replaces Financial Advisor&apos;s settings A Financial Advisor can define three different configurations: </para>        </briefdescription>
+        <detaileddescription>
+<para><orderedlist>
+<listitem><para>Groups: offer traders a way to create a group of accounts and apply a single allocation method to all accounts in the group.</para></listitem><listitem><para>Profiles: let you allocate shares on an account-by-account basis using a predefined calculation value.</para></listitem><listitem><para>Account Aliases: let you easily identify the accounts by meaningful names rather than account numbers. More information at <ulink url="https://www.interactivebrokers.com/en/?f=%2Fen%2Fsoftware%2Fpdfhighlights%2FPDF-AdvisorAllocations.php%3Fib_entity%3Dllc">https://www.interactivebrokers.com/en/?f=%2Fen%2Fsoftware%2Fpdfhighlights%2FPDF-AdvisorAllocations.php%3Fib_entity%3Dllc</ulink> <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>faDataType</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the configuration to change. Set to 1, 2 or 3 as defined above. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>xml</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the xml-formatted configuration string </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="see"><para><ref refid="class_i_b_api_1_1_e_client_a298083eaed0207ac8d3e69894dd81c82_1a298083eaed0207ac8d3e69894dd81c82" kindref="member">requestFA</ref> </para></simplesect>
+</para></listitem></orderedlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="source/EClient.cs" line="978" column="1" bodyfile="source/EClient.cs" bodystart="978" bodyend="991"/>
+      </memberdef>
+      <memberdef kind="function" id="class_i_b_api_1_1_e_client_a298083eaed0207ac8d3e69894dd81c82_1a298083eaed0207ac8d3e69894dd81c82" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void requestFA</definition>
+        <argsstring>(int faDataType)</argsstring>
+        <name>requestFA</name>
+        <param>
+          <type>int</type>
+          <declname>faDataType</declname>
+        </param>
+        <briefdescription>
+<para>Requests the FA configuration A Financial Advisor can define three different configurations: </para>        </briefdescription>
+        <detaileddescription>
+<para><orderedlist>
+<listitem><para>Groups: offer traders a way to create a group of accounts and apply a single allocation method to all accounts in the group.</para></listitem><listitem><para>Profiles: let you allocate shares on an account-by-account basis using a predefined calculation value.</para></listitem><listitem><para>Account Aliases: let you easily identify the accounts by meaningful names rather than account numbers. More information at <ulink url="https://www.interactivebrokers.com/en/?f=%2Fen%2Fsoftware%2Fpdfhighlights%2FPDF-AdvisorAllocations.php%3Fib_entity%3Dllc">https://www.interactivebrokers.com/en/?f=%2Fen%2Fsoftware%2Fpdfhighlights%2FPDF-AdvisorAllocations.php%3Fib_entity%3Dllc</ulink> <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>faDataType</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the configuration to change. Set to 1, 2 or 3 as defined above. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="see"><para><ref refid="class_i_b_api_1_1_e_client_a7ff2dbde6ec82a3d6dc5036168ddd38a_1a7ff2dbde6ec82a3d6dc5036168ddd38a" kindref="member">replaceFA</ref> </para></simplesect>
+</para></listitem></orderedlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="source/EClient.cs" line="1003" column="1" bodyfile="source/EClient.cs" bodystart="1003" bodyend="1015"/>
+      </memberdef>
+      <memberdef kind="function" id="class_i_b_api_1_1_e_client_a3e0d55d36cd416639b97ee6e47a86fe9_1a3e0d55d36cd416639b97ee6e47a86fe9" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void reqAccountSummary</definition>
+        <argsstring>(int reqId, string group, string tags)</argsstring>
+        <name>reqAccountSummary</name>
+        <param>
+          <type>int</type>
+          <declname>reqId</declname>
+        </param>
+        <param>
+          <type>string</type>
+          <declname>group</declname>
+        </param>
+        <param>
+          <type>string</type>
+          <declname>tags</declname>
+        </param>
+        <briefdescription>
+<para>Requests a specific account&apos;s summary. This method will subscribe to the account summary as presented in the TWS&apos; Account Summary tab. The data is returned at <ref refid="interface_i_b_api_1_1_e_wrapper_acd761f48771f61dd0fb9e9a7d88d4f04_1acd761f48771f61dd0fb9e9a7d88d4f04" kindref="member">EWrapper::accountSummary</ref>. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>reqId</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the unique request idntifier. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>group</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>set to &quot;All&quot; to return account summary data for all accounts, or set to a specific Advisor Account Group name that has already been created in TWS Global Configuration.  tags a comma separated list with the desired tags:<itemizedlist>
+<listitem><para>AccountType</para></listitem><listitem><para>NetLiquidation,</para></listitem><listitem><para>TotalCashValue — Total cash including futures pnl</para></listitem><listitem><para>SettledCash — For cash accounts, this is the same as TotalCashValue</para></listitem><listitem><para>AccruedCash — Net accrued interest</para></listitem><listitem><para>BuyingPower — The maximum amount of marginable US stocks the account can buy</para></listitem><listitem><para>EquityWithLoanValue — Cash + stocks + bonds + mutual funds</para></listitem><listitem><para>PreviousEquityWithLoanValue,</para></listitem><listitem><para>GrossPositionValue — The sum of the absolute value of all stock and equity option positions</para></listitem><listitem><para>RegTEquity,</para></listitem><listitem><para>RegTMargin,</para></listitem><listitem><para>SMA — Special Memorandum Account</para></listitem><listitem><para>InitMarginReq,</para></listitem><listitem><para>MaintMarginReq,</para></listitem><listitem><para>AvailableFunds,</para></listitem><listitem><para>ExcessLiquidity,</para></listitem><listitem><para>Cushion — Excess liquidity as a percentage of net liquidation value</para></listitem><listitem><para>FullInitMarginReq,</para></listitem><listitem><para>FullMaintMarginReq,</para></listitem><listitem><para>FullAvailableFunds,</para></listitem><listitem><para>FullExcessLiquidity,</para></listitem><listitem><para>LookAheadNextChange — Time when look-ahead values take effect</para></listitem><listitem><para>LookAheadInitMarginReq,</para></listitem><listitem><para>LookAheadMaintMarginReq,</para></listitem><listitem><para>LookAheadAvailableFunds,</para></listitem><listitem><para>LookAheadExcessLiquidity,</para></listitem><listitem><para>HighestSeverity — A measure of how close the account is to liquidation</para></listitem><listitem><para>DayTradesRemaining — The Number of Open/Close trades a user could put on before Pattern Day Trading is detected. A value of &quot;-1&quot; means that the user can put on unlimited day trades.</para></listitem><listitem><para>Leverage — GrossPositionValue / NetLiquidation </para></listitem></itemizedlist>
+</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="see"><para><ref refid="class_i_b_api_1_1_e_client_af5ec205466b47cdab2cd17931b529e82_1af5ec205466b47cdab2cd17931b529e82" kindref="member">cancelAccountSummary</ref>, <ref refid="interface_i_b_api_1_1_e_wrapper_acd761f48771f61dd0fb9e9a7d88d4f04_1acd761f48771f61dd0fb9e9a7d88d4f04" kindref="member">EWrapper::accountSummary</ref>, <ref refid="interface_i_b_api_1_1_e_wrapper_a12bf8483858526077140c950e80f2995_1a12bf8483858526077140c950e80f2995" kindref="member">EWrapper::accountSummaryEnd</ref> </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="source/EClient.cs" line="1054" column="1" bodyfile="source/EClient.cs" bodystart="1054" bodyend="1073"/>
+      </memberdef>
+      <memberdef kind="function" id="class_i_b_api_1_1_e_client_aea1b0d9b6b85a4e0b18caf13a51f837f_1aea1b0d9b6b85a4e0b18caf13a51f837f" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void reqAccountUpdates</definition>
+        <argsstring>(bool subscribe, string acctCode)</argsstring>
+        <name>reqAccountUpdates</name>
+        <param>
+          <type>bool</type>
+          <declname>subscribe</declname>
+        </param>
+        <param>
+          <type>string</type>
+          <declname>acctCode</declname>
+        </param>
+        <briefdescription>
+<para>Subscribes to an specific account&apos;s information and portfolio Through this method, a single account&apos;s subscription can be started/stopped. As a result from the subscription, the account&apos;s information, portfolio and last update time will be received at <ref refid="interface_i_b_api_1_1_e_wrapper_ae15a34084d9f26f279abd0bdeab1b9b5_1ae15a34084d9f26f279abd0bdeab1b9b5" kindref="member">EWrapper::updateAccountValue</ref>, EWrapper::updateAccountPortfolio, <ref refid="interface_i_b_api_1_1_e_wrapper_a0f2fa798304a0cf101d57453f48c55f0_1a0f2fa798304a0cf101d57453f48c55f0" kindref="member">EWrapper::updateAccountTime</ref> respectively. Only one account can be subscribed at a time. A second subscription request for another account when the previous one is still active will cause the first one to be canceled in favour of the second one. Consider user reqPositions if you want to retrieve all your accounts&apos; portfolios directly. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>subscribe</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>set to true to start the subscription and to false to stop it. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>acctCode</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the account id (i.e. U123456) for which the information is requested. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="see"><para><ref refid="class_i_b_api_1_1_e_client_ab262cf5601e57d6612d3df5e821fca9e_1ab262cf5601e57d6612d3df5e821fca9e" kindref="member">reqPositions</ref>, <ref refid="interface_i_b_api_1_1_e_wrapper_ae15a34084d9f26f279abd0bdeab1b9b5_1ae15a34084d9f26f279abd0bdeab1b9b5" kindref="member">EWrapper::updateAccountValue</ref>, EWrapper::updateAccountPortfolio, <ref refid="interface_i_b_api_1_1_e_wrapper_a0f2fa798304a0cf101d57453f48c55f0_1a0f2fa798304a0cf101d57453f48c55f0" kindref="member">EWrapper::updateAccountTime</ref> </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="source/EClient.cs" line="1083" column="1" bodyfile="source/EClient.cs" bodystart="1083" bodyend="1097"/>
+      </memberdef>
+      <memberdef kind="function" id="class_i_b_api_1_1_e_client_aa2c9a012884dd53311a7a7c6a326306c_1aa2c9a012884dd53311a7a7c6a326306c" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void reqAllOpenOrders</definition>
+        <argsstring>()</argsstring>
+        <name>reqAllOpenOrders</name>
+        <briefdescription>
+<para>Requests all open orders submitted by any API client as well as those directly placed in the TWS. The existing orders will be received via the openOrder and orderStatus events. </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="see"><para><ref refid="class_i_b_api_1_1_e_client_abe8e30367fff33b9a1171a4580029016_1abe8e30367fff33b9a1171a4580029016" kindref="member">reqAutoOpenOrders</ref>, <ref refid="class_i_b_api_1_1_e_client_a11e9c0dce640a3b8ed7a221792412c05_1a11e9c0dce640a3b8ed7a221792412c05" kindref="member">reqOpenOrders</ref>, <ref refid="interface_i_b_api_1_1_e_wrapper_aa05258f1d005accd3efc0d60bc151407_1aa05258f1d005accd3efc0d60bc151407" kindref="member">EWrapper::openOrder</ref>, <ref refid="interface_i_b_api_1_1_e_wrapper_a225c060ff9653cfaeff7304033eb76b3_1a225c060ff9653cfaeff7304033eb76b3" kindref="member">EWrapper::orderStatus</ref> </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="source/EClient.cs" line="1103" column="1" bodyfile="source/EClient.cs" bodystart="1103" bodyend="1114"/>
+      </memberdef>
+      <memberdef kind="function" id="class_i_b_api_1_1_e_client_abe8e30367fff33b9a1171a4580029016_1abe8e30367fff33b9a1171a4580029016" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void reqAutoOpenOrders</definition>
+        <argsstring>(bool autoBind)</argsstring>
+        <name>reqAutoOpenOrders</name>
+        <param>
+          <type>bool</type>
+          <declname>autoBind</declname>
+        </param>
+        <briefdescription>
+<para>Requests all order placed on the TWS directly. Only the orders created after this request has been made will be returned. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>autoBind</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>if set to true, the newly created orders will be implicitely associated with this client. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="see"><para><ref refid="class_i_b_api_1_1_e_client_aa2c9a012884dd53311a7a7c6a326306c_1aa2c9a012884dd53311a7a7c6a326306c" kindref="member">reqAllOpenOrders</ref>, <ref refid="class_i_b_api_1_1_e_client_a11e9c0dce640a3b8ed7a221792412c05_1a11e9c0dce640a3b8ed7a221792412c05" kindref="member">reqOpenOrders</ref>, <ref refid="class_i_b_api_1_1_e_client_adb0a6963779be4904439fb1f24a8cce8_1adb0a6963779be4904439fb1f24a8cce8" kindref="member">cancelOrder</ref>, <ref refid="class_i_b_api_1_1_e_client_a66ad7a4820c5be21ebde521d59a50053_1a66ad7a4820c5be21ebde521d59a50053" kindref="member">reqGlobalCancel</ref>, <ref refid="interface_i_b_api_1_1_e_wrapper_aa05258f1d005accd3efc0d60bc151407_1aa05258f1d005accd3efc0d60bc151407" kindref="member">EWrapper::openOrder</ref>, <ref refid="interface_i_b_api_1_1_e_wrapper_a225c060ff9653cfaeff7304033eb76b3_1a225c060ff9653cfaeff7304033eb76b3" kindref="member">EWrapper::orderStatus</ref> </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="source/EClient.cs" line="1122" column="1" bodyfile="source/EClient.cs" bodystart="1122" bodyend="1134"/>
+      </memberdef>
+      <memberdef kind="function" id="class_i_b_api_1_1_e_client_ade440c6db838b548594981d800ea5ca9_1ade440c6db838b548594981d800ea5ca9" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void reqContractDetails</definition>
+        <argsstring>(int reqId, Contract contract)</argsstring>
+        <name>reqContractDetails</name>
+        <param>
+          <type>int</type>
+          <declname>reqId</declname>
+        </param>
+        <param>
+          <type>Contract</type>
+          <declname>contract</declname>
+        </param>
+        <briefdescription>
+<para>Requests contract information. This method will provide all the contracts matching the contract provided. It can also be used to retrieve complete options and futures chains. This information will be returned at <ref refid="interface_i_b_api_1_1_e_wrapper" kindref="compound">EWrapper</ref>:contractDetails. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>reqId</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the unique request identifier. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>contract</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the contract used as sample to query the available contracts. Typically, it will contain the Contract::Symbol, Contract::Currency, Contract::SecType, Contract::Exchange </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="see"><para><ref refid="interface_i_b_api_1_1_e_wrapper_a1b767810613c700b5bb1056a836da0bc_1a1b767810613c700b5bb1056a836da0bc" kindref="member">EWrapper::contractDetails</ref> </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="source/EClient.cs" line="1143" column="1" bodyfile="source/EClient.cs" bodystart="1143" bodyend="1223"/>
+      </memberdef>
+      <memberdef kind="function" id="class_i_b_api_1_1_e_client_ad1ecfd4fb31841ce5817e0c32f44b639_1ad1ecfd4fb31841ce5817e0c32f44b639" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void reqCurrentTime</definition>
+        <argsstring>()</argsstring>
+        <name>reqCurrentTime</name>
+        <briefdescription>
+<para>Requests the server&apos;s current time. </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="see"><para><ref refid="interface_i_b_api_1_1_e_wrapper_a7004c6c027c90ecdc1f5c68759e37fd2_1a7004c6c027c90ecdc1f5c68759e37fd2" kindref="member">EWrapper::currentTime</ref> </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="source/EClient.cs" line="1229" column="1" bodyfile="source/EClient.cs" bodystart="1229" bodyend="1244"/>
+      </memberdef>
+      <memberdef kind="function" id="class_i_b_api_1_1_e_client_ae17dbb7d7c37591de983b2b74af2d9b5_1ae17dbb7d7c37591de983b2b74af2d9b5" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void reqExecutions</definition>
+        <argsstring>(int reqId, ExecutionFilter filter)</argsstring>
+        <name>reqExecutions</name>
+        <param>
+          <type>int</type>
+          <declname>reqId</declname>
+        </param>
+        <param>
+          <type>ExecutionFilter</type>
+          <declname>filter</declname>
+        </param>
+        <briefdescription>
+<para>Requests all the day&apos;s executions matching the filter. Only the current day&apos;s executions can be retrieved. Along with the executions, the CommissionReport will also be returned. The execution details will arrive at <ref refid="interface_i_b_api_1_1_e_wrapper" kindref="compound">EWrapper</ref>:execDetails. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>reqId</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the request&apos;s unique identifier. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>filter</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the filter criteria used to determine which execution reports are returned. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="see"><para><ref refid="interface_i_b_api_1_1_e_wrapper_a09f82de3d0666d13b00b5168e8b9313d_1a09f82de3d0666d13b00b5168e8b9313d" kindref="member">EWrapper::execDetails</ref>, <ref refid="interface_i_b_api_1_1_e_wrapper_a7ebfc18d5d03189ab5bf895db4a1a204_1a7ebfc18d5d03189ab5bf895db4a1a204" kindref="member">EWrapper::commissionReport</ref>, ExecutionFilter </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="source/EClient.cs" line="1253" column="1" bodyfile="source/EClient.cs" bodystart="1253" bodyend="1285"/>
+      </memberdef>
+      <memberdef kind="function" id="class_i_b_api_1_1_e_client_abba7df6f72f5516cae4c05c9144a89ee_1abba7df6f72f5516cae4c05c9144a89ee" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void reqFundamentalData</definition>
+        <argsstring>(int reqId, Contract contract, String reportType, List&lt; TagValue &gt; fundamentalDataOptions)</argsstring>
+        <name>reqFundamentalData</name>
+        <param>
+          <type>int</type>
+          <declname>reqId</declname>
+        </param>
+        <param>
+          <type>Contract</type>
+          <declname>contract</declname>
+        </param>
+        <param>
+          <type>String</type>
+          <declname>reportType</declname>
+        </param>
+        <param>
+          <type>List&lt; TagValue &gt;</type>
+          <declname>fundamentalDataOptions</declname>
+        </param>
+        <briefdescription>
+<para>Requests the contract&apos;s Reuters&apos; global fundamental data. Reuters funalmental data will be returned at <ref refid="interface_i_b_api_1_1_e_wrapper_af209070fa9583fb4780be0f3ff1e61e4_1af209070fa9583fb4780be0f3ff1e61e4" kindref="member">EWrapper::fundamentalData</ref>. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>reqId</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the request&apos;s unique identifier. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>contract</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the contract&apos;s description for which the data will be returned. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>reportType</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>there are three available report types:<itemizedlist>
+<listitem><para>ReportSnapshot: Company overview</para></listitem><listitem><para>ReportsFinSummary: Financial summary</para></listitem><listitem><para>ReportRatios: Financial ratios</para></listitem><listitem><para>ReportsFinStatements: Financial statements</para></listitem><listitem><para>RESC: Analyst estimates</para></listitem><listitem><para>CalendarReport: Company calendar </para></listitem></itemizedlist>
+</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="see"><para><ref refid="interface_i_b_api_1_1_e_wrapper_af209070fa9583fb4780be0f3ff1e61e4_1af209070fa9583fb4780be0f3ff1e61e4" kindref="member">EWrapper::fundamentalData</ref> </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="source/EClient.cs" line="1301" column="1" bodyfile="source/EClient.cs" bodystart="1301" bodyend="1341"/>
+      </memberdef>
+      <memberdef kind="function" id="class_i_b_api_1_1_e_client_a66ad7a4820c5be21ebde521d59a50053_1a66ad7a4820c5be21ebde521d59a50053" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void reqGlobalCancel</definition>
+        <argsstring>()</argsstring>
+        <name>reqGlobalCancel</name>
+        <briefdescription>
+<para>Cancels all the active orders. This method will cancel ALL open orders included those placed directly via the TWS. </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="see"><para><ref refid="class_i_b_api_1_1_e_client_adb0a6963779be4904439fb1f24a8cce8_1adb0a6963779be4904439fb1f24a8cce8" kindref="member">cancelOrder</ref> </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="source/EClient.cs" line="1348" column="1" bodyfile="source/EClient.cs" bodystart="1348" bodyend="1364"/>
+      </memberdef>
+      <memberdef kind="function" id="class_i_b_api_1_1_e_client_a72fc193c4d50f738b6092a174988f093_1a72fc193c4d50f738b6092a174988f093" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void reqHistoricalData</definition>
+        <argsstring>(int tickerId, Contract contract, string endDateTime, string durationString, string barSizeSetting, string whatToShow, int useRTH, int formatDate, List&lt; TagValue &gt; chartOptions)</argsstring>
+        <name>reqHistoricalData</name>
+        <param>
+          <type>int</type>
+          <declname>tickerId</declname>
+        </param>
+        <param>
+          <type>Contract</type>
+          <declname>contract</declname>
+        </param>
+        <param>
+          <type>string</type>
+          <declname>endDateTime</declname>
+        </param>
+        <param>
+          <type>string</type>
+          <declname>durationString</declname>
+        </param>
+        <param>
+          <type>string</type>
+          <declname>barSizeSetting</declname>
+        </param>
+        <param>
+          <type>string</type>
+          <declname>whatToShow</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>useRTH</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>formatDate</declname>
+        </param>
+        <param>
+          <type>List&lt; TagValue &gt;</type>
+          <declname>chartOptions</declname>
+        </param>
+        <briefdescription>
+<para>Requests contracts&apos; historical data. When requesting historical data, a finishing time and date is required along with a duration string. For example, having: </para>        </briefdescription>
+        <detaileddescription>
+<para><itemizedlist>
+<listitem><para>endDateTime: 20130701 23:59:59 GMT</para></listitem><listitem><para>durationStr: 3 D will return three days of data counting backwards from July 1st 2013 at 23:59:59 GMT resulting in all the available bars of the last three days until the date and time specified. It is possible to specify a timezone optionally. The resulting bars will be returned in <ref refid="interface_i_b_api_1_1_e_wrapper_a5cfc0dff9d3e3470f4c9209163279cda_1a5cfc0dff9d3e3470f4c9209163279cda" kindref="member">EWrapper::historicalData</ref> <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>tickerId</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the request&apos;s unique identifier. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>contract</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the contract for which we want to retrieve the data. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>endDateTime</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>request&apos;s ending time with format yyyyMMdd HH:mm:ss {TMZ} </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>durationString</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the amount of time for which the data needs to be retrieved:</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para></listitem><listitem><para>&quot; S (seconds)
+     - &quot; D (days)</para></listitem><listitem><para>&quot; W (weeks)
+     - &quot; M (months)</para></listitem><listitem><para>" Y (years) <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>barSizeSetting</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the size of the bar:</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para></listitem><listitem><para>1 sec</para></listitem><listitem><para>5 secs</para></listitem><listitem><para>15 secs</para></listitem><listitem><para>30 secs</para></listitem><listitem><para>1 min</para></listitem><listitem><para>2 mins</para></listitem><listitem><para>3 mins</para></listitem><listitem><para>5 mins</para></listitem><listitem><para>15 mins</para></listitem><listitem><para>30 mins</para></listitem><listitem><para>1 hour</para></listitem><listitem><para>1 day <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>whatToShow</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the kind of information being retrieved:</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para></listitem><listitem><para>TRADES</para></listitem><listitem><para>MIDPOINT</para></listitem><listitem><para>BID</para></listitem><listitem><para>ASK</para></listitem><listitem><para>BID_ASK</para></listitem><listitem><para>HISTORICAL_VOLATILITY</para></listitem><listitem><para>OPTION_IMPLIED_VOLATILITY <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>useRTH</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>set to 0 to obtain the data which was also generated ourside of the Regular Trading Hours, set to 1 to obtain only the RTH data </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>formatDate</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>set to 1 to obtain the bars&apos; time as yyyyMMdd HH:mm:ss, set to 2 to obtain it like system time format in seconds </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="see"><para><ref refid="interface_i_b_api_1_1_e_wrapper_a5cfc0dff9d3e3470f4c9209163279cda_1a5cfc0dff9d3e3470f4c9209163279cda" kindref="member">EWrapper::historicalData</ref> </para></simplesect>
+</para></listitem></itemizedlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="source/EClient.cs" line="1406" column="1" bodyfile="source/EClient.cs" bodystart="1406" bodyend="1485"/>
+      </memberdef>
+      <memberdef kind="function" id="class_i_b_api_1_1_e_client_aecea365530f40e7b56529238c9dd2f4a_1aecea365530f40e7b56529238c9dd2f4a" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void reqIds</definition>
+        <argsstring>(int numIds)</argsstring>
+        <name>reqIds</name>
+        <param>
+          <type>int</type>
+          <declname>numIds</declname>
+        </param>
+        <briefdescription>
+<para>Requests the next valid order id. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>numIds</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>deprecate </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="see"><para><ref refid="interface_i_b_api_1_1_e_wrapper_a09c07727efd297e438690ab42838d332_1a09c07727efd297e438690ab42838d332" kindref="member">EWrapper::nextValidId</ref> </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="source/EClient.cs" line="1492" column="1" bodyfile="source/EClient.cs" bodystart="1492" bodyend="1505"/>
+      </memberdef>
+      <memberdef kind="function" id="class_i_b_api_1_1_e_client_af5dc6607457bc7bca764a49c10de0813_1af5dc6607457bc7bca764a49c10de0813" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void reqManagedAccts</definition>
+        <argsstring>()</argsstring>
+        <name>reqManagedAccts</name>
+        <briefdescription>
+<para>Requests the accounts to which the logged user has access to. </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="see"><para><ref refid="interface_i_b_api_1_1_e_wrapper_abd7e561f313bcc4c860074906199a46c_1abd7e561f313bcc4c860074906199a46c" kindref="member">EWrapper::managedAccounts</ref> </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="source/EClient.cs" line="1511" column="1" bodyfile="source/EClient.cs" bodystart="1511" bodyend="1522"/>
+      </memberdef>
+      <memberdef kind="function" id="class_i_b_api_1_1_e_client_a5b7d2f3048b2be5c9c3a87c18fb01dd3_1a5b7d2f3048b2be5c9c3a87c18fb01dd3" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void reqMktData</definition>
+        <argsstring>(int tickerId, Contract contract, string genericTickList, bool snapshot, List&lt; TagValue &gt; mktDataOptions)</argsstring>
+        <name>reqMktData</name>
+        <param>
+          <type>int</type>
+          <declname>tickerId</declname>
+        </param>
+        <param>
+          <type>Contract</type>
+          <declname>contract</declname>
+        </param>
+        <param>
+          <type>string</type>
+          <declname>genericTickList</declname>
+        </param>
+        <param>
+          <type>bool</type>
+          <declname>snapshot</declname>
+        </param>
+        <param>
+          <type>List&lt; TagValue &gt;</type>
+          <declname>mktDataOptions</declname>
+        </param>
+        <briefdescription>
+<para>Requests real time market data. This function will return the product&apos;s market data. It is important to notice that only real time data can be delivered via the API. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>tickerId</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the request&apos;s identifier </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>contract</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the Contract for which the data is being requested </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>genericTickList</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>comma separated ids of the available generic ticks:<itemizedlist>
+<listitem><para>100 Option Volume (currently for stocks)</para></listitem><listitem><para>101 Option Open Interest (currently for stocks)</para></listitem><listitem><para>104 Historical Volatility (currently for stocks)</para></listitem><listitem><para>106 Option Implied Volatility (currently for stocks)</para></listitem><listitem><para>162 Index Future Premium</para></listitem><listitem><para>165 Miscellaneous Stats</para></listitem><listitem><para>221 Mark Price (used in TWS P&amp;L computations)</para></listitem><listitem><para>225 Auction values (volume, price and imbalance)</para></listitem><listitem><para>233 RTVolume - contains the last trade price, last trade size, last trade time, total volume, VWAP, and single trade flag.</para></listitem><listitem><para>236 Shortable</para></listitem><listitem><para>256 Inventory</para></listitem><listitem><para>258 Fundamental Ratios</para></listitem><listitem><para>411 Realtime Historical Volatility</para></listitem><listitem><para>456 IBDividends </para></listitem></itemizedlist>
+</para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>snapshot</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>when set to true, it will provide a single snapshot of the available data. Set to false if you want to receive continuous updates. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="see"><para><ref refid="class_i_b_api_1_1_e_client_af443a1cd993aee33ce67deb7bc39e484_1af443a1cd993aee33ce67deb7bc39e484" kindref="member">cancelMktData</ref>, <ref refid="interface_i_b_api_1_1_e_wrapper_aff4ae3269d7b13dd1ca989a8d5ca1ced_1aff4ae3269d7b13dd1ca989a8d5ca1ced" kindref="member">EWrapper::tickPrice</ref>, <ref refid="interface_i_b_api_1_1_e_wrapper_a1844eb442fb657c0f2cc0a63e4e74eba_1a1844eb442fb657c0f2cc0a63e4e74eba" kindref="member">EWrapper::tickSize</ref>, <ref refid="interface_i_b_api_1_1_e_wrapper_a19cb7c5bbd4ab05ccc5f9e686ed07a9e_1a19cb7c5bbd4ab05ccc5f9e686ed07a9e" kindref="member">EWrapper::tickString</ref>, <ref refid="interface_i_b_api_1_1_e_wrapper_af8afed0428f2f848f15ac137d81283fc_1af8afed0428f2f848f15ac137d81283fc" kindref="member">EWrapper::tickEFP</ref>, <ref refid="interface_i_b_api_1_1_e_wrapper_a9901f14408b7a6f75b1d06e3e6196a26_1a9901f14408b7a6f75b1d06e3e6196a26" kindref="member">EWrapper::tickGeneric</ref>, EWrapper::tickOption, <ref refid="interface_i_b_api_1_1_e_wrapper_1a2d1c80705657202c82a0b8708ad0e169" kindref="member">EWrapper::tickSnapshotEnd</ref> </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="source/EClient.cs" line="1547" column="1" bodyfile="source/EClient.cs" bodystart="1547" bodyend="1642"/>
+      </memberdef>
+      <memberdef kind="function" id="class_i_b_api_1_1_e_client_ae03b31bb2702ba519ed63c46455872b6_1ae03b31bb2702ba519ed63c46455872b6" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void reqMarketDataType</definition>
+        <argsstring>(int marketDataType)</argsstring>
+        <name>reqMarketDataType</name>
+        <param>
+          <type>int</type>
+          <declname>marketDataType</declname>
+        </param>
+        <briefdescription>
+<para>indicates the TWS to switch to &quot;frozen&quot; market data. The API can receive frozen market data from Trader Workstation. Frozen market data is the last data recorded in our system. During normal trading hours, the API receives real-time market data. If you use this function, you are telling TWS to automatically switch to frozen market data after the close. Then, before the opening of the next trading day, market data will automatically switch back to real-time market data. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>marketDataType</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>set to 1 for real time streaming, set to 2 for frozen market data. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="source/EClient.cs" line="1649" column="1" bodyfile="source/EClient.cs" bodystart="1649" bodyend="1663"/>
+      </memberdef>
+      <memberdef kind="function" id="class_i_b_api_1_1_e_client_a7f2915171d0c150723e297be291beabb_1a7f2915171d0c150723e297be291beabb" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void reqMarketDepth</definition>
+        <argsstring>(int tickerId, Contract contract, int numRows, List&lt; TagValue &gt; mktDepthOptions)</argsstring>
+        <name>reqMarketDepth</name>
+        <param>
+          <type>int</type>
+          <declname>tickerId</declname>
+        </param>
+        <param>
+          <type>Contract</type>
+          <declname>contract</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>numRows</declname>
+        </param>
+        <param>
+          <type>List&lt; TagValue &gt;</type>
+          <declname>mktDepthOptions</declname>
+        </param>
+        <briefdescription>
+<para>Requests the contract&apos;s market depth (order book). </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>tickerId</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the request&apos;s identifier </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>contract</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the Contract for which the depth is being requested </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>numRows</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the number of rows on each side of the order book </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="see"><para><ref refid="class_i_b_api_1_1_e_client_a7aeb4af9a757c70cb74579308ab1fb7b_1a7aeb4af9a757c70cb74579308ab1fb7b" kindref="member">cancelMktDepth</ref>, <ref refid="interface_i_b_api_1_1_e_wrapper_ab0d68c4cf7093f105095d72dd7e7a912_1ab0d68c4cf7093f105095d72dd7e7a912" kindref="member">EWrapper::updateMktDepth</ref>, <ref refid="interface_i_b_api_1_1_e_wrapper_ad8afb71cd866b423a84555f500992968_1ad8afb71cd866b423a84555f500992968" kindref="member">EWrapper::updateMktDepthL2</ref> </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="source/EClient.cs" line="1672" column="1" bodyfile="source/EClient.cs" bodystart="1672" bodyend="1723"/>
+      </memberdef>
+      <memberdef kind="function" id="class_i_b_api_1_1_e_client_a286458a8be7d3b37f0d94fe61bf717fa_1a286458a8be7d3b37f0d94fe61bf717fa" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void reqNewsBulletins</definition>
+        <argsstring>(bool allMessages)</argsstring>
+        <name>reqNewsBulletins</name>
+        <param>
+          <type>bool</type>
+          <declname>allMessages</declname>
+        </param>
+        <briefdescription>
+<para>Subscribes to IB&apos;s News Bulletins. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>allMessages</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>if set to true, will return all the existing bulletins for the current day, set to false to receive only the new bulletins. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="see"><para>cancelNewsBulletins, EWrapper::updateNewsBulletins </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="source/EClient.cs" line="1730" column="1" bodyfile="source/EClient.cs" bodystart="1730" bodyend="1743"/>
+      </memberdef>
+      <memberdef kind="function" id="class_i_b_api_1_1_e_client_a11e9c0dce640a3b8ed7a221792412c05_1a11e9c0dce640a3b8ed7a221792412c05" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void reqOpenOrders</definition>
+        <argsstring>()</argsstring>
+        <name>reqOpenOrders</name>
+        <briefdescription>
+<para>Requests all open orders places by this specific API client (identified by the API client id) </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="see"><para><ref refid="class_i_b_api_1_1_e_client_aa2c9a012884dd53311a7a7c6a326306c_1aa2c9a012884dd53311a7a7c6a326306c" kindref="member">reqAllOpenOrders</ref>, <ref refid="class_i_b_api_1_1_e_client_abe8e30367fff33b9a1171a4580029016_1abe8e30367fff33b9a1171a4580029016" kindref="member">reqAutoOpenOrders</ref>, <ref refid="class_i_b_api_1_1_e_client_aa6ff6f6455c551bef9d66c34d1c8586c_1aa6ff6f6455c551bef9d66c34d1c8586c" kindref="member">placeOrder</ref>, <ref refid="class_i_b_api_1_1_e_client_adb0a6963779be4904439fb1f24a8cce8_1adb0a6963779be4904439fb1f24a8cce8" kindref="member">cancelOrder</ref>, <ref refid="class_i_b_api_1_1_e_client_a66ad7a4820c5be21ebde521d59a50053_1a66ad7a4820c5be21ebde521d59a50053" kindref="member">reqGlobalCancel</ref>, <ref refid="interface_i_b_api_1_1_e_wrapper_aa05258f1d005accd3efc0d60bc151407_1aa05258f1d005accd3efc0d60bc151407" kindref="member">EWrapper::openOrder</ref>, <ref refid="interface_i_b_api_1_1_e_wrapper_a225c060ff9653cfaeff7304033eb76b3_1a225c060ff9653cfaeff7304033eb76b3" kindref="member">EWrapper::orderStatus</ref> </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="source/EClient.cs" line="1749" column="1" bodyfile="source/EClient.cs" bodystart="1749" bodyend="1760"/>
+      </memberdef>
+      <memberdef kind="function" id="class_i_b_api_1_1_e_client_ab262cf5601e57d6612d3df5e821fca9e_1ab262cf5601e57d6612d3df5e821fca9e" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void reqPositions</definition>
+        <argsstring>()</argsstring>
+        <name>reqPositions</name>
+        <briefdescription>
+<para>Requests all positions from all accounts. </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="see"><para><ref refid="class_i_b_api_1_1_e_client_ab2159a39733d8967928317524875aa62_1ab2159a39733d8967928317524875aa62" kindref="member">cancelPositions</ref>, <ref refid="interface_i_b_api_1_1_e_wrapper_af4105e2dae9efd6f6bb56f706374c9d6_1af4105e2dae9efd6f6bb56f706374c9d6" kindref="member">EWrapper::position</ref>, <ref refid="interface_i_b_api_1_1_e_wrapper_acf1bebfc1b29cbeff32da7d53aec0971_1acf1bebfc1b29cbeff32da7d53aec0971" kindref="member">EWrapper::positionEnd</ref> </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="source/EClient.cs" line="1766" column="1" bodyfile="source/EClient.cs" bodystart="1766" bodyend="1780"/>
+      </memberdef>
+      <memberdef kind="function" id="class_i_b_api_1_1_e_client_a644a8d918f3108a3817e8672b9782e67_1a644a8d918f3108a3817e8672b9782e67" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void reqRealTimeBars</definition>
+        <argsstring>(int tickerId, Contract contract, int barSize, string whatToShow, bool useRTH, List&lt; TagValue &gt; realTimeBarsOptions)</argsstring>
+        <name>reqRealTimeBars</name>
+        <param>
+          <type>int</type>
+          <declname>tickerId</declname>
+        </param>
+        <param>
+          <type>Contract</type>
+          <declname>contract</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>barSize</declname>
+        </param>
+        <param>
+          <type>string</type>
+          <declname>whatToShow</declname>
+        </param>
+        <param>
+          <type>bool</type>
+          <declname>useRTH</declname>
+        </param>
+        <param>
+          <type>List&lt; TagValue &gt;</type>
+          <declname>realTimeBarsOptions</declname>
+        </param>
+        <briefdescription>
+<para>Requests real time bars Currently, only 5 seconds bars are provided. This request ius suject to the same pacing as any historical data request: no more than 60 API queries in more than 600 seconds. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>tickerId</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the request&apos;s unique identifier. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>contract</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the Contract for which the depth is being requested </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>barSize</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>currently being ignored </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>whatToShow</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the nature of the data being retrieved:<itemizedlist>
+<listitem><para>TRADES</para></listitem><listitem><para>MIDPOINT</para></listitem><listitem><para>BID</para></listitem><listitem><para>ASK </para></listitem></itemizedlist>
+</para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>useRTH</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>set to 0 to obtain the data which was also generated ourside of the Regular Trading Hours, set to 1 to obtain only the RTH data </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="see"><para><ref refid="class_i_b_api_1_1_e_client_a472bdf9a30d1079e03400d8d38cfb634_1a472bdf9a30d1079e03400d8d38cfb634" kindref="member">cancelRealTimeBars</ref>, EWrapper::realTimeBar </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="source/EClient.cs" line="1796" column="1" bodyfile="source/EClient.cs" bodystart="1796" bodyend="1844"/>
+      </memberdef>
+      <memberdef kind="function" id="class_i_b_api_1_1_e_client_a5839736a34d827f8db87f536a73ae970_1a5839736a34d827f8db87f536a73ae970" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void reqScannerParameters</definition>
+        <argsstring>()</argsstring>
+        <name>reqScannerParameters</name>
+        <briefdescription>
+<para>Requests all possible parameters which can be used for a scanner subscription. </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="see"><para><ref refid="class_i_b_api_1_1_e_client_a13dd1287f67c6873b3e8b85d6c19f885_1a13dd1287f67c6873b3e8b85d6c19f885" kindref="member">reqScannerSubscription</ref> </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="source/EClient.cs" line="1850" column="1" bodyfile="source/EClient.cs" bodystart="1850" bodyend="1861"/>
+      </memberdef>
+      <memberdef kind="function" id="class_i_b_api_1_1_e_client_a13dd1287f67c6873b3e8b85d6c19f885_1a13dd1287f67c6873b3e8b85d6c19f885" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void reqScannerSubscription</definition>
+        <argsstring>(int reqId, ScannerSubscription subscription, List&lt; TagValue &gt; scannerSubscriptionOptions)</argsstring>
+        <name>reqScannerSubscription</name>
+        <param>
+          <type>int</type>
+          <declname>reqId</declname>
+        </param>
+        <param>
+          <type>ScannerSubscription</type>
+          <declname>subscription</declname>
+        </param>
+        <param>
+          <type>List&lt; TagValue &gt;</type>
+          <declname>scannerSubscriptionOptions</declname>
+        </param>
+        <briefdescription>
+<para>Starts a subscription to market scan results based on the provided parameters. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>reqId</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the request&apos;s identifier </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>subscription</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>summary of the scanner subscription including its filters. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="see"><para><ref refid="class_i_b_api_1_1_e_client_a5839736a34d827f8db87f536a73ae970_1a5839736a34d827f8db87f536a73ae970" kindref="member">reqScannerParameters</ref>, ScannerSubscription, <ref refid="interface_i_b_api_1_1_e_wrapper_a973d71a29aa397fc21f51113b1a12461_1a973d71a29aa397fc21f51113b1a12461" kindref="member">EWrapper::scannerData</ref> </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="source/EClient.cs" line="1869" column="1" bodyfile="source/EClient.cs" bodystart="1869" bodyend="1916"/>
+      </memberdef>
+      <memberdef kind="function" id="class_i_b_api_1_1_e_client_1a62ed6f4f391c86743c566d44c29dae48" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void setServerLogLevel</definition>
+        <argsstring>(int logLevel)</argsstring>
+        <name>setServerLogLevel</name>
+        <param>
+          <type>int</type>
+          <declname>logLevel</declname>
+        </param>
+        <briefdescription>
+<para>Changes the TWS/GW log level. Valid values are:<linebreak/>
+1 = SYSTEM<linebreak/>
+2 = ERROR<linebreak/>
+3 = WARNING<linebreak/>
+4 = INFORMATION<linebreak/>
+5 = DETAIL<linebreak/>
+. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="source/EClient.cs" line="1927" column="1" bodyfile="source/EClient.cs" bodystart="1927" bodyend="1941"/>
+      </memberdef>
+      <memberdef kind="function" id="class_i_b_api_1_1_e_client_1ad2073ff44982929bcf2c74cc16985c15" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void verifyRequest</definition>
+        <argsstring>(string apiName, string apiVersion)</argsstring>
+        <name>verifyRequest</name>
+        <param>
+          <type>string</type>
+          <declname>apiName</declname>
+        </param>
+        <param>
+          <type>string</type>
+          <declname>apiVersion</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="source/EClient.cs" line="1943" column="1" bodyfile="source/EClient.cs" bodystart="1943" bodyend="1964"/>
+      </memberdef>
+      <memberdef kind="function" id="class_i_b_api_1_1_e_client_1afbabff484bb7df3afb24898072fe993b" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void verifyMessage</definition>
+        <argsstring>(string apiData)</argsstring>
+        <name>verifyMessage</name>
+        <param>
+          <type>string</type>
+          <declname>apiData</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="source/EClient.cs" line="1966" column="1" bodyfile="source/EClient.cs" bodystart="1966" bodyend="1980"/>
+      </memberdef>
+      <memberdef kind="function" id="class_i_b_api_1_1_e_client_1ac922fe1a0578c66415c44a3e464dce1b" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void verifyAndAuthRequest</definition>
+        <argsstring>(string apiName, string apiVersion, string opaqueIsvKey)</argsstring>
+        <name>verifyAndAuthRequest</name>
+        <param>
+          <type>string</type>
+          <declname>apiName</declname>
+        </param>
+        <param>
+          <type>string</type>
+          <declname>apiVersion</declname>
+        </param>
+        <param>
+          <type>string</type>
+          <declname>opaqueIsvKey</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="source/EClient.cs" line="1982" column="1" bodyfile="source/EClient.cs" bodystart="1982" bodyend="2003"/>
+      </memberdef>
+      <memberdef kind="function" id="class_i_b_api_1_1_e_client_1a0e96a19214c5d08a5ea8bf01fe388970" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void verifyAndAuthMessage</definition>
+        <argsstring>(string apiData, string xyzResponse)</argsstring>
+        <name>verifyAndAuthMessage</name>
+        <param>
+          <type>string</type>
+          <declname>apiData</declname>
+        </param>
+        <param>
+          <type>string</type>
+          <declname>xyzResponse</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="source/EClient.cs" line="2005" column="1" bodyfile="source/EClient.cs" bodystart="2005" bodyend="2019"/>
+      </memberdef>
+      <memberdef kind="function" id="class_i_b_api_1_1_e_client_1a7cf28264b3b410670fab515d6f02912f" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void queryDisplayGroups</definition>
+        <argsstring>(int requestId)</argsstring>
+        <name>queryDisplayGroups</name>
+        <param>
+          <type>int</type>
+          <declname>requestId</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="source/EClient.cs" line="2021" column="1" bodyfile="source/EClient.cs" bodystart="2021" bodyend="2035"/>
+      </memberdef>
+      <memberdef kind="function" id="class_i_b_api_1_1_e_client_1afca514934b229ce99d737db951c2a498" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void subscribeToGroupEvents</definition>
+        <argsstring>(int requestId, int groupId)</argsstring>
+        <name>subscribeToGroupEvents</name>
+        <param>
+          <type>int</type>
+          <declname>requestId</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>groupId</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="source/EClient.cs" line="2037" column="1" bodyfile="source/EClient.cs" bodystart="2037" bodyend="2052"/>
+      </memberdef>
+      <memberdef kind="function" id="class_i_b_api_1_1_e_client_1a5da9bfaf490c6822bb989e62796c1459" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void updateDisplayGroup</definition>
+        <argsstring>(int requestId, string contractInfo)</argsstring>
+        <name>updateDisplayGroup</name>
+        <param>
+          <type>int</type>
+          <declname>requestId</declname>
+        </param>
+        <param>
+          <type>string</type>
+          <declname>contractInfo</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="source/EClient.cs" line="2054" column="1" bodyfile="source/EClient.cs" bodystart="2054" bodyend="2069"/>
+      </memberdef>
+      <memberdef kind="function" id="class_i_b_api_1_1_e_client_1a17b64bff31b8237b75f7a98ac79fcc71" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void unsubscribeFromGroupEvents</definition>
+        <argsstring>(int requestId)</argsstring>
+        <name>unsubscribeFromGroupEvents</name>
+        <param>
+          <type>int</type>
+          <declname>requestId</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="source/EClient.cs" line="2071" column="1" bodyfile="source/EClient.cs" bodystart="2071" bodyend="2085"/>
+      </memberdef>
+      <memberdef kind="function" id="class_i_b_api_1_1_e_client_1acc9a6d7c7f6db257ec75b61d8e906bb6" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>int</type>
+        <definition>int ReadInt</definition>
+        <argsstring>()</argsstring>
+        <name>ReadInt</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="source/EClient.cs" line="2490" column="1" bodyfile="source/EClient.cs" bodystart="2490" bodyend="2493"/>
+      </memberdef>
+      <memberdef kind="function" id="class_i_b_api_1_1_e_client_1acf33b0c140093f975338b62657f81057" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>byte[]</type>
+        <definition>byte [] ReadByteArray</definition>
+        <argsstring>(int msgSize)</argsstring>
+        <name>ReadByteArray</name>
+        <param>
+          <type>int</type>
+          <declname>msgSize</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="source/EClient.cs" line="2495" column="1" bodyfile="source/EClient.cs" bodystart="2495" bodyend="2500"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="protected-func">
+      <memberdef kind="function" id="class_i_b_api_1_1_e_client_1a6a5fcac8d8d11035ea9cd94504ab7897" prot="protected" static="no" const="no" explicit="no" inline="no" virt="pure-virtual">
+        <type>abstract uint</type>
+        <definition>abstract uint prepareBuffer</definition>
+        <argsstring>(BinaryWriter paramsList)</argsstring>
+        <name>prepareBuffer</name>
+        <param>
+          <type>BinaryWriter</type>
+          <declname>paramsList</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="source/EClient.cs" line="107" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="class_i_b_api_1_1_e_client_1a9a46451aaa956f9418801e1e2e5ed6d5" prot="protected" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void sendConnectRequest</definition>
+        <argsstring>()</argsstring>
+        <name>sendConnectRequest</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="source/EClient.cs" line="109" column="1" bodyfile="source/EClient.cs" bodystart="109" bodyend="139"/>
+      </memberdef>
+      <memberdef kind="function" id="class_i_b_api_1_1_e_client_1a1562a23248444eb8351c74d305d62695" prot="protected" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool CheckServerVersion</definition>
+        <argsstring>(int requiredVersion)</argsstring>
+        <name>CheckServerVersion</name>
+        <param>
+          <type>int</type>
+          <declname>requiredVersion</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="source/EClient.cs" line="2087" column="1" bodyfile="source/EClient.cs" bodystart="2087" bodyend="2090"/>
+      </memberdef>
+      <memberdef kind="function" id="class_i_b_api_1_1_e_client_1ad75db87645230c2fa8b66daf10c1115c" prot="protected" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool CheckServerVersion</definition>
+        <argsstring>(int requestId, int requiredVersion)</argsstring>
+        <name>CheckServerVersion</name>
+        <param>
+          <type>int</type>
+          <declname>requestId</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>requiredVersion</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="source/EClient.cs" line="2092" column="1" bodyfile="source/EClient.cs" bodystart="2092" bodyend="2095"/>
+      </memberdef>
+      <memberdef kind="function" id="class_i_b_api_1_1_e_client_1a709e8bf3b8b4150202601c60cb13e7f9" prot="protected" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool CheckServerVersion</definition>
+        <argsstring>(int requiredVersion, string updatetail)</argsstring>
+        <name>CheckServerVersion</name>
+        <param>
+          <type>int</type>
+          <declname>requiredVersion</declname>
+        </param>
+        <param>
+          <type>string</type>
+          <declname>updatetail</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="source/EClient.cs" line="2097" column="1" bodyfile="source/EClient.cs" bodystart="2097" bodyend="2100"/>
+      </memberdef>
+      <memberdef kind="function" id="class_i_b_api_1_1_e_client_1ac70715859101096c48d83e7177859622" prot="protected" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool CheckServerVersion</definition>
+        <argsstring>(int tickerId, int requiredVersion, string updatetail)</argsstring>
+        <name>CheckServerVersion</name>
+        <param>
+          <type>int</type>
+          <declname>tickerId</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>requiredVersion</declname>
+        </param>
+        <param>
+          <type>string</type>
+          <declname>updatetail</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="source/EClient.cs" line="2102" column="1" bodyfile="source/EClient.cs" bodystart="2102" bodyend="2110"/>
+      </memberdef>
+      <memberdef kind="function" id="class_i_b_api_1_1_e_client_1a6e5f0a82933bac9a59edaaac71b6c8c7" prot="protected" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void CloseAndSend</definition>
+        <argsstring>(BinaryWriter paramsList, uint lengthPos, CodeMsgPair error)</argsstring>
+        <name>CloseAndSend</name>
+        <param>
+          <type>BinaryWriter</type>
+          <declname>paramsList</declname>
+        </param>
+        <param>
+          <type>uint</type>
+          <declname>lengthPos</declname>
+        </param>
+        <param>
+          <type>CodeMsgPair</type>
+          <declname>error</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="source/EClient.cs" line="2112" column="1" bodyfile="source/EClient.cs" bodystart="2112" bodyend="2115"/>
+      </memberdef>
+      <memberdef kind="function" id="class_i_b_api_1_1_e_client_1a94d98becf44607124cda9f58f3e4e0e5" prot="protected" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void CloseAndSend</definition>
+        <argsstring>(int reqId, BinaryWriter paramsList, uint lengthPos, CodeMsgPair error)</argsstring>
+        <name>CloseAndSend</name>
+        <param>
+          <type>int</type>
+          <declname>reqId</declname>
+        </param>
+        <param>
+          <type>BinaryWriter</type>
+          <declname>paramsList</declname>
+        </param>
+        <param>
+          <type>uint</type>
+          <declname>lengthPos</declname>
+        </param>
+        <param>
+          <type>CodeMsgPair</type>
+          <declname>error</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="source/EClient.cs" line="2117" column="1" bodyfile="source/EClient.cs" bodystart="2117" bodyend="2131"/>
+      </memberdef>
+      <memberdef kind="function" id="class_i_b_api_1_1_e_client_1ac48f75cf63bc2208cdee548ebcea8cf4" prot="protected" static="no" const="no" explicit="no" inline="no" virt="pure-virtual">
+        <type>abstract void</type>
+        <definition>abstract void CloseAndSend</definition>
+        <argsstring>(BinaryWriter request, uint lengthPos)</argsstring>
+        <name>CloseAndSend</name>
+        <param>
+          <type>BinaryWriter</type>
+          <declname>request</declname>
+        </param>
+        <param>
+          <type>uint</type>
+          <declname>lengthPos</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="source/EClient.cs" line="2133" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="class_i_b_api_1_1_e_client_1aeef0ab7234c31d0dad9a26709740d3e4" prot="protected" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool CheckConnection</definition>
+        <argsstring>()</argsstring>
+        <name>CheckConnection</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="source/EClient.cs" line="2135" column="1" bodyfile="source/EClient.cs" bodystart="2135" bodyend="2144"/>
+      </memberdef>
+      <memberdef kind="function" id="class_i_b_api_1_1_e_client_1a876ac4a65e22d219d1055eb0282b07e9" prot="protected" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void ReportError</definition>
+        <argsstring>(int reqId, CodeMsgPair error, string tail)</argsstring>
+        <name>ReportError</name>
+        <param>
+          <type>int</type>
+          <declname>reqId</declname>
+        </param>
+        <param>
+          <type>CodeMsgPair</type>
+          <declname>error</declname>
+        </param>
+        <param>
+          <type>string</type>
+          <declname>tail</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="source/EClient.cs" line="2146" column="1" bodyfile="source/EClient.cs" bodystart="2146" bodyend="2149"/>
+      </memberdef>
+      <memberdef kind="function" id="class_i_b_api_1_1_e_client_1a0340aa3b5dedfd6397e107ec65a344b0" prot="protected" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void ReportUpdateTWS</definition>
+        <argsstring>(int reqId, string tail)</argsstring>
+        <name>ReportUpdateTWS</name>
+        <param>
+          <type>int</type>
+          <declname>reqId</declname>
+        </param>
+        <param>
+          <type>string</type>
+          <declname>tail</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="source/EClient.cs" line="2151" column="1" bodyfile="source/EClient.cs" bodystart="2151" bodyend="2154"/>
+      </memberdef>
+      <memberdef kind="function" id="class_i_b_api_1_1_e_client_1a9f5074e274c1b99cf2341709c072aafb" prot="protected" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void ReportUpdateTWS</definition>
+        <argsstring>(string tail)</argsstring>
+        <name>ReportUpdateTWS</name>
+        <param>
+          <type>string</type>
+          <declname>tail</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="source/EClient.cs" line="2156" column="1" bodyfile="source/EClient.cs" bodystart="2156" bodyend="2159"/>
+      </memberdef>
+      <memberdef kind="function" id="class_i_b_api_1_1_e_client_1a5be19ae67cbb93382b9752ceef282678" prot="protected" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void ReportError</definition>
+        <argsstring>(int reqId, int code, string message)</argsstring>
+        <name>ReportError</name>
+        <param>
+          <type>int</type>
+          <declname>reqId</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>code</declname>
+        </param>
+        <param>
+          <type>string</type>
+          <declname>message</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="source/EClient.cs" line="2161" column="1" bodyfile="source/EClient.cs" bodystart="2161" bodyend="2164"/>
+      </memberdef>
+      <memberdef kind="function" id="class_i_b_api_1_1_e_client_1a363dc73d72694879dd2272c7f8f8cefc" prot="protected" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void SendCancelRequest</definition>
+        <argsstring>(OutgoingMessages msgType, int version, int reqId, CodeMsgPair errorMessage)</argsstring>
+        <name>SendCancelRequest</name>
+        <param>
+          <type>OutgoingMessages</type>
+          <declname>msgType</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>version</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>reqId</declname>
+        </param>
+        <param>
+          <type>CodeMsgPair</type>
+          <declname>errorMessage</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="source/EClient.cs" line="2166" column="1" bodyfile="source/EClient.cs" bodystart="2166" bodyend="2186"/>
+      </memberdef>
+      <memberdef kind="function" id="class_i_b_api_1_1_e_client_1ae2792a3462ea5feda140de6b870a7775" prot="protected" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void SendCancelRequest</definition>
+        <argsstring>(OutgoingMessages msgType, int version, CodeMsgPair errorMessage)</argsstring>
+        <name>SendCancelRequest</name>
+        <param>
+          <type>OutgoingMessages</type>
+          <declname>msgType</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>version</declname>
+        </param>
+        <param>
+          <type>CodeMsgPair</type>
+          <declname>errorMessage</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="source/EClient.cs" line="2188" column="1" bodyfile="source/EClient.cs" bodystart="2188" bodyend="2207"/>
+      </memberdef>
+      <memberdef kind="function" id="class_i_b_api_1_1_e_client_1aefa10ac81b4cc0051028e3366252b726" prot="protected" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool VerifyOrderContract</definition>
+        <argsstring>(Contract contract, int id)</argsstring>
+        <name>VerifyOrderContract</name>
+        <param>
+          <type>Contract</type>
+          <declname>contract</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>id</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="source/EClient.cs" line="2209" column="1" bodyfile="source/EClient.cs" bodystart="2209" bodyend="2286"/>
+      </memberdef>
+      <memberdef kind="function" id="class_i_b_api_1_1_e_client_1ad86a0ece6ce008c47ac41019912a04aa" prot="protected" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool VerifyOrder</definition>
+        <argsstring>(Order order, int id, bool isBagOrder)</argsstring>
+        <name>VerifyOrder</name>
+        <param>
+          <type>Order</type>
+          <declname>order</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>id</declname>
+        </param>
+        <param>
+          <type>bool</type>
+          <declname>isBagOrder</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="source/EClient.cs" line="2288" column="1" bodyfile="source/EClient.cs" bodystart="2288" bodyend="2465"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-func">
+      <memberdef kind="function" id="class_i_b_api_1_1_e_client_1ad8f74b46140f6cd1f1e2db16e2d8bad2" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool IsEmpty</definition>
+        <argsstring>(string str)</argsstring>
+        <name>IsEmpty</name>
+        <param>
+          <type>string</type>
+          <declname>str</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="source/EClient.cs" line="2467" column="1" bodyfile="source/EClient.cs" bodystart="2467" bodyend="2470"/>
+      </memberdef>
+      <memberdef kind="function" id="class_i_b_api_1_1_e_client_1aa1ee769a0169e69afd13a3400a3e7482" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool StringsAreEqual</definition>
+        <argsstring>(string a, string b)</argsstring>
+        <name>StringsAreEqual</name>
+        <param>
+          <type>string</type>
+          <declname>a</declname>
+        </param>
+        <param>
+          <type>string</type>
+          <declname>b</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="source/EClient.cs" line="2472" column="1" bodyfile="source/EClient.cs" bodystart="2472" bodyend="2475"/>
+      </memberdef>
+      <memberdef kind="function" id="class_i_b_api_1_1_e_client_1ade68ec4879606ea722d79f1812719953" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>string</type>
+        <definition>string TagValueListToString</definition>
+        <argsstring>(List&lt; TagValue &gt; tagValues)</argsstring>
+        <name>TagValueListToString</name>
+        <param>
+          <type>List&lt; TagValue &gt;</type>
+          <declname>tagValues</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="source/EClient.cs" line="2477" column="1" bodyfile="source/EClient.cs" bodystart="2477" bodyend="2488"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <collaborationgraph>
+      <node id="1">
+        <label>EClient</label>
+        <link refid="class_i_b_api_1_1_e_client"/>
+        <childnode refid="2" relation="usage">
+          <edgelabel>wrapper</edgelabel>
+        </childnode>
+      </node>
+      <node id="2">
+        <label>EWrapper</label>
+        <link refid="interface_i_b_api_1_1_e_wrapper"/>
+      </node>
+    </collaborationgraph>
+    <location file="source/EClient.cs" line="19" column="1" bodyfile="source/EClient.cs" bodystart="18" bodyend="2503"/>
+    <listofallmembers>
+      <member refid="class_i_b_api_1_1_e_client_1a5243596fcb804198d6d892058295403b" prot="protected" virt="non-virtual"><scope>IBApi::EClient</scope><name>allowRedirect</name></member>
+      <member refid="class_i_b_api_1_1_e_client_1aefb4f201071c475e143c8946067d684b" prot="public" virt="non-virtual"><scope>IBApi::EClient</scope><name>AllowRedirect</name></member>
+      <member refid="class_i_b_api_1_1_e_client_1aacf95fe1db1afe29b687a4fa78ef4609" prot="public" virt="non-virtual"><scope>IBApi::EClient</scope><name>AsyncEConnect</name></member>
+      <member refid="class_i_b_api_1_1_e_client_a04c5d248c1036dd72435cc1edc7c58e2_1a04c5d248c1036dd72435cc1edc7c58e2" prot="public" virt="non-virtual"><scope>IBApi::EClient</scope><name>calculateImpliedVolatility</name></member>
+      <member refid="class_i_b_api_1_1_e_client_a7afa53b655542e74ede683e1de2b2fc4_1a7afa53b655542e74ede683e1de2b2fc4" prot="public" virt="non-virtual"><scope>IBApi::EClient</scope><name>calculateOptionPrice</name></member>
+      <member refid="class_i_b_api_1_1_e_client_af5ec205466b47cdab2cd17931b529e82_1af5ec205466b47cdab2cd17931b529e82" prot="public" virt="non-virtual"><scope>IBApi::EClient</scope><name>cancelAccountSummary</name></member>
+      <member refid="class_i_b_api_1_1_e_client_ae9bedabe0d86919489c87093c0a20d98_1ae9bedabe0d86919489c87093c0a20d98" prot="public" virt="non-virtual"><scope>IBApi::EClient</scope><name>cancelCalculateImpliedVolatility</name></member>
+      <member refid="class_i_b_api_1_1_e_client_aaf743e93e4dc4045f97c40e476fb0fd6_1aaf743e93e4dc4045f97c40e476fb0fd6" prot="public" virt="non-virtual"><scope>IBApi::EClient</scope><name>cancelCalculateOptionPrice</name></member>
+      <member refid="class_i_b_api_1_1_e_client_acd1ccc4382e3e51fa07091426422d61b_1acd1ccc4382e3e51fa07091426422d61b" prot="public" virt="non-virtual"><scope>IBApi::EClient</scope><name>cancelFundamentalData</name></member>
+      <member refid="class_i_b_api_1_1_e_client_ab27324bd18e7022e26ac4520808b919f_1ab27324bd18e7022e26ac4520808b919f" prot="public" virt="non-virtual"><scope>IBApi::EClient</scope><name>cancelHistoricalData</name></member>
+      <member refid="class_i_b_api_1_1_e_client_af443a1cd993aee33ce67deb7bc39e484_1af443a1cd993aee33ce67deb7bc39e484" prot="public" virt="non-virtual"><scope>IBApi::EClient</scope><name>cancelMktData</name></member>
+      <member refid="class_i_b_api_1_1_e_client_a7aeb4af9a757c70cb74579308ab1fb7b_1a7aeb4af9a757c70cb74579308ab1fb7b" prot="public" virt="non-virtual"><scope>IBApi::EClient</scope><name>cancelMktDepth</name></member>
+      <member refid="class_i_b_api_1_1_e_client_ae734ca3d50bb6ce3ddb666d9babc0d6e_1ae734ca3d50bb6ce3ddb666d9babc0d6e" prot="public" virt="non-virtual"><scope>IBApi::EClient</scope><name>cancelNewsBulletin</name></member>
+      <member refid="class_i_b_api_1_1_e_client_adb0a6963779be4904439fb1f24a8cce8_1adb0a6963779be4904439fb1f24a8cce8" prot="public" virt="non-virtual"><scope>IBApi::EClient</scope><name>cancelOrder</name></member>
+      <member refid="class_i_b_api_1_1_e_client_ab2159a39733d8967928317524875aa62_1ab2159a39733d8967928317524875aa62" prot="public" virt="non-virtual"><scope>IBApi::EClient</scope><name>cancelPositions</name></member>
+      <member refid="class_i_b_api_1_1_e_client_a472bdf9a30d1079e03400d8d38cfb634_1a472bdf9a30d1079e03400d8d38cfb634" prot="public" virt="non-virtual"><scope>IBApi::EClient</scope><name>cancelRealTimeBars</name></member>
+      <member refid="class_i_b_api_1_1_e_client_abf7a8fc280a422a0695962ba50b2d574_1abf7a8fc280a422a0695962ba50b2d574" prot="public" virt="non-virtual"><scope>IBApi::EClient</scope><name>cancelScannerSubscription</name></member>
+      <member refid="class_i_b_api_1_1_e_client_1aeef0ab7234c31d0dad9a26709740d3e4" prot="protected" virt="non-virtual"><scope>IBApi::EClient</scope><name>CheckConnection</name></member>
+      <member refid="class_i_b_api_1_1_e_client_1a1562a23248444eb8351c74d305d62695" prot="protected" virt="non-virtual"><scope>IBApi::EClient</scope><name>CheckServerVersion</name></member>
+      <member refid="class_i_b_api_1_1_e_client_1ad75db87645230c2fa8b66daf10c1115c" prot="protected" virt="non-virtual"><scope>IBApi::EClient</scope><name>CheckServerVersion</name></member>
+      <member refid="class_i_b_api_1_1_e_client_1a709e8bf3b8b4150202601c60cb13e7f9" prot="protected" virt="non-virtual"><scope>IBApi::EClient</scope><name>CheckServerVersion</name></member>
+      <member refid="class_i_b_api_1_1_e_client_1ac70715859101096c48d83e7177859622" prot="protected" virt="non-virtual"><scope>IBApi::EClient</scope><name>CheckServerVersion</name></member>
+      <member refid="class_i_b_api_1_1_e_client_1a835ae48cfee11c9ce3a4bc4727993119" prot="protected" virt="non-virtual"><scope>IBApi::EClient</scope><name>clientId</name></member>
+      <member refid="class_i_b_api_1_1_e_client_a7f7a3199c392465d0767c6506c1af5b4_1a7f7a3199c392465d0767c6506c1af5b4" prot="public" virt="non-virtual"><scope>IBApi::EClient</scope><name>Close</name></member>
+      <member refid="class_i_b_api_1_1_e_client_1a6e5f0a82933bac9a59edaaac71b6c8c7" prot="protected" virt="non-virtual"><scope>IBApi::EClient</scope><name>CloseAndSend</name></member>
+      <member refid="class_i_b_api_1_1_e_client_1a94d98becf44607124cda9f58f3e4e0e5" prot="protected" virt="non-virtual"><scope>IBApi::EClient</scope><name>CloseAndSend</name></member>
+      <member refid="class_i_b_api_1_1_e_client_1ac48f75cf63bc2208cdee548ebcea8cf4" prot="protected" virt="pure-virtual"><scope>IBApi::EClient</scope><name>CloseAndSend</name></member>
+      <member refid="class_i_b_api_1_1_e_client_1a076dd5fccdd2496ec18d1add279edad8" prot="private" virt="non-virtual"><scope>IBApi::EClient</scope><name>connectOptions</name></member>
+      <member refid="class_i_b_api_1_1_e_client_1a02b6e0c36bd0cc914f4dfacd600d9051" prot="public" virt="non-virtual"><scope>IBApi::EClient</scope><name>DisableUseV100Plus</name></member>
+      <member refid="class_i_b_api_1_1_e_client_a6019980df10f825dcba782d8992da1c1_1a6019980df10f825dcba782d8992da1c1" prot="public" virt="non-virtual"><scope>IBApi::EClient</scope><name>EClient</name></member>
+      <member refid="class_i_b_api_1_1_e_client_1aeb253ccdaf724eac22e8f75a0f19f421" prot="public" virt="non-virtual"><scope>IBApi::EClient</scope><name>eDisconnect</name></member>
+      <member refid="class_i_b_api_1_1_e_client_1afcf6b472311ae96d184a3228b09182e6" prot="private" virt="non-virtual"><scope>IBApi::EClient</scope><name>encodedVersion</name></member>
+      <member refid="class_i_b_api_1_1_e_client_aad70a7b82ad3b5e7ae3e9f0b98dc2a5b_1aad70a7b82ad3b5e7ae3e9f0b98dc2a5b" prot="public" virt="non-virtual"><scope>IBApi::EClient</scope><name>exerciseOptions</name></member>
+      <member refid="class_i_b_api_1_1_e_client_1a8324856cfd55c38c8d5f9f886839dca4" prot="protected" virt="non-virtual"><scope>IBApi::EClient</scope><name>extraAuth</name></member>
+      <member refid="class_i_b_api_1_1_e_client_1ada1a895a5ff67fb36ed9a4765f2274d2" prot="protected" virt="non-virtual"><scope>IBApi::EClient</scope><name>isConnected</name></member>
+      <member refid="class_i_b_api_1_1_e_client_ab8e2702adca8f47228f9754f4963455d_1ab8e2702adca8f47228f9754f4963455d" prot="public" virt="non-virtual"><scope>IBApi::EClient</scope><name>IsConnected</name></member>
+      <member refid="class_i_b_api_1_1_e_client_1ad8f74b46140f6cd1f1e2db16e2d8bad2" prot="private" virt="non-virtual"><scope>IBApi::EClient</scope><name>IsEmpty</name></member>
+      <member refid="class_i_b_api_1_1_e_client_1a92c6f01beeba35cdc2e6a94f5c566ab7" prot="public" virt="non-virtual"><scope>IBApi::EClient</scope><name>optionalCapabilities</name></member>
+      <member refid="class_i_b_api_1_1_e_client_aa6ff6f6455c551bef9d66c34d1c8586c_1aa6ff6f6455c551bef9d66c34d1c8586c" prot="public" virt="non-virtual"><scope>IBApi::EClient</scope><name>placeOrder</name></member>
+      <member refid="class_i_b_api_1_1_e_client_1a6a5fcac8d8d11035ea9cd94504ab7897" prot="protected" virt="pure-virtual"><scope>IBApi::EClient</scope><name>prepareBuffer</name></member>
+      <member refid="class_i_b_api_1_1_e_client_1a7cf28264b3b410670fab515d6f02912f" prot="public" virt="non-virtual"><scope>IBApi::EClient</scope><name>queryDisplayGroups</name></member>
+      <member refid="class_i_b_api_1_1_e_client_1acf33b0c140093f975338b62657f81057" prot="public" virt="non-virtual"><scope>IBApi::EClient</scope><name>ReadByteArray</name></member>
+      <member refid="class_i_b_api_1_1_e_client_1acc9a6d7c7f6db257ec75b61d8e906bb6" prot="public" virt="non-virtual"><scope>IBApi::EClient</scope><name>ReadInt</name></member>
+      <member refid="class_i_b_api_1_1_e_client_a7ff2dbde6ec82a3d6dc5036168ddd38a_1a7ff2dbde6ec82a3d6dc5036168ddd38a" prot="public" virt="non-virtual"><scope>IBApi::EClient</scope><name>replaceFA</name></member>
+      <member refid="class_i_b_api_1_1_e_client_1a876ac4a65e22d219d1055eb0282b07e9" prot="protected" virt="non-virtual"><scope>IBApi::EClient</scope><name>ReportError</name></member>
+      <member refid="class_i_b_api_1_1_e_client_1a5be19ae67cbb93382b9752ceef282678" prot="protected" virt="non-virtual"><scope>IBApi::EClient</scope><name>ReportError</name></member>
+      <member refid="class_i_b_api_1_1_e_client_1a0340aa3b5dedfd6397e107ec65a344b0" prot="protected" virt="non-virtual"><scope>IBApi::EClient</scope><name>ReportUpdateTWS</name></member>
+      <member refid="class_i_b_api_1_1_e_client_1a9f5074e274c1b99cf2341709c072aafb" prot="protected" virt="non-virtual"><scope>IBApi::EClient</scope><name>ReportUpdateTWS</name></member>
+      <member refid="class_i_b_api_1_1_e_client_a3e0d55d36cd416639b97ee6e47a86fe9_1a3e0d55d36cd416639b97ee6e47a86fe9" prot="public" virt="non-virtual"><scope>IBApi::EClient</scope><name>reqAccountSummary</name></member>
+      <member refid="class_i_b_api_1_1_e_client_aea1b0d9b6b85a4e0b18caf13a51f837f_1aea1b0d9b6b85a4e0b18caf13a51f837f" prot="public" virt="non-virtual"><scope>IBApi::EClient</scope><name>reqAccountUpdates</name></member>
+      <member refid="class_i_b_api_1_1_e_client_aa2c9a012884dd53311a7a7c6a326306c_1aa2c9a012884dd53311a7a7c6a326306c" prot="public" virt="non-virtual"><scope>IBApi::EClient</scope><name>reqAllOpenOrders</name></member>
+      <member refid="class_i_b_api_1_1_e_client_abe8e30367fff33b9a1171a4580029016_1abe8e30367fff33b9a1171a4580029016" prot="public" virt="non-virtual"><scope>IBApi::EClient</scope><name>reqAutoOpenOrders</name></member>
+      <member refid="class_i_b_api_1_1_e_client_ade440c6db838b548594981d800ea5ca9_1ade440c6db838b548594981d800ea5ca9" prot="public" virt="non-virtual"><scope>IBApi::EClient</scope><name>reqContractDetails</name></member>
+      <member refid="class_i_b_api_1_1_e_client_ad1ecfd4fb31841ce5817e0c32f44b639_1ad1ecfd4fb31841ce5817e0c32f44b639" prot="public" virt="non-virtual"><scope>IBApi::EClient</scope><name>reqCurrentTime</name></member>
+      <member refid="class_i_b_api_1_1_e_client_ae17dbb7d7c37591de983b2b74af2d9b5_1ae17dbb7d7c37591de983b2b74af2d9b5" prot="public" virt="non-virtual"><scope>IBApi::EClient</scope><name>reqExecutions</name></member>
+      <member refid="class_i_b_api_1_1_e_client_abba7df6f72f5516cae4c05c9144a89ee_1abba7df6f72f5516cae4c05c9144a89ee" prot="public" virt="non-virtual"><scope>IBApi::EClient</scope><name>reqFundamentalData</name></member>
+      <member refid="class_i_b_api_1_1_e_client_a66ad7a4820c5be21ebde521d59a50053_1a66ad7a4820c5be21ebde521d59a50053" prot="public" virt="non-virtual"><scope>IBApi::EClient</scope><name>reqGlobalCancel</name></member>
+      <member refid="class_i_b_api_1_1_e_client_a72fc193c4d50f738b6092a174988f093_1a72fc193c4d50f738b6092a174988f093" prot="public" virt="non-virtual"><scope>IBApi::EClient</scope><name>reqHistoricalData</name></member>
+      <member refid="class_i_b_api_1_1_e_client_aecea365530f40e7b56529238c9dd2f4a_1aecea365530f40e7b56529238c9dd2f4a" prot="public" virt="non-virtual"><scope>IBApi::EClient</scope><name>reqIds</name></member>
+      <member refid="class_i_b_api_1_1_e_client_af5dc6607457bc7bca764a49c10de0813_1af5dc6607457bc7bca764a49c10de0813" prot="public" virt="non-virtual"><scope>IBApi::EClient</scope><name>reqManagedAccts</name></member>
+      <member refid="class_i_b_api_1_1_e_client_ae03b31bb2702ba519ed63c46455872b6_1ae03b31bb2702ba519ed63c46455872b6" prot="public" virt="non-virtual"><scope>IBApi::EClient</scope><name>reqMarketDataType</name></member>
+      <member refid="class_i_b_api_1_1_e_client_a7f2915171d0c150723e297be291beabb_1a7f2915171d0c150723e297be291beabb" prot="public" virt="non-virtual"><scope>IBApi::EClient</scope><name>reqMarketDepth</name></member>
+      <member refid="class_i_b_api_1_1_e_client_a5b7d2f3048b2be5c9c3a87c18fb01dd3_1a5b7d2f3048b2be5c9c3a87c18fb01dd3" prot="public" virt="non-virtual"><scope>IBApi::EClient</scope><name>reqMktData</name></member>
+      <member refid="class_i_b_api_1_1_e_client_a286458a8be7d3b37f0d94fe61bf717fa_1a286458a8be7d3b37f0d94fe61bf717fa" prot="public" virt="non-virtual"><scope>IBApi::EClient</scope><name>reqNewsBulletins</name></member>
+      <member refid="class_i_b_api_1_1_e_client_a11e9c0dce640a3b8ed7a221792412c05_1a11e9c0dce640a3b8ed7a221792412c05" prot="public" virt="non-virtual"><scope>IBApi::EClient</scope><name>reqOpenOrders</name></member>
+      <member refid="class_i_b_api_1_1_e_client_ab262cf5601e57d6612d3df5e821fca9e_1ab262cf5601e57d6612d3df5e821fca9e" prot="public" virt="non-virtual"><scope>IBApi::EClient</scope><name>reqPositions</name></member>
+      <member refid="class_i_b_api_1_1_e_client_a644a8d918f3108a3817e8672b9782e67_1a644a8d918f3108a3817e8672b9782e67" prot="public" virt="non-virtual"><scope>IBApi::EClient</scope><name>reqRealTimeBars</name></member>
+      <member refid="class_i_b_api_1_1_e_client_a5839736a34d827f8db87f536a73ae970_1a5839736a34d827f8db87f536a73ae970" prot="public" virt="non-virtual"><scope>IBApi::EClient</scope><name>reqScannerParameters</name></member>
+      <member refid="class_i_b_api_1_1_e_client_a13dd1287f67c6873b3e8b85d6c19f885_1a13dd1287f67c6873b3e8b85d6c19f885" prot="public" virt="non-virtual"><scope>IBApi::EClient</scope><name>reqScannerSubscription</name></member>
+      <member refid="class_i_b_api_1_1_e_client_a298083eaed0207ac8d3e69894dd81c82_1a298083eaed0207ac8d3e69894dd81c82" prot="public" virt="non-virtual"><scope>IBApi::EClient</scope><name>requestFA</name></member>
+      <member refid="class_i_b_api_1_1_e_client_1a363dc73d72694879dd2272c7f8f8cefc" prot="protected" virt="non-virtual"><scope>IBApi::EClient</scope><name>SendCancelRequest</name></member>
+      <member refid="class_i_b_api_1_1_e_client_1ae2792a3462ea5feda140de6b870a7775" prot="protected" virt="non-virtual"><scope>IBApi::EClient</scope><name>SendCancelRequest</name></member>
+      <member refid="class_i_b_api_1_1_e_client_1a9a46451aaa956f9418801e1e2e5ed6d5" prot="protected" virt="non-virtual"><scope>IBApi::EClient</scope><name>sendConnectRequest</name></member>
+      <member refid="class_i_b_api_1_1_e_client_1a8b5a91b71a45856e86b5075aecde0942" prot="public" virt="non-virtual"><scope>IBApi::EClient</scope><name>ServerTime</name></member>
+      <member refid="class_i_b_api_1_1_e_client_1a368ae79fe337fb5f9b1c2c389020e9c5" prot="public" virt="non-virtual"><scope>IBApi::EClient</scope><name>ServerVersion</name></member>
+      <member refid="class_i_b_api_1_1_e_client_1a89af9728586e10491e22cdfd2654e314" prot="protected" virt="non-virtual"><scope>IBApi::EClient</scope><name>serverVersion</name></member>
+      <member refid="class_i_b_api_1_1_e_client_1a3297a7c5fd7c83930e02af34411a4c22" prot="public" virt="non-virtual"><scope>IBApi::EClient</scope><name>SetConnectOptions</name></member>
+      <member refid="class_i_b_api_1_1_e_client_1a62ed6f4f391c86743c566d44c29dae48" prot="public" virt="non-virtual"><scope>IBApi::EClient</scope><name>setServerLogLevel</name></member>
+      <member refid="class_i_b_api_1_1_e_client_1ae4acf7f265ee81aa80dec12722cce970" prot="protected" virt="non-virtual"><scope>IBApi::EClient</scope><name>socketTransport</name></member>
+      <member refid="class_i_b_api_1_1_e_client_1acf1370a40894c7a3d44053142077397b" prot="public" virt="non-virtual"><scope>IBApi::EClient</scope><name>startApi</name></member>
+      <member refid="class_i_b_api_1_1_e_client_1aa1ee769a0169e69afd13a3400a3e7482" prot="private" virt="non-virtual"><scope>IBApi::EClient</scope><name>StringsAreEqual</name></member>
+      <member refid="class_i_b_api_1_1_e_client_1afca514934b229ce99d737db951c2a498" prot="public" virt="non-virtual"><scope>IBApi::EClient</scope><name>subscribeToGroupEvents</name></member>
+      <member refid="class_i_b_api_1_1_e_client_1ade68ec4879606ea722d79f1812719953" prot="private" virt="non-virtual"><scope>IBApi::EClient</scope><name>TagValueListToString</name></member>
+      <member refid="class_i_b_api_1_1_e_client_1a4d226af85a476de05dfcdb5234ddbe74" prot="protected" virt="non-virtual"><scope>IBApi::EClient</scope><name>tcpStream</name></member>
+      <member refid="class_i_b_api_1_1_e_client_1a17b64bff31b8237b75f7a98ac79fcc71" prot="public" virt="non-virtual"><scope>IBApi::EClient</scope><name>unsubscribeFromGroupEvents</name></member>
+      <member refid="class_i_b_api_1_1_e_client_1a5da9bfaf490c6822bb989e62796c1459" prot="public" virt="non-virtual"><scope>IBApi::EClient</scope><name>updateDisplayGroup</name></member>
+      <member refid="class_i_b_api_1_1_e_client_1aa1d42f0a07a098b3955a3a0df3ad7f79" prot="protected" virt="non-virtual"><scope>IBApi::EClient</scope><name>useV100Plus</name></member>
+      <member refid="class_i_b_api_1_1_e_client_1a66984a66019ddb1fefdb5a048eb686b2" prot="package" virt="non-virtual"><scope>IBApi::EClient</scope><name>UseV100Plus</name></member>
+      <member refid="class_i_b_api_1_1_e_client_1a0e96a19214c5d08a5ea8bf01fe388970" prot="public" virt="non-virtual"><scope>IBApi::EClient</scope><name>verifyAndAuthMessage</name></member>
+      <member refid="class_i_b_api_1_1_e_client_1ac922fe1a0578c66415c44a3e464dce1b" prot="public" virt="non-virtual"><scope>IBApi::EClient</scope><name>verifyAndAuthRequest</name></member>
+      <member refid="class_i_b_api_1_1_e_client_1afbabff484bb7df3afb24898072fe993b" prot="public" virt="non-virtual"><scope>IBApi::EClient</scope><name>verifyMessage</name></member>
+      <member refid="class_i_b_api_1_1_e_client_1ad86a0ece6ce008c47ac41019912a04aa" prot="protected" virt="non-virtual"><scope>IBApi::EClient</scope><name>VerifyOrder</name></member>
+      <member refid="class_i_b_api_1_1_e_client_1aefa10ac81b4cc0051028e3366252b726" prot="protected" virt="non-virtual"><scope>IBApi::EClient</scope><name>VerifyOrderContract</name></member>
+      <member refid="class_i_b_api_1_1_e_client_1ad2073ff44982929bcf2c74cc16985c15" prot="public" virt="non-virtual"><scope>IBApi::EClient</scope><name>verifyRequest</name></member>
+      <member refid="class_i_b_api_1_1_e_client_1a0c72ef91f991621e214b4975d6b961d5" prot="protected" virt="non-virtual"><scope>IBApi::EClient</scope><name>wrapper</name></member>
+      <member refid="class_i_b_api_1_1_e_client_1acf8abd56a4309686e2fe8c839672a460" prot="public" virt="non-virtual"><scope>IBApi::EClient</scope><name>Wrapper</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>
