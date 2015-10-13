@@ -1,0 +1,253 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en"> <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>&lt;no title&gt; &mdash; TWS API 9.72 documentation</title>
+  
+
+  
+  
+
+  
+
+  
+  
+    
+
+  
+
+  
+  
+    <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  
+
+  
+
+  
+    <link rel="top" title="TWS API 9.72 documentation" href="../index.html"/>
+
+
+  
+  <script src="../_static/js/modernizr.min.js"></script>
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="../index.html" class="icon icon-home"> TWS API
+          
+
+          
+            
+            <img src="../_static/nav_iblogo.png" class="logo" />
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                9.72
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+                <ul>
+<li class="toctree-l1"><a class="reference internal" href="../connectionandserver.html">Connection and Server</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../marketdata.html">Market Data</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../orders.html">Orders</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../accountandportfolio.html">Account and Portfolio</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../executions.html">Executions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../contractdetails.html">Contract Details</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../marketdepth.html">Market Depth</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../newsbulletins.html">News Bulletins</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../financialadvisors.html">Financial Advisors</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../marketscanners.html">Market Scanners</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../historicaldata.html">Historical Data</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../realtimebars.html">Realtime Bars</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../fundamentaldata.html">Fundamental Data</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../displaygroups.html">Display Groups</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="../index.html">TWS API</a>
+      </nav>
+
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../index.html">Docs</a> &raquo;</li>
+      
+    <li>&lt;no title&gt;</li>
+      <li class="wy-breadcrumbs-aside">
+        
+          
+            <a href="../_sources/_include/limitiftouched.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+  </ul>
+  <hr/>
+</div>
+
+            <p>
+            Select Language:
+            <a id="show-java" class="btn btn-primary btn-lg">Java</a>
+            <a id="show-csharp" class="btn btn-primary btn-lg">C#</a>
+            <a id="show-cpp" class="btn btn-primary btn-lg">C++</a>
+            <a id="show-activex" class="btn btn-primary btn-lg">ActiveX</a>
+            <a id="show-dde" class="btn btn-primary btn-lg">DDE for Excel</a>
+            <p>
+
+
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="csharp-code-example container" id="limitiftouched-csharp">
+<p><strong>csharp</strong></p>
+<div class="highlight-csharp"><div class="highlight"><pre><span class="n">Order</span> <span class="n">order</span> <span class="p">=</span> <span class="k">new</span> <span class="n">Order</span><span class="p">();</span>
+<span class="n">order</span><span class="p">.</span><span class="n">Action</span> <span class="p">=</span> <span class="n">action</span><span class="p">;</span>
+<span class="n">order</span><span class="p">.</span><span class="n">OrderType</span> <span class="p">=</span> <span class="s">&quot;LIT&quot;</span><span class="p">;</span>
+<span class="n">order</span><span class="p">.</span><span class="n">TotalQuantity</span> <span class="p">=</span> <span class="n">quantity</span><span class="p">;</span>
+<span class="n">order</span><span class="p">.</span><span class="n">LmtPrice</span> <span class="p">=</span> <span class="n">limitPrice</span><span class="p">;</span>
+<span class="n">order</span><span class="p">.</span><span class="n">AuxPrice</span> <span class="p">=</span> <span class="n">triggerPrice</span><span class="p">;</span>
+</pre></div>
+</div>
+</div>
+<div class="java-code-example container" id="limitiftouched-java">
+<p><strong>java</strong></p>
+<div class="highlight-java"><div class="highlight"><pre><span class="n">Order</span> <span class="n">order</span> <span class="o">=</span> <span class="k">new</span> <span class="n">Order</span><span class="o">();</span>
+<span class="n">order</span><span class="o">.</span><span class="na">Action</span> <span class="o">=</span> <span class="n">action</span><span class="o">;</span>
+<span class="n">order</span><span class="o">.</span><span class="na">OrderType</span> <span class="o">=</span> <span class="s">&quot;LIT&quot;</span><span class="o">;</span>
+<span class="n">order</span><span class="o">.</span><span class="na">TotalQuantity</span> <span class="o">=</span> <span class="n">quantity</span><span class="o">;</span>
+<span class="n">order</span><span class="o">.</span><span class="na">LmtPrice</span> <span class="o">=</span> <span class="n">limitPrice</span><span class="o">;</span>
+<span class="n">order</span><span class="o">.</span><span class="na">AuxPrice</span> <span class="o">=</span> <span class="n">triggerPrice</span><span class="o">;</span>
+</pre></div>
+</div>
+</div>
+
+
+           </div>
+          </div>
+          <footer>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2015, Brandon.
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'../',
+            VERSION:'9.72',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true
+        };
+    </script>
+      <script type="text/javascript" src="../_static/jquery.js"></script>
+      <script type="text/javascript" src="../_static/underscore.js"></script>
+      <script type="text/javascript" src="../_static/doctools.js"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
+  
+
+  
+  
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.StickyNav.enable();
+      });
+  </script>
+   
+   <script>
+   $(document).ready(function(){
+    $(".java-code-example").show();
+    $(".csharp-code-example").hide();
+
+    $("#show-java").click(function(){
+      $(".csharp-code-example").hide();
+      $(".java-code-example").show();
+    });
+
+    $("#show-csharp").click(function(){
+        $(".csharp-code-example").show();
+        $(".java-code-example").hide();
+    });
+
+});
+  </script>
+</body>
+</html>
