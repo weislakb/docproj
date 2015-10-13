@@ -32,7 +32,7 @@
   
     <link rel="top" title="TWS API 9.72 documentation" href="index.html"/>
         <link rel="next" title="Orders" href="orders.html"/>
-        <link rel="prev" title="Welcome to docproj’s documentation!" href="index.html"/>
+        <link rel="prev" title="Connection and Server" href="connectionandserver.html"/>
 
 
   
@@ -85,8 +85,25 @@
             
             
                 <ul class="current">
-<li class="toctree-l1 current"><a class="current reference internal" href="">Market Data</a></li>
+<li class="toctree-l1"><a class="reference internal" href="connectionandserver.html">Connection and Server</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="">Market Data</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#requesting">Requesting</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#receiving">Receiving</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#define-a-contract">Define a Contract</a></li>
+</ul>
+</li>
 <li class="toctree-l1"><a class="reference internal" href="orders.html">Orders</a></li>
+<li class="toctree-l1"><a class="reference internal" href="accountandportfolio.html">Account and Portfolio</a></li>
+<li class="toctree-l1"><a class="reference internal" href="executions.html">Executions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="contractdetails.html">Contract Details</a></li>
+<li class="toctree-l1"><a class="reference internal" href="marketdepth.html">Market Depth</a></li>
+<li class="toctree-l1"><a class="reference internal" href="newsbulletins.html">News Bulletins</a></li>
+<li class="toctree-l1"><a class="reference internal" href="financialadvisors.html">Financial Advisors</a></li>
+<li class="toctree-l1"><a class="reference internal" href="marketscanners.html">Market Scanners</a></li>
+<li class="toctree-l1"><a class="reference internal" href="historicaldata.html">Historical Data</a></li>
+<li class="toctree-l1"><a class="reference internal" href="realtimebars.html">Realtime Bars</a></li>
+<li class="toctree-l1"><a class="reference internal" href="fundamentaldata.html">Fundamental Data</a></li>
+<li class="toctree-l1"><a class="reference internal" href="displaygroups.html">Display Groups</a></li>
 </ul>
 
             
@@ -144,13 +161,188 @@
             
   <div class="section" id="market-data">
 <h1>Market Data<a class="headerlink" href="#market-data" title="Permalink to this headline">¶</a></h1>
-<p>Some stuff about market data</p>
-<ul class="simple">
-<li>Hey a list<ul>
-<li>I&#8217;m nesting</li>
+<p>Using the TWS API, you can request realtime market data for trading and analysis.</p>
+<div class="section" id="requesting">
+<h2>Requesting<a class="headerlink" href="#requesting" title="Permalink to this headline">¶</a></h2>
+<p>In order to receive live quotes, you must first make the request call within your API program.  Each request call creates a streaming ticker feed from the TWS API server to your TWS API client.  Most IB accounts are eligible for 100 simultaneous quote lines.  If you request more than that, or if you are no longer using a ticker stream, use the cancelMktData method to cancel the subscription.</p>
+<dl class="function">
+<dt id="_CPPv210reqMktDatai8Contract6stringb4ListI8TagValueE">
+<span id="reqMktData__i.Contract.string.b.List:TagValue:"></span><span class="target" id="project0class_i_b_api_1_1_e_client_a5b7d2f3048b2be5c9c3a87c18fb01dd3_1a5b7d2f3048b2be5c9c3a87c18fb01dd3"></span>void <code class="descclassname"></code><code class="descname">reqMktData</code><span class="sig-paren">(</span>int <em>tickerId</em>, Contract <em>contract</em>, string <em>genericTickList</em>, bool <em>snapshot</em>, List&lt;TagValue&gt; <em>mktDataOptions</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv210reqMktDatai8Contract6stringb4ListI8TagValueE" title="Permalink to this definition">¶</a></dt>
+<dd><p>Requests real time market data. This function will return the product&#8217;s market data. It is important to notice that only real time data can be delivered via the API. </p>
+<p><dl class="docutils">
+<dt><strong>See</strong></dt>
+<dd><a class="reference internal" href="#project0class_i_b_api_1_1_e_client_af443a1cd993aee33ce67deb7bc39e484_1af443a1cd993aee33ce67deb7bc39e484"><span>cancelMktData</span></a>, <a class="reference internal" href="#project0interface_i_b_api_1_1_e_wrapper_aff4ae3269d7b13dd1ca989a8d5ca1ced_1aff4ae3269d7b13dd1ca989a8d5ca1ced"><span>EWrapper::tickPrice</span></a>, <a class="reference internal" href="#project0interface_i_b_api_1_1_e_wrapper_a1844eb442fb657c0f2cc0a63e4e74eba_1a1844eb442fb657c0f2cc0a63e4e74eba"><span>EWrapper::tickSize</span></a>, <a class="reference internal" href="#project0interface_i_b_api_1_1_e_wrapper_a19cb7c5bbd4ab05ccc5f9e686ed07a9e_1a19cb7c5bbd4ab05ccc5f9e686ed07a9e"><span>EWrapper::tickString</span></a>, EWrapper::tickEFP, <a class="reference internal" href="#project0interface_i_b_api_1_1_e_wrapper_a9901f14408b7a6f75b1d06e3e6196a26_1a9901f14408b7a6f75b1d06e3e6196a26"><span>EWrapper::tickGeneric</span></a>, EWrapper::tickOption, <a class="reference internal" href="#project0interface_i_b_api_1_1_e_wrapper_1a2d1c80705657202c82a0b8708ad0e169"><span>EWrapper::tickSnapshotEnd</span></a> </dd>
+<dt><strong>Parameters</strong></dt>
+<dd><ul class="breatheparameterlist first last">
+<li><code class="first docutils literal"><span class="pre">tickerId</span></code> - <p>the request&#8217;s identifier </p>
+</li>
+<li><code class="first docutils literal"><span class="pre">contract</span></code> - <p>the Contract for which the data is being requested </p>
+</li>
+<li><code class="first docutils literal"><span class="pre">genericTickList</span></code> - <p>comma separated ids of the available generic ticks:<ul class="simple">
+<li>100 Option Volume (currently for stocks)</li>
+<li>101 Option Open Interest (currently for stocks)</li>
+<li>104 Historical Volatility (currently for stocks)</li>
+<li>106 Option Implied Volatility (currently for stocks)</li>
+<li>162 Index Future Premium</li>
+<li>165 Miscellaneous Stats</li>
+<li>221 Mark Price (used in TWS P&amp;L computations)</li>
+<li>225 Auction values (volume, price and imbalance)</li>
+<li>233 RTVolume - contains the last trade price, last trade size, last trade time, total volume, VWAP, and single trade flag.</li>
+<li>236 Shortable</li>
+<li>256 Inventory</li>
+<li>258 Fundamental Ratios</li>
+<li>411 Realtime Historical Volatility</li>
+<li>456 IBDividends </li>
 </ul>
+</p>
+</li>
+<li><code class="first docutils literal"><span class="pre">snapshot</span></code> - <p>when set to true, it will provide a single snapshot of the available data. Set to false if you want to receive continuous updates. </p>
 </li>
 </ul>
+</dd>
+</dl>
+</p>
+</dd></dl>
+
+<p><strong>Cancelling Streaming Data</strong></p>
+<dl class="function">
+<dt id="_CPPv213cancelMktDatai">
+<span id="cancelMktData__i"></span><span class="target" id="project0class_i_b_api_1_1_e_client_af443a1cd993aee33ce67deb7bc39e484_1af443a1cd993aee33ce67deb7bc39e484"></span>void <code class="descclassname"></code><code class="descname">cancelMktData</code><span class="sig-paren">(</span>int <em>tickerId</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv213cancelMktDatai" title="Permalink to this definition">¶</a></dt>
+<dd><p>Cancels a RT Market Data request. </p>
+<p><dl class="docutils">
+<dt><strong>See</strong></dt>
+<dd><a class="reference internal" href="#project0class_i_b_api_1_1_e_client_a5b7d2f3048b2be5c9c3a87c18fb01dd3_1a5b7d2f3048b2be5c9c3a87c18fb01dd3"><span>reqMktData</span></a> </dd>
+<dt><strong>Parameters</strong></dt>
+<dd><ul class="breatheparameterlist first last">
+<li><code class="first docutils literal"><span class="pre">tickerId</span></code> - <p>request&#8217;s identifier </p>
+</li>
+</ul>
+</dd>
+</dl>
+</p>
+</dd></dl>
+
+</div>
+<div class="section" id="receiving">
+<h2>Receiving<a class="headerlink" href="#receiving" title="Permalink to this headline">¶</a></h2>
+<p>After subscribing to the ticker stream, your API client will receive the data supplied by the TWS API server via several methods.  In your API client code, you will need to implement these methods to manipulate the data relayed back to the client.</p>
+<dl class="function">
+<dt id="_CPPv29tickPriceiidi">
+<span id="tickPrice__i.i.double.i"></span><span class="target" id="project0interface_i_b_api_1_1_e_wrapper_aff4ae3269d7b13dd1ca989a8d5ca1ced_1aff4ae3269d7b13dd1ca989a8d5ca1ced"></span>void <code class="descclassname"></code><code class="descname">tickPrice</code><span class="sig-paren">(</span>int <em>tickerId</em>, int <em>field</em>, double <em>price</em>, int <em>canAutoExecute</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv29tickPriceiidi" title="Permalink to this definition">¶</a></dt>
+<dd><p>Market data tick price callback. Handles all price related ticks. </p>
+<p><dl class="docutils">
+<dt><strong>See</strong></dt>
+<dd>TickType, <a class="reference internal" href="#project0interface_i_b_api_1_1_e_wrapper_a1844eb442fb657c0f2cc0a63e4e74eba_1a1844eb442fb657c0f2cc0a63e4e74eba"><span>tickSize</span></a>, <a class="reference internal" href="#project0interface_i_b_api_1_1_e_wrapper_a19cb7c5bbd4ab05ccc5f9e686ed07a9e_1a19cb7c5bbd4ab05ccc5f9e686ed07a9e"><span>tickString</span></a>, tickEFP, <a class="reference internal" href="#project0interface_i_b_api_1_1_e_wrapper_a9901f14408b7a6f75b1d06e3e6196a26_1a9901f14408b7a6f75b1d06e3e6196a26"><span>tickGeneric</span></a>, tickOptionComputation, <a class="reference internal" href="#project0interface_i_b_api_1_1_e_wrapper_1a2d1c80705657202c82a0b8708ad0e169"><span>tickSnapshotEnd</span></a>, marketDataType, EClientSocket::reqMktData </dd>
+<dt><strong>Parameters</strong></dt>
+<dd><ul class="breatheparameterlist first last">
+<li><code class="first docutils literal"><span class="pre">tickerId</span></code> - <p>the request&#8217;s unique identifier. </p>
+</li>
+<li><code class="first docutils literal"><span class="pre">field</span></code> - <p>the type of the price being received (i.e. ask price). </p>
+</li>
+<li><code class="first docutils literal"><span class="pre">price</span></code> - <p>the actual price. </p>
+</li>
+<li><code class="first docutils literal"><span class="pre">canAutoExecute</span></code> - <p>Specifies whether the price tick is available for automatic execution (1) or not (0). </p>
+</li>
+</ul>
+</dd>
+</dl>
+</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="_CPPv28tickSizeiii">
+<span id="tickSize__i.i.i"></span><span class="target" id="project0interface_i_b_api_1_1_e_wrapper_a1844eb442fb657c0f2cc0a63e4e74eba_1a1844eb442fb657c0f2cc0a63e4e74eba"></span>void <code class="descclassname"></code><code class="descname">tickSize</code><span class="sig-paren">(</span>int <em>tickerId</em>, int <em>field</em>, int <em>size</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv28tickSizeiii" title="Permalink to this definition">¶</a></dt>
+<dd><p>Market data tick size callback. Handles all size-related ticks. </p>
+<p><dl class="docutils">
+<dt><strong>See</strong></dt>
+<dd>reqMarketData() </dd>
+<dt><strong>See</strong></dt>
+<dd>TickType, <a class="reference internal" href="#project0interface_i_b_api_1_1_e_wrapper_aff4ae3269d7b13dd1ca989a8d5ca1ced_1aff4ae3269d7b13dd1ca989a8d5ca1ced"><span>tickPrice</span></a>, <a class="reference internal" href="#project0interface_i_b_api_1_1_e_wrapper_a19cb7c5bbd4ab05ccc5f9e686ed07a9e_1a19cb7c5bbd4ab05ccc5f9e686ed07a9e"><span>tickString</span></a>, tickEFP, <a class="reference internal" href="#project0interface_i_b_api_1_1_e_wrapper_a9901f14408b7a6f75b1d06e3e6196a26_1a9901f14408b7a6f75b1d06e3e6196a26"><span>tickGeneric</span></a>, tickOptionComputation, <a class="reference internal" href="#project0interface_i_b_api_1_1_e_wrapper_1a2d1c80705657202c82a0b8708ad0e169"><span>tickSnapshotEnd</span></a>, marketDataType, EClientSocket::reqMktData </dd>
+<dt><strong>Parameters</strong></dt>
+<dd><ul class="breatheparameterlist first last">
+<li><code class="first docutils literal"><span class="pre">tickerId</span></code> - <p>the request&#8217;s unique identifier. </p>
+</li>
+<li><code class="first docutils literal"><span class="pre">field</span></code> - <p>the type of size being received (i.e. bid size) </p>
+</li>
+<li><code class="first docutils literal"><span class="pre">size</span></code> - <p>the actual size. </p>
+</li>
+</ul>
+</dd>
+</dl>
+</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="_CPPv211tickGenericiid">
+<span id="tickGeneric__i.i.double"></span><span class="target" id="project0interface_i_b_api_1_1_e_wrapper_a9901f14408b7a6f75b1d06e3e6196a26_1a9901f14408b7a6f75b1d06e3e6196a26"></span>void <code class="descclassname"></code><code class="descname">tickGeneric</code><span class="sig-paren">(</span>int <em>tickerId</em>, int <em>field</em>, double <em>value</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv211tickGenericiid" title="Permalink to this definition">¶</a></dt>
+<dd><p>Market data callback. </p>
+<p><dl class="docutils">
+<dt><strong>Parameters</strong></dt>
+<dd><ul class="breatheparameterlist first last">
+<li><code class="first docutils literal"><span class="pre">tickerId</span></code> - <p>the request&#8217;s unique identifier. </p>
+</li>
+<li><code class="first docutils literal"><span class="pre">field</span></code> - <p>the type of tick being received. </p>
+</li>
+<li><code class="first docutils literal"><span class="pre">value</span></code> - <p></p>
+</li>
+</ul>
+</dd>
+</dl>
+</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="_CPPv210tickStringii6string">
+<span id="tickString__i.i.string"></span><span class="target" id="project0interface_i_b_api_1_1_e_wrapper_a19cb7c5bbd4ab05ccc5f9e686ed07a9e_1a19cb7c5bbd4ab05ccc5f9e686ed07a9e"></span>void <code class="descclassname"></code><code class="descname">tickString</code><span class="sig-paren">(</span>int <em>tickerId</em>, int <em>field</em>, string <em>value</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv210tickStringii6string" title="Permalink to this definition">¶</a></dt>
+<dd><p>Market data callback. </p>
+<p><dl class="docutils">
+<dt><strong>See</strong></dt>
+<dd>TickType, <a class="reference internal" href="#project0interface_i_b_api_1_1_e_wrapper_a1844eb442fb657c0f2cc0a63e4e74eba_1a1844eb442fb657c0f2cc0a63e4e74eba"><span>tickSize</span></a>, <a class="reference internal" href="#project0interface_i_b_api_1_1_e_wrapper_aff4ae3269d7b13dd1ca989a8d5ca1ced_1aff4ae3269d7b13dd1ca989a8d5ca1ced"><span>tickPrice</span></a>, tickEFP, <a class="reference internal" href="#project0interface_i_b_api_1_1_e_wrapper_a9901f14408b7a6f75b1d06e3e6196a26_1a9901f14408b7a6f75b1d06e3e6196a26"><span>tickGeneric</span></a>, tickOptionComputation, <a class="reference internal" href="#project0interface_i_b_api_1_1_e_wrapper_1a2d1c80705657202c82a0b8708ad0e169"><span>tickSnapshotEnd</span></a>, marketDataType, EClientSocket::reqMktData </dd>
+<dt><strong>Parameters</strong></dt>
+<dd><ul class="breatheparameterlist first last">
+<li><code class="first docutils literal"><span class="pre">tickerId</span></code> - <p>the request&#8217;s unique identifier. </p>
+</li>
+<li><code class="first docutils literal"><span class="pre">field</span></code> - <p>the type of the tick being received </p>
+</li>
+<li><code class="first docutils literal"><span class="pre">value</span></code> - <p></p>
+</li>
+</ul>
+</dd>
+</dl>
+</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="_CPPv215tickSnapshotEndi">
+<span id="tickSnapshotEnd__i"></span><span class="target" id="project0interface_i_b_api_1_1_e_wrapper_1a2d1c80705657202c82a0b8708ad0e169"></span>void <code class="descclassname"></code><code class="descname">tickSnapshotEnd</code><span class="sig-paren">(</span>int <em>tickerId</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv215tickSnapshotEndi" title="Permalink to this definition">¶</a></dt>
+<dd><p>When requesting market data snapshots, this market will indicate the snapshot reception is finished. </p>
+</dd></dl>
+
+</div>
+<div class="section" id="define-a-contract">
+<h2>Define a Contract<a class="headerlink" href="#define-a-contract" title="Permalink to this headline">¶</a></h2>
+<p>Here are some examples of defining a contract:</p>
+<div class="csharp-code-example container" id="usstock-csharp">
+<p><strong>csharp</strong></p>
+<div class="highlight-csharp"><div class="highlight"><pre><span class="n">Contract</span> <span class="n">contract</span> <span class="p">=</span> <span class="k">new</span> <span class="n">Contract</span><span class="p">();</span>
+<span class="n">contract</span><span class="p">.</span><span class="n">Symbol</span> <span class="p">=</span> <span class="s">&quot;IBKR&quot;</span><span class="p">;</span>
+<span class="n">contract</span><span class="p">.</span><span class="n">SecType</span> <span class="p">=</span> <span class="s">&quot;STK&quot;</span><span class="p">;</span>
+<span class="n">contract</span><span class="p">.</span><span class="n">Currency</span> <span class="p">=</span> <span class="s">&quot;USD&quot;</span><span class="p">;</span>
+<span class="n">contract</span><span class="p">.</span><span class="n">Exchange</span> <span class="p">=</span> <span class="s">&quot;SMART&quot;</span><span class="p">;</span>
+</pre></div>
+</div>
+</div>
+<div class="java-code-example container" id="usstock-java">
+<p><strong>java</strong></p>
+<div class="highlight-java"><div class="highlight"><pre><span class="n">Contract</span> <span class="n">contract</span> <span class="o">=</span> <span class="k">new</span> <span class="n">Contract</span><span class="o">();</span>
+<span class="n">contract</span><span class="o">.</span><span class="na">Symbol</span> <span class="o">=</span> <span class="s">&quot;IBKR&quot;</span><span class="o">;</span>
+<span class="n">contract</span><span class="o">.</span><span class="na">SecType</span> <span class="o">=</span> <span class="s">&quot;STK&quot;</span><span class="o">;</span>
+<span class="n">contract</span><span class="o">.</span><span class="na">Currency</span> <span class="o">=</span> <span class="s">&quot;USD&quot;</span><span class="o">;</span>
+<span class="n">contract</span><span class="o">.</span><span class="na">Exchange</span> <span class="o">=</span> <span class="s">&quot;SMART&quot;</span><span class="o">;</span>
+</pre></div>
+</div>
+</div>
+</div>
 </div>
 
 
@@ -163,7 +355,7 @@
         <a href="orders.html" class="btn btn-neutral float-right" title="Orders" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
-        <a href="index.html" class="btn btn-neutral" title="Welcome to docproj’s documentation!" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+        <a href="connectionandserver.html" class="btn btn-neutral" title="Connection and Server" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
       
     </div>
   
@@ -219,31 +411,19 @@
       });
   </script>
    
-  <script type="text/javascript">
-  function showonlyone(selected) {
-     $('.code_example container').each(function(index) {
-          if ($(this).attr("id") == selected) {
-               $(this).show(100);
-          }
-          else {
-               $(this).hide(100);
-          }
-     });
-   }
-   </script>
    <script>
    $(document).ready(function(){
-    $("#java").show();
-    $("#csharp").hide();
+    $(".java-code-example").show();
+    $(".csharp-code-example").hide();
 
     $("#show-java").click(function(){
-      $("#csharp").hide();
-      $("#java").show();
+      $(".csharp-code-example").hide();
+      $(".java-code-example").show();
     });
 
     $("#show-csharp").click(function(){
-        $("#csharp").show();
-        $("#java").hide();
+        $(".csharp-code-example").show();
+        $(".java-code-example").hide();
     });
 
 });

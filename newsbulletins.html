@@ -8,7 +8,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>&lt;no title&gt; &mdash; TWS API 9.72 documentation</title>
+  <title>News Bulletins &mdash; TWS API 9.72 documentation</title>
   
 
   
@@ -31,6 +31,8 @@
 
   
     <link rel="top" title="TWS API 9.72 documentation" href="index.html"/>
+        <link rel="next" title="Financial Advisors" href="financialadvisors.html"/>
+        <link rel="prev" title="Market Depth" href="marketdepth.html"/>
 
 
   
@@ -82,9 +84,21 @@
           
             
             
-                <ul>
+                <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="connectionandserver.html">Connection and Server</a></li>
 <li class="toctree-l1"><a class="reference internal" href="marketdata.html">Market Data</a></li>
 <li class="toctree-l1"><a class="reference internal" href="orders.html">Orders</a></li>
+<li class="toctree-l1"><a class="reference internal" href="accountandportfolio.html">Account and Portfolio</a></li>
+<li class="toctree-l1"><a class="reference internal" href="executions.html">Executions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="contractdetails.html">Contract Details</a></li>
+<li class="toctree-l1"><a class="reference internal" href="marketdepth.html">Market Depth</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="">News Bulletins</a></li>
+<li class="toctree-l1"><a class="reference internal" href="financialadvisors.html">Financial Advisors</a></li>
+<li class="toctree-l1"><a class="reference internal" href="marketscanners.html">Market Scanners</a></li>
+<li class="toctree-l1"><a class="reference internal" href="historicaldata.html">Historical Data</a></li>
+<li class="toctree-l1"><a class="reference internal" href="realtimebars.html">Realtime Bars</a></li>
+<li class="toctree-l1"><a class="reference internal" href="fundamentaldata.html">Fundamental Data</a></li>
+<li class="toctree-l1"><a class="reference internal" href="displaygroups.html">Display Groups</a></li>
 </ul>
 
             
@@ -115,11 +129,11 @@
   <ul class="wy-breadcrumbs">
     <li><a href="index.html">Docs</a> &raquo;</li>
       
-    <li>&lt;no title&gt;</li>
+    <li>News Bulletins</li>
       <li class="wy-breadcrumbs-aside">
         
           
-            <a href="_sources/marketorder.txt" rel="nofollow"> View page source</a>
+            <a href="_sources/newsbulletins.txt" rel="nofollow"> View page source</a>
           
         
       </li>
@@ -140,19 +154,23 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
             
-  <blockquote>
-<div>Order order = new Order();
-order.Action = action;
-order.Tif = &#8220;AUC&#8221;;
-order.OrderType = &#8220;MTL&#8221;;
-order.TotalQuantity = quantity;
-order.LmtPrice = price;
-return order;</div></blockquote>
+  <div class="section" id="news-bulletins">
+<h1>News Bulletins<a class="headerlink" href="#news-bulletins" title="Permalink to this headline">¶</a></h1>
+</div>
 
 
            </div>
           </div>
           <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="financialadvisors.html" class="btn btn-neutral float-right" title="Financial Advisors" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="marketdepth.html" class="btn btn-neutral" title="Market Depth" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
   
 
   <hr/>
@@ -206,31 +224,19 @@ return order;</div></blockquote>
       });
   </script>
    
-  <script type="text/javascript">
-  function showonlyone(selected) {
-     $('.code_example container').each(function(index) {
-          if ($(this).attr("id") == selected) {
-               $(this).show(100);
-          }
-          else {
-               $(this).hide(100);
-          }
-     });
-   }
-   </script>
    <script>
    $(document).ready(function(){
-    $("#java").show();
-    $("#csharp").hide();
+    $(".java-code-example").show();
+    $(".csharp-code-example").hide();
 
     $("#show-java").click(function(){
-      $("#csharp").hide();
-      $("#java").show();
+      $(".csharp-code-example").hide();
+      $(".java-code-example").show();
     });
 
     $("#show-csharp").click(function(){
-        $("#csharp").show();
-        $("#java").hide();
+        $(".csharp-code-example").show();
+        $(".java-code-example").hide();
     });
 
 });

@@ -3,16 +3,28 @@
    You can adapt this file completely to your liking, but it should at least
    contain the root `toctree` directive.
 
-Welcome to docproj's documentation!
-===================================
+Welcome to IB's TWS API documentation!
+======================================
 
 Contents:
 
 .. toctree::
    :maxdepth: 2
 
+   connectionandserver
    marketdata
    orders
+   accountandportfolio
+   executions
+   contractdetails
+   marketdepth
+   newsbulletins
+   financialadvisors
+   marketscanners
+   historicaldata
+   realtimebars
+   fundamentaldata
+   displaygroups
 
 Indices and tables
 ==================
@@ -20,4 +32,3 @@ Indices and tables
 * :ref:`genindex`
 * :ref:`modindex`
 * :ref:`search`
-

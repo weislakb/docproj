@@ -83,8 +83,20 @@
             
             
                 <ul>
+<li class="toctree-l1"><a class="reference internal" href="connectionandserver.html">Connection and Server</a></li>
 <li class="toctree-l1"><a class="reference internal" href="marketdata.html">Market Data</a></li>
 <li class="toctree-l1"><a class="reference internal" href="orders.html">Orders</a></li>
+<li class="toctree-l1"><a class="reference internal" href="accountandportfolio.html">Account and Portfolio</a></li>
+<li class="toctree-l1"><a class="reference internal" href="executions.html">Executions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="contractdetails.html">Contract Details</a></li>
+<li class="toctree-l1"><a class="reference internal" href="marketdepth.html">Market Depth</a></li>
+<li class="toctree-l1"><a class="reference internal" href="newsbulletins.html">News Bulletins</a></li>
+<li class="toctree-l1"><a class="reference internal" href="financialadvisors.html">Financial Advisors</a></li>
+<li class="toctree-l1"><a class="reference internal" href="marketscanners.html">Market Scanners</a></li>
+<li class="toctree-l1"><a class="reference internal" href="historicaldata.html">Historical Data</a></li>
+<li class="toctree-l1"><a class="reference internal" href="realtimebars.html">Realtime Bars</a></li>
+<li class="toctree-l1"><a class="reference internal" href="fundamentaldata.html">Fundamental Data</a></li>
+<li class="toctree-l1"><a class="reference internal" href="displaygroups.html">Display Groups</a></li>
 </ul>
 
             
@@ -214,31 +226,19 @@
   <script type="text/javascript" id="searchindexloader"></script>
    
 
-  <script type="text/javascript">
-  function showonlyone(selected) {
-     $('.code_example container').each(function(index) {
-          if ($(this).attr("id") == selected) {
-               $(this).show(100);
-          }
-          else {
-               $(this).hide(100);
-          }
-     });
-   }
-   </script>
    <script>
    $(document).ready(function(){
-    $("#java").show();
-    $("#csharp").hide();
+    $(".java-code-example").show();
+    $(".csharp-code-example").hide();
 
     $("#show-java").click(function(){
-      $("#csharp").hide();
-      $("#java").show();
+      $(".csharp-code-example").hide();
+      $(".java-code-example").show();
     });
 
     $("#show-csharp").click(function(){
-        $("#csharp").show();
-        $("#java").hide();
+        $(".csharp-code-example").show();
+        $(".java-code-example").hide();
     });
 
 });

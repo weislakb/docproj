@@ -2,13 +2,13 @@
 
 <!DOCTYPE html>
 <!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
-<!--[if gt IE 8]><!--> <html class="no-js" lang="en" ng-app="apidocApp"> <!--<![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en"> <!--<![endif]-->
 <head>
   <meta charset="utf-8">
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>&lt;no title&gt; &mdash; docproj 1 documentation</title>
+  <title>Display Groups &mdash; TWS API 9.72 documentation</title>
   
 
   
@@ -30,7 +30,8 @@
   
 
   
-    <link rel="top" title="docproj 1 documentation" href="index.html"/>
+    <link rel="top" title="TWS API 9.72 documentation" href="index.html"/>
+        <link rel="prev" title="Fundamental Data" href="fundamentaldata.html"/>
 
 
   
@@ -48,9 +49,12 @@
           
 
           
-            <a href="index.html" class="icon icon-home"> docproj
+            <a href="index.html" class="icon icon-home"> TWS API
           
 
+          
+            
+            <img src="_static/nav_iblogo.png" class="logo" />
           
           </a>
 
@@ -58,7 +62,7 @@
             
             
               <div class="version">
-                1
+                9.72
               </div>
             
           
@@ -79,9 +83,21 @@
           
             
             
-                <ul>
+                <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="connectionandserver.html">Connection and Server</a></li>
 <li class="toctree-l1"><a class="reference internal" href="marketdata.html">Market Data</a></li>
 <li class="toctree-l1"><a class="reference internal" href="orders.html">Orders</a></li>
+<li class="toctree-l1"><a class="reference internal" href="accountandportfolio.html">Account and Portfolio</a></li>
+<li class="toctree-l1"><a class="reference internal" href="executions.html">Executions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="contractdetails.html">Contract Details</a></li>
+<li class="toctree-l1"><a class="reference internal" href="marketdepth.html">Market Depth</a></li>
+<li class="toctree-l1"><a class="reference internal" href="newsbulletins.html">News Bulletins</a></li>
+<li class="toctree-l1"><a class="reference internal" href="financialadvisors.html">Financial Advisors</a></li>
+<li class="toctree-l1"><a class="reference internal" href="marketscanners.html">Market Scanners</a></li>
+<li class="toctree-l1"><a class="reference internal" href="historicaldata.html">Historical Data</a></li>
+<li class="toctree-l1"><a class="reference internal" href="realtimebars.html">Realtime Bars</a></li>
+<li class="toctree-l1"><a class="reference internal" href="fundamentaldata.html">Fundamental Data</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="">Display Groups</a></li>
 </ul>
 
             
@@ -95,7 +111,7 @@
       
       <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
         <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
-        <a href="index.html">docproj</a>
+        <a href="index.html">TWS API</a>
       </nav>
 
 
@@ -112,11 +128,11 @@
   <ul class="wy-breadcrumbs">
     <li><a href="index.html">Docs</a> &raquo;</li>
       
-    <li>&lt;no title&gt;</li>
+    <li>Display Groups</li>
       <li class="wy-breadcrumbs-aside">
         
           
-            <a href="_sources/marketorder2.txt" rel="nofollow"> View page source</a>
+            <a href="_sources/displaygroups.txt" rel="nofollow"> View page source</a>
           
         
       </li>
@@ -128,25 +144,31 @@
             Select Language:
             <a id="show-java" class="btn btn-primary btn-lg">Java</a>
             <a id="show-csharp" class="btn btn-primary btn-lg">C#</a>
+            <a id="show-cpp" class="btn btn-primary btn-lg">C++</a>
+            <a id="show-activex" class="btn btn-primary btn-lg">ActiveX</a>
+            <a id="show-dde" class="btn btn-primary btn-lg">DDE for Excel</a>
             <p>
 
 
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
             
-  <blockquote>
-<div>Order order = new Order();
-order.Action = action;
-order.Tif = &#8220;AUC&#8221;;
-order.OrderType = &#8220;MTL&#8221;;
-order.TotalQuantity = quantity;
-order.LmtPrice = price;
-return order;</div></blockquote>
+  <div class="section" id="display-groups">
+<h1>Display Groups<a class="headerlink" href="#display-groups" title="Permalink to this headline">¶</a></h1>
+<p>This page discusses how to utilize the display groups feature in TWS via the API.</p>
+</div>
 
 
            </div>
           </div>
           <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+      
+        <a href="fundamentaldata.html" class="btn btn-neutral" title="Fundamental Data" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
   
 
   <hr/>
@@ -175,7 +197,7 @@ return order;</div></blockquote>
     <script type="text/javascript">
         var DOCUMENTATION_OPTIONS = {
             URL_ROOT:'./',
-            VERSION:'1',
+            VERSION:'9.72',
             COLLAPSE_INDEX:false,
             FILE_SUFFIX:'.html',
             HAS_SOURCE:  true
@@ -200,30 +222,21 @@ return order;</div></blockquote>
       });
   </script>
    
-  <script type="text/javascript">
-  function showonlyone(selected) {
-     $('.code_example container').each(function(index) {
-          if ($(this).attr("id") == selected) {
-               $(this).show(100);
-          }
-          else {
-               $(this).hide(100);
-          }
-     });
-   }
-   </script>
    <script>
    $(document).ready(function(){
-    $("#csharp").hide();
-    $("#java").show();
-    $("#show-csharp").click(function(){
-        $("#csharp").show();
-        $("#java").hide()
-    });
+    $(".java-code-example").show();
+    $(".csharp-code-example").hide();
+
     $("#show-java").click(function(){
-      $("#csharp").hide();
-      $("#java").show()
+      $(".csharp-code-example").hide();
+      $(".java-code-example").show();
     });
+
+    $("#show-csharp").click(function(){
+        $(".csharp-code-example").show();
+        $(".java-code-example").hide();
+    });
+
 });
   </script>
 </body>
