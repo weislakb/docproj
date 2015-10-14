@@ -50,7 +50,7 @@
           
 
           
-            <a href="index.html" class="icon icon-home"> TWS API
+            <a href="index.html">
           
 
           
@@ -90,8 +90,8 @@
 <li class="toctree-l1 current"><a class="current reference internal" href="">Orders</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="#placing">Placing</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#order-types">Order Types</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#market">Market</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#auction">Auction</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#market-if-touched">Market-If-Touched</a></li>
 </ul>
 </li>
 </ul>
@@ -167,6 +167,7 @@
 <p>Interactive Brokers offers you numerous order types which allow you to minimize your costs, improve your executions, and maximize your profits.  This page lists our common order types, and how to create them via the API.</p>
 <div class="section" id="placing">
 <h2>Placing<a class="headerlink" href="#placing" title="Permalink to this headline">¶</a></h2>
+<p>To place an order you must call the <a class="reference internal" href="#_CPPv210placeOrderi8Contract5Order" title="placeOrder"><code class="xref any cpp cpp-func docutils literal"><span class="pre">placeOrder</span></code></a> function with an order ID, an Order object, and a Contract object as parameters.  Order object examples are listed below, and Contract examples can be found on the previous page.</p>
 <dl class="function">
 <dt id="_CPPv210placeOrderi8Contract5Order">
 <span id="placeOrder__i.Contract.Order"></span><span class="target" id="project0class_i_b_api_1_1_e_client_aa6ff6f6455c551bef9d66c34d1c8586c_1aa6ff6f6455c551bef9d66c34d1c8586c"></span>void <code class="descclassname"></code><code class="descname">placeOrder</code><span class="sig-paren">(</span>int <em>id</em>, Contract <em>contract</em>, Order <em>order</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv210placeOrderi8Contract5Order" title="Permalink to this definition">¶</a></dt>
@@ -191,15 +192,57 @@
 </div>
 <div class="section" id="order-types">
 <h2>Order Types<a class="headerlink" href="#order-types" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="market">
+<h3>Market<a class="headerlink" href="#market" title="Permalink to this headline">¶</a></h3>
+<p>A Market order is an order to buy or sell at the market bid or offer price. A market order may increase the likelihood of a fill and the speed of execution, but unlike the Limit order a Market order provides no price protection and may fill at a price far lower/higher than the current displayed bid/ask.</p>
+<p>Products: BOND, CFD, EFP, CASH, FUND, FUT, FOP, OPT, STK, WAR</p>
+<p>Reference: <a class="reference external" href="http://individuals.interactivebrokers.com/en/trading/orders/market.php?ib_entity=llc">http://individuals.interactivebrokers.com/en/trading/orders/market.php?ib_entity=llc</a></p>
+<div class="csharp-code-example container" id="marketorder-csharp">
+<p><strong>csharp</strong></p>
+<div class="highlight-csharp"><div class="highlight"><pre><span class="n">Order</span> <span class="n">order</span> <span class="p">=</span> <span class="k">new</span> <span class="n">Order</span><span class="p">();</span>
+<span class="n">order</span><span class="p">.</span><span class="n">Action</span> <span class="p">=</span> <span class="n">action</span><span class="p">;</span>
+<span class="n">order</span><span class="p">.</span><span class="n">OrderType</span> <span class="p">=</span> <span class="s">&quot;MKT&quot;</span><span class="p">;</span>
+<span class="n">order</span><span class="p">.</span><span class="n">TotalQuantity</span> <span class="p">=</span> <span class="n">quantity</span><span class="p">;</span>
+</pre></div>
+</div>
+</div>
+<div class="java-code-example container" id="marketorder-java">
+<p><strong>java</strong></p>
+<div class="highlight-java"><div class="highlight"><pre><span class="n">Order</span> <span class="n">order</span> <span class="o">=</span> <span class="k">new</span> <span class="n">Order</span><span class="o">();</span>
+<span class="n">order</span><span class="o">.</span><span class="na">Action</span> <span class="o">=</span> <span class="n">action</span><span class="o">;</span>
+<span class="n">order</span><span class="o">.</span><span class="na">OrderType</span> <span class="o">=</span> <span class="s">&quot;MKT&quot;</span><span class="o">;</span>
+<span class="n">order</span><span class="o">.</span><span class="na">TotalQuantity</span> <span class="o">=</span> <span class="n">quantity</span><span class="o">;</span>
+</pre></div>
+</div>
+</div>
+</div>
 <div class="section" id="auction">
 <h3>Auction<a class="headerlink" href="#auction" title="Permalink to this headline">¶</a></h3>
 <p>An auction order is entered into the electronic trading system during the pre-market opening period for execution at the Calculated Opening Price (COP). If your order is not filled on the open, the order is re-submitted as a limit order with the limit price set to the COP or the best bid/ask after the market opens.</p>
 <p>Products: FUT, STK</p>
-<p>Supported Exchanges: <a class="reference external" href="https://individuals.interactivebrokers.com/en/?f=%2Fen%2Ftrading%2ForderTypeExchanges.php%3Fot%3Dauc">https://individuals.interactivebrokers.com/en/?f=%2Fen%2Ftrading%2ForderTypeExchanges.php%3Fot%3Dauc</a></p>
 <p>Reference: <a class="reference external" href="http://individuals.interactivebrokers.com/en/trading/orders/auction.php?ib_entity=llc">http://individuals.interactivebrokers.com/en/trading/orders/auction.php?ib_entity=llc</a></p>
+<div class="csharp-code-example container" id="atauction-csharp">
+<p><strong>csharp</strong></p>
+<div class="highlight-csharp"><div class="highlight"><pre><span class="n">Order</span> <span class="n">order</span> <span class="p">=</span> <span class="k">new</span> <span class="n">Order</span><span class="p">();</span>
+<span class="n">order</span><span class="p">.</span><span class="n">Action</span> <span class="p">=</span> <span class="n">action</span><span class="p">;</span>
+<span class="n">order</span><span class="p">.</span><span class="n">Tif</span> <span class="p">=</span> <span class="s">&quot;AUC&quot;</span><span class="p">;</span>
+<span class="n">order</span><span class="p">.</span><span class="n">OrderType</span> <span class="p">=</span> <span class="s">&quot;MTL&quot;</span><span class="p">;</span>
+<span class="n">order</span><span class="p">.</span><span class="n">TotalQuantity</span> <span class="p">=</span> <span class="n">quantity</span><span class="p">;</span>
+<span class="n">order</span><span class="p">.</span><span class="n">LmtPrice</span> <span class="p">=</span> <span class="n">price</span><span class="p">;</span>
+</pre></div>
 </div>
-<div class="section" id="market-if-touched">
-<h3>Market-If-Touched<a class="headerlink" href="#market-if-touched" title="Permalink to this headline">¶</a></h3>
+</div>
+<div class="java-code-example container" id="atauction-java">
+<p><strong>java</strong></p>
+<div class="highlight-java"><div class="highlight"><pre><span class="n">Order</span> <span class="n">order</span> <span class="o">=</span> <span class="k">new</span> <span class="n">Order</span><span class="o">();</span>
+<span class="n">order</span><span class="o">.</span><span class="na">Action</span> <span class="o">=</span> <span class="n">action</span><span class="o">;</span>
+<span class="n">order</span><span class="o">.</span><span class="na">Tif</span> <span class="o">=</span> <span class="s">&quot;AUC&quot;</span><span class="o">;</span>
+<span class="n">order</span><span class="o">.</span><span class="na">OrderType</span> <span class="o">=</span> <span class="s">&quot;MTL&quot;</span><span class="o">;</span>
+<span class="n">order</span><span class="o">.</span><span class="na">TotalQuantity</span> <span class="o">=</span> <span class="n">quantity</span><span class="o">;</span>
+<span class="n">order</span><span class="o">.</span><span class="na">LmtPrice</span> <span class="o">=</span> <span class="n">price</span><span class="o">;</span>
+</pre></div>
+</div>
+</div>
 </div>
 </div>
 </div>
@@ -238,7 +281,6 @@
 
   </div>
   
-
 
   
 
