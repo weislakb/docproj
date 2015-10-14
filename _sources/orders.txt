@@ -6,11 +6,24 @@ Interactive Brokers offers you numerous order types which allow you to minimize 
 Placing
 ------------
 
-.. doxygenfunction:: placeOrder
+To place an order you must call the :any:`placeOrder` function with an order ID, an Order object, and a Contract object as parameters.  Order object examples are listed below, and Contract examples can be found on the previous page.
 
+.. doxygenfunction:: placeOrder
 
 Order Types
 -----------
+
+Market
+~~~~~~
+
+A Market order is an order to buy or sell at the market bid or offer price. A market order may increase the likelihood of a fill and the speed of execution, but unlike the Limit order a Market order provides no price protection and may fill at a price far lower/higher than the current displayed bid/ask.
+
+Products: BOND, CFD, EFP, CASH, FUND, FUT, FOP, OPT, STK, WAR
+
+Reference: http://individuals.interactivebrokers.com/en/trading/orders/market.php?ib_entity=llc
+
+.. include:: _include/marketorder.rst
+
 
 Auction
 ~~~~~~~
@@ -19,13 +32,6 @@ An auction order is entered into the electronic trading system during the pre-ma
 
 Products: FUT, STK
 
-Supported Exchanges: https://individuals.interactivebrokers.com/en/?f=%2Fen%2Ftrading%2ForderTypeExchanges.php%3Fot%3Dauc
-
 Reference: http://individuals.interactivebrokers.com/en/trading/orders/auction.php?ib_entity=llc
 
-.. include:: ../_include/atauction.rst
-
-Market-If-Touched
-~~~~~~~~~~~~~~~~~
-
-.. include:: ../_include/marketiftouched.rst
+.. include:: _include/atauction.rst
